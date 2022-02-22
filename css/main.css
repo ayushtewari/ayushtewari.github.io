@@ -53,15 +53,15 @@ td {
 
 .photo {
   padding-left: 2.5%;
-  width: 300px;
-  max-width: 300px;
+  width: 250px;
+  max-width: 250px;
 }
 
 .pub-photo {
   padding-left: 0.5%;
   padding-right: 2.5%;
-  width: 150px;
-  max-width: 150px;
+  width: 200px;
+  max-width: 200px;
 }
 
 .self-author {
