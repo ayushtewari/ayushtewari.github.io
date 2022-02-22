@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ayush Tewari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayush Tewari is a Postdoc at MIT">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <table>
+      <tbody>
+        <tr>
+          <td class="bio">
+            <h1 class="name ">Ayush Tewari</h1>
+            <div class="email ">ayusht@mit.edu</div>
+            <p>Hello!</p>
+          </td>
+          <td class="photo">
+            <img src="assets/photo.jpeg" width="100%" height="100%">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Publications</h2>
+    <ul class="publications">
+      {% for pub in publications %}
+        <li class="pub">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="pub-photo">
+                    <img src={{ pub.teaser }} width="100%" height="100%">
+                  </td>
+                  <td>
+                    <span class="pub-title">{{ pub.title }}</span><br/>
+                    {{ pub.conference }}<br/>
+                    <span>{{ pub.authors | safe }}<br/>
+                    {{ pub.data | safe }}<br/>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
