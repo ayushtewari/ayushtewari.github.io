@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "build": "npx @11ty/eleventy",
+        "build": "env NODE_ENV=production npx @11ty/eleventy --pathprefix 'ayushtewari.github.io'",
         "serve": "npx @11ty/eleventy --serve"
     },
     "license": "MIT",
