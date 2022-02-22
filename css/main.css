@@ -1,0 +1,87 @@
+body {
+  margin: 40px auto;
+  max-width: 900px;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333;
+  padding: 0 10px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+a {
+  text-decoration: none;
+  color: #0051c9;
+}
+
+a:visited {
+  color: #0051c9;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.name {
+  margin-bottom: 0.1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+table,
+tr,
+td {
+  padding: 0;
+}
+
+.bio {
+  padding-right: 2.5%;
+  width: 63%;
+  vertical-align: top;
+}
+
+.photo {
+  padding-left: 2.5%;
+  width: 25%;
+  max-width: 25%;
+}
+
+.pub-photo {
+  padding-left: 0.5%;
+  padding-right: 2.5%;
+  width: 25%;
+  max-width: 25%;
+}
+
+.self-author {
+  font-weight: 550;
+}
+
+.pub-title {
+  font-size: 1.17em;
+  font-weight: 550;
+}
+
+.pub p {
+  line-height: 1;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.publications li {
+  list-style-type: "";
+  padding-bottom: 30px;
+}
