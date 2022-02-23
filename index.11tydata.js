@@ -123,11 +123,43 @@ module.exports = {
             data: ["[project page]".link("http://gvv.mpi-inf.mpg.de/projects/2021-cvpr-full-body-capture/"), "[paper]".link("https://arxiv.org/pdf/2012.06087.pdf")].join(" ")
         },
         {
-            title: "3D Morphable Face Models - Past, Present and Future3dmm",
+            title: "3D Morphable Face Models - Past, Present and Future",
             teaser: "assets/3dmm.png",
             authors: authorList([BernhardEgger, WillSmith, AyushTewari, StefanieWuhrer, MichaelZollhoefer, ThaboBeeler, FlorianBernard, TimoBolkart, AdamKortylewski, SamiRomdhani, ChristianTheobalt, VolkerBlanz, ThomasVetter]),
             conference: TOG + " 2021",
             data: ["[arXiv]".link("https://arxiv.org/abs/1909.01815")].join(" ")
+        },
+    ],
+    talks: [
+        {
+            title: "Synthesis of Portrait Images with 3D Control",
+            venue: "CVPR NTIRE workshop 2021", 
+            data: "[slides]".link("https://nextcloud.mpi-inf.mpg.de/index.php/s/H2fJet3mqjdjyKy")
+        },
+        {
+            title: "Self-Supervised 3D Digitization of Faces",
+            venue: "MIT vision and graphics seminar 2021", 
+            data: "[video]".link("https://www.youtube.com/watch?v=wyuMeSlTTfI")
+        },
+        {
+            title: "GANs with 3D Control",
+            venue: "SIGGRAPH course 2021", 
+            data: "[video]".link("https://www.youtube.com/watch?v=otly9jcZ0Jg&t=1863s")
+        },
+        {
+            title: "PIE: Portrait Image Embedding for Semantic Control",
+            venue: "SIGGRAPH Asia 2020", 
+            data: "[video]".link("https://www.youtube.com/watch?v=VPHJk-Nm9vM")
+        },
+        {
+            title: "StyleRig: Rigging StyleGAN for 3D Control over Portrait Images",
+            venue: "CVPR 2020", 
+            data: "[video]".link("https://www.youtube.com/watch?v=VPHJk-Nm9vM")
+        },
+        {
+            title: "Neural Rendering Fundamentals",
+            venue: "CVPR 2020 tutorial", 
+            data: "[video]".link("https://www.youtube.com/watch?v=LCTYRqW-ne8&t=890s")
         },
     ],
     metadata: ["[google scholar]".link("https://scholar.google.com/citations?user=pDnzpeoAAAAJ&hl=en"), "[CV]"].join(" "),
