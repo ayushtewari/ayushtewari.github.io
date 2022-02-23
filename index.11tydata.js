@@ -162,5 +162,5 @@ module.exports = {
             data: "[video]".link("https://www.youtube.com/watch?v=LCTYRqW-ne8&t=890s")
         },
     ],
-    metadata: ["[google scholar]".link("https://scholar.google.com/citations?user=pDnzpeoAAAAJ&hl=en"), "[CV]"].join(" "),
+    metadata: ["[Google Scholar]".link("https://scholar.google.com/citations?user=pDnzpeoAAAAJ&hl=en"), "[CV]"].join(" "),
 };
