@@ -73,7 +73,15 @@ td {
   font-weight: 550;
 }
 
+.talk-title {
+  font-weight: 550;
+}
+
 .pub p {
+  line-height: 1;
+}
+
+.talk p {
   line-height: 1;
 }
 
@@ -84,4 +92,9 @@ ul {
 .publications li {
   list-style-type: "";
   padding-bottom: 10px;
+}
+
+.talks li {
+  list-style-type: "";
+  padding-bottom: 1px;
 }
