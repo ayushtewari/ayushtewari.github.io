@@ -319,7 +319,7 @@ module.exports = {
         {
             title: "MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction",
             venue: "ICCV 2017", 
-            data: "[video]".link("https://www.youtube.com/watch?v=fNlMGWm7bbk&t=362s")
+            data: "[video]".link("https://www.https://www.youtube.com/watch?v=NnWaNaq_86M")
         },
     ],
     metadata: ["[Google Scholar]".link("https://scholar.google.com/citations?user=pDnzpeoAAAAJ&hl=en"), "[CV]".link("assets/CV.pdf")].join(" "),
