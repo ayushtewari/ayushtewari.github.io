@@ -299,7 +299,7 @@ module.exports = {
         {
             title: "PIE: Portrait Image Embedding for Semantic Control",
             venue: "SIGGRAPH Asia 2020", 
-            data: "[video]".link("https://www.youtube.com/watch?v=VPHJk-Nm9vM")
+            data: "[video]".link("https://youtu.be/Q0MS4szpUf4")
         },
         {
             title: "StyleRig: Rigging StyleGAN for 3D Control over Portrait Images",
