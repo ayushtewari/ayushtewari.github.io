@@ -66,6 +66,7 @@ const VladislavGolyanik = "Vladislav Golyanik".link("http://people.mpi-inf.mpg.d
 const WeipengXu = "Weipeng Xu".link("http://people.mpi-inf.mpg.de/~wxu/");
 const WillSmith = "Will Smith".link("https://www-users.cs.york.ac.uk/wsmith/");
 const WojciechMatusik = "Wojciech Matusik".link("https://cdfg.csail.mit.edu/wojciech");
+const XingangPan = "Xingang Pan".link("https://https://xingangpan.github.io//");
 const YuxiaoZhou = "Yuxiao Zhou".link("https://calciferzh.github.io/");
 const ZeyuJin = "Zeyu Jin".link("https://research.adobe.com/person/zeyu-jin/");
 
@@ -118,6 +119,13 @@ function authorListEqual(authors, numEqual) {
 
 module.exports = {
     publications: [
+        {
+            title: "Disentangled3D: Learning a 3D Generative Model with Disentangled Geometry and Appearance from Monocular Images",
+            teaser: "assets/D3D.gif",
+            authors: authorListEqual([AyushTewari, MallikarjunBR, XingangPan, OhadFried, ManeeshAgrawala, ChristianTheobalt], 0),
+            conference: CVPR + " 2022",
+            data: ["[project page]".link("https://people.mpi-inf.mpg.de/~atewari/projects/D3D/"), "[paper]".link("https://people.mpi-inf.mpg.de/~atewari/projects/D3D/data/paper.pdf")].join(" ")
+        },
         {
             title: "StyleVideoGAN: A Temporal Generative Model using a Pretrained StyleGAN",
             teaser: "assets/StyleVideoGAN.png",
