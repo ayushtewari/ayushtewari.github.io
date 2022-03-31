@@ -8,6 +8,7 @@ const AyushTewari = "Ayush Tewari";
 const AbdallahDib = "Abdallah Dib".link("https://www.interdigital.com/talent/?id=38");
 const AdamFinkelstein = "Adam Finkelstein".link("https://www.cs.princeton.edu/~af/");
 const AdamKortylewski = "Adam Kortylewski".link("https://adamkortylewski.com/");
+const BenMildenhall = "Ben Mildenhall".link("https://bmild.github.io/");
 const BerndBickel = "Bernd Bickel".link("http://berndbickel.com/");
 const BerntSchiele = "Bernt Schiele".link("https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/");
 const BernhardEgger = "Bernhard Egger".link("https://eggerbernhard.ch/");
@@ -28,6 +29,7 @@ const HansPeterSeidel = "Hans-Peter Seidel".link("https://people.mpi-inf.mpg.de/
 const HyeongwooKim = "Hyeongwoo Kim".link("http://www.mpi-inf.mpg.de/~hkim/");
 const IkhsanulHabibie = "Ikhsanul Habibie".link("https://www.mpi-inf.mpg.de/~ihabibie/");
 const JasonSaragih = "Jason Saragih".link("http://jsaragih.org/Home_Page.html");
+const JonBarron = "Jonathan T. Barron".link("https://jonbarron.info/");
 const JunYanZhu = "Jun-Yan Zhu".link("https://www.cs.cmu.edu/~junyanz/");
 const JustusThies = "Justus Thies".link("https://justusthies.github.io/");
 const KalyanSunkavalli = "Kalyan Sunkavalli".link("http://www.kalyans.org/");
@@ -46,6 +48,7 @@ const LouisChevallier = "Louis Chevallier".link("https://scholar.google.fr/citat
 const OhadFried = "Ohad Fried".link("https://www.ohadf.com/");
 const PabloGarrido = "Pablo Garrido".link("https://www.linkedin.com/in/pablo-garrido-485472169/");
 const PatrickPerez = "Patrick Perez".link("https://ptrckprz.github.io/");
+const PratulSrinivasan = "Pratul Srinivasan".link("https://pratulsrinivasan.github.io/");
 const VolkerBlanz = "Volker Blanz".link("http://www.grk1564.uni-siegen.de/de/blanz-volker");
 const QianruSun = "Qianru Sun".link("https://qianrusun.com/");
 const RicardoMartinBrualla = "Ricardo Martin-Brualla".link("http://ricardomartinbrualla.com/");
@@ -67,6 +70,7 @@ const WeipengXu = "Weipeng Xu".link("http://people.mpi-inf.mpg.de/~wxu/");
 const WillSmith = "Will Smith".link("https://www-users.cs.york.ac.uk/wsmith/");
 const WojciechMatusik = "Wojciech Matusik".link("https://cdfg.csail.mit.edu/wojciech");
 const XingangPan = "Xingang Pan".link("https://https://xingangpan.github.io//");
+const YifanWang = "Yifan Wang".link("https://yifita.github.io/");
 const YuxiaoZhou = "Yuxiao Zhou".link("https://calciferzh.github.io/");
 const ZeyuJin = "Zeyu Jin".link("https://research.adobe.com/person/zeyu-jin/");
 
@@ -125,6 +129,13 @@ module.exports = {
             authors: authorListEqual([AyushTewari, MallikarjunBR, XingangPan, OhadFried, ManeeshAgrawala, ChristianTheobalt], 0),
             conference: CVPR + " 2022",
             data: ["[project page]".link("https://people.mpi-inf.mpg.de/~atewari/projects/D3D/"), "[paper]".link("https://people.mpi-inf.mpg.de/~atewari/projects/D3D/data/paper.pdf")].join(" ")
+        },
+        {
+            title: "Advances in Neural Rendering",
+            teaser: "assets/NeuralRendering.png",
+            authors: authorListEqual([AyushTewari,  JustusThies, BenMildenhall, PratulSrinivasan, EdgarTretschk, YifanWang, ChristophLassner, VincentSitzmann, RicardoMartinBrualla, StephenLombardi, TomasSimon, ChristianTheobalt, MatthiasNiessner, JonBarron, GordonWetzstein, MichaelZollhoefer, VladislavGolyanik], 4),
+            conference: STAR + " 2022",
+            data: ["[paper]".link("https://arxiv.org/abs/2111.05849")].join(" ")
         },
         {
             title: "StyleVideoGAN: A Temporal Generative Model using a Pretrained StyleGAN",
