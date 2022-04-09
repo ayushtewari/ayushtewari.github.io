@@ -128,7 +128,7 @@ module.exports = {
             teaser: "assets/D3D.gif",
             authors: authorListEqual([AyushTewari, MallikarjunBR, XingangPan, OhadFried, ManeeshAgrawala, ChristianTheobalt], 0),
             conference: CVPR + " 2022",
-            data: ["[project page]".link("https://people.mpi-inf.mpg.de/~atewari/projects/D3D/"), "[paper]".link("https://people.mpi-inf.mpg.de/~atewari/projects/D3D/data/paper.pdf")].join(" ")
+            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/D3D/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/D3D/data/paper.pdf")].join(" ")
         },
         {
             title: "Advances in Neural Rendering",
