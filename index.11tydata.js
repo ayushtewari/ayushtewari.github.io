@@ -8,6 +8,7 @@ const AyushTewari = "Ayush Tewari";
 const AbdallahDib = "Abdallah Dib".link("https://www.interdigital.com/talent/?id=38");
 const AdamFinkelstein = "Adam Finkelstein".link("https://www.cs.princeton.edu/~af/");
 const AdamKortylewski = "Adam Kortylewski".link("https://adamkortylewski.com/");
+const AdrienGaidon = "Adrien Gaidon".link("https://adriengaidon.com/");
 const BenMildenhall = "Ben Mildenhall".link("https://bmild.github.io/");
 const BerndBickel = "Bernd Bickel".link("http://berndbickel.com/");
 const BerntSchiele = "Bernt Schiele".link("https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/");
@@ -21,6 +22,7 @@ const EdgarTretschk = "Edgar Tretschk".link("http://people.mpi-inf.mpg.de/~trets
 const EliShectman = "Eli Schectman".link("https://research.adobe.com/person/eli-shechtman/");
 const FengXu = "Feng Xu".link("http://cgcad.thss.tsinghua.edu.cn/xufeng/");
 const FlorianBernard = "Florian Bernard".link("https://sites.google.com/site/fbernardpi/");
+const FredoDurand = "Fredo Durand".link("http://people.csail.mit.edu/fredo/");
 const GauravBharaj = "Gaurav Bharaj".link("http://gauravbharaj.com/");
 const GereonFox = "Gereon Fox".link("https://people.mpi-inf.mpg.de/~gfox/");
 const GordonWetzstein = "Gordon Wetzstein".link("https://stanford.edu/~gordonwz/");
@@ -29,6 +31,7 @@ const HansPeterSeidel = "Hans-Peter Seidel".link("https://people.mpi-inf.mpg.de/
 const HyeongwooKim = "Hyeongwoo Kim".link("http://www.mpi-inf.mpg.de/~hkim/");
 const IkhsanulHabibie = "Ikhsanul Habibie".link("https://www.mpi-inf.mpg.de/~ihabibie/");
 const JasonSaragih = "Jason Saragih".link("http://jsaragih.org/Home_Page.html");
+const JoshTenenbaum = "Joshua B. Tenenbaum".link("http://web.mit.edu/cocosci/josh.html");
 const JonBarron = "Jonathan T. Barron".link("https://jonbarron.info/");
 const JunYanZhu = "Jun-Yan Zhu".link("https://www.cs.cmu.edu/~junyanz/");
 const JustusThies = "Justus Thies".link("https://justusthies.github.io/");
@@ -48,12 +51,15 @@ const LouisChevallier = "Louis Chevallier".link("https://scholar.google.fr/citat
 const OhadFried = "Ohad Fried".link("https://www.ohadf.com/");
 const PabloGarrido = "Pablo Garrido".link("https://www.linkedin.com/in/pablo-garrido-485472169/");
 const PatrickPerez = "Patrick Perez".link("https://ptrckprz.github.io/");
+const PrafullSharma = "Prafull Sharma".link("https://prafullsharma.net/");
 const PratulSrinivasan = "Pratul Srinivasan".link("https://pratulsrinivasan.github.io/");
 const VolkerBlanz = "Volker Blanz".link("http://www.grk1564.uni-siegen.de/de/blanz-volker");
 const QianruSun = "Qianru Sun".link("https://qianrusun.com/");
+const RaresAmbrus = "Rares Ambrus".link("https://scholar.google.se/citations?user=2xjjS3oAAAAJ&hl=en");
 const RicardoMartinBrualla = "Ricardo Martin-Brualla".link("http://ricardomartinbrualla.com/");
 const RohitPandey = "Rohit Pandey".link("https://research.google/people/106687/");
 const SeanFanello = "Sean Fanello".link("http://www.seanfanello.it/");
+const SergeyZakharov = "Sergey Zakharov".link("https://zakharos.github.io/");
 const StephenLombardi = "Stepehen Lombardi".link("https://stephenlombardi.github.io/");
 const StefanieWuhrer = "Stefanie Wuhrer".link("http://morpheo.inrialpes.fr/~wuhrer/");
 const SamiRomdhani = "Sami Romdhani".link("https://www.linkedin.com/in/sami-romdhani-09775827/");
@@ -68,10 +74,12 @@ const TomasSimon = "Tomas Simon".link("http://www.cs.cmu.edu/~tsimon/");
 const VincentSitzmann = "Vincent Sitzmann".link("http://web.stanford.edu/~sitzmann/");
 const VladislavGolyanik = "Vladislav Golyanik".link("http://people.mpi-inf.mpg.de/~golyanik/");
 const WeipengXu = "Weipeng Xu".link("http://people.mpi-inf.mpg.de/~wxu/");
+const WilliamTFreeman = "William T. Freeman".link("https://billf.mit.edu/");
 const WillSmith = "Will Smith".link("https://www-users.cs.york.ac.uk/wsmith/");
 const WojciechMatusik = "Wojciech Matusik".link("https://cdfg.csail.mit.edu/wojciech");
 const XingangPan = "Xingang Pan".link("https://https://xingangpan.github.io//");
 const YifanWang = "Yifan Wang".link("https://yifita.github.io/");
+const YilunDu = "Yilun Du".link("https://yilundu.github.io/");
 const YuxiaoZhou = "Yuxiao Zhou".link("https://calciferzh.github.io/");
 const ZeyuJin = "Zeyu Jin".link("https://research.adobe.com/person/zeyu-jin/");
 
@@ -124,6 +132,13 @@ function authorListEqual(authors, numEqual) {
 
 module.exports = {
     publications: [
+        {
+            title: "Seeing 3D Objects in a Single Image via Self-Supervised Static-Dynamic Disentanglement",
+            teaser: "assets/seeing3d.gif",
+            authors: authorListEqual([PrafullSharma, AyushTewari, YilunDu, SergeyZakharov, RaresAmbrus, AdrienGaidon, WilliamTFreeman, FredoDurand, JoshTenenbaum], 0),
+            conference: "arXiv",
+            data: ["[project page]".link("https://prafullsharma.net/see3d/"), "[paper]".link("https://prafullsharma.net/see3d/paper.pdf")].join(" ")
+        },
         {
             title: "Neural Radiance Transfer Fields for Relightable Novel-view Synthesis with Global Illumination",
             teaser: "assets/eccv22.gif",
@@ -227,7 +242,7 @@ module.exports = {
             teaser: "assets/PatchNets.png",
             authors: authorListEqual([EdgarTretschk, AyushTewari, MichaelZollhoefer, VladislavGolyanik, ChristianTheobalt], 0),
             conference: ECCV + " 2020",
-            data: ["[project page]".link("http://gvv.mpi-inf.mpg.de/projects/DEMEA/"), "[paper]".link("http://gvv.mpi-inf.mpg.de/projects/DEMEA/data/demea.pdf")].join(" ")
+            data: ["[project page]".link("https://gvv.mpi-inf.mpg.de/projects/PatchNets/"), "[paper]".link("arXiv")].join(" ")
         },
         {
             title: "Neural Voice Puppetry: Audio-driven Facial Reenactment",
