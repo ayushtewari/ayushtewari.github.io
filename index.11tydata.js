@@ -135,7 +135,7 @@ module.exports = {
         {
             title: "Seeing 3D Objects in a Single Image via Self-Supervised Static-Dynamic Disentanglement",
             teaser: "assets/seeing3d.gif",
-            authors: authorListEqual([PrafullSharma, AyushTewari, YilunDu, SergeyZakharov, RaresAmbrus, AdrienGaidon, WilliamTFreeman, FredoDurand, JoshTenenbaum], 0),
+            authors: authorListEqual([PrafullSharma, AyushTewari, YilunDu, SergeyZakharov, RaresAmbrus, AdrienGaidon, WilliamTFreeman, FredoDurand, JoshTenenbaum, VincentSitzmann], 0),
             conference: "arXiv",
             data: ["[project page]".link("https://prafullsharma.net/see3d/"), "[paper]".link("https://prafullsharma.net/see3d/paper.pdf")].join(" ")
         },
