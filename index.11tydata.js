@@ -61,6 +61,7 @@ const TaeHyunOh = "Tae-Hyun Oh".link("https://scholar.google.com/citations?user=
 const TarunYenamandra = "Tarun Yenamandra".link("https://vision.in.tum.de/members/yenamand");
 const ThaboBeeler = "Thabo Beeler".link("https://thabobeeler.com/");
 const ThomasVetter = "Thomas Vetter".link("https://gravis.dmi.unibas.ch/");
+const ThomasLeimkuehler = "Thomas Leimkuehler".link("https://people.mpi-inf.mpg.de/~tleimkue/");
 const TimoBolkart = "Timo Bolkart".link("https://ps.is.mpg.de/person/tbolkart");
 const TimWeyrich = "Tim Weyrich".link("http://reality.cs.ucl.ac.uk/weyrich.html");
 const TomasSimon = "Tomas Simon".link("http://www.cs.cmu.edu/~tsimon/");
@@ -123,6 +124,13 @@ function authorListEqual(authors, numEqual) {
 
 module.exports = {
     publications: [
+        {
+            title: "Neural Radiance Transfer Fields for Relightable Novel-view Synthesis with Global Illumination",
+            teaser: "assets/eccv22.gif",
+            authors: authorListEqual([LinjieLyu, AyushTewari, ThomasLeimkuehler, MarcHabermann, ChristianTheobalt], 0),
+            conference: ECCV + " 2022 (Oral)",
+            data: ["[project page]".link("https://people.mpi-inf.mpg.de/~llyu/projects/2022-NRTF/"), "[paper]".link("https://arxiv.org/pdf/2207.13607.pdf")].join(" ")
+        },
         {
             title: "Disentangled3D: Learning a 3D Generative Model with Disentangled Geometry and Appearance from Monocular Images",
             teaser: "assets/D3D.gif",
