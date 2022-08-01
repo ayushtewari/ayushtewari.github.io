@@ -91,8 +91,9 @@ const SIGGRAPH = "SIGGRAPH"
 const SIGGRAPHASIA = "SIGGRAPH Asia"
 const TOG = "ACM Transactions on Graphics"
 const BMVC = "BMVC"
-const ECCV = "ECCV"
 const STAR = "Eurographics State-of-the-Art Report"
+const ECCV = "ECCV"
+const ThreeDV = "3DV"
 const TPAMI = "TPAMI"
 
 function authorList(authors) {
@@ -145,6 +146,13 @@ module.exports = {
             authors: authorListEqual([LinjieLyu, AyushTewari, ThomasLeimkuehler, MarcHabermann, ChristianTheobalt], 0),
             conference: ECCV + " 2022 (Oral)",
             data: ["[project page]".link("https://people.mpi-inf.mpg.de/~llyu/projects/2022-NRTF/"), "[paper]".link("https://arxiv.org/pdf/2207.13607.pdf")].join(" ")
+        },
+        {
+            title: "GAN2X: Non-Lambertian Inverse Rendering of Image GANs",
+            teaser: "assets/gan2x.gif",
+            authors: authorListEqual([XingangPan, AyushTewari, LingjieLiu, ChristianTheobalt], 0),
+            conference: ThreeDV + " 2022",
+            data: ["[project page]".link("https://people.mpi-inf.mpg.de/~xpan/GAN2X/"), "[paper]".link("https://arxiv.org/abs/2206.09244")].join(" ")
         },
         {
             title: "Disentangled3D: Learning a 3D Generative Model with Disentangled Geometry and Appearance from Monocular Images",
