@@ -332,6 +332,16 @@ module.exports = {
     ],
     talks: [
         {
+            title: "Finding 3D Structure in Unstructured 2D Data",
+            venue: "Rank Prize Seminar, Oxford University, Adobe, 2022", 
+            data: "[slides]".link("https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EXroiViFphtAmlF8Jv5NHoQBZlf3e1u3N_36TSDHQUIl1Q?e=0L7Jxq")
+        },
+        {
+            title: "Learning 3D Generative Models from 2D Data",
+            venue: "Dagstuhl Seminar, 2022", 
+            data: "[slides]".link("https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EVSkLtzYm99OhjnadwRO_SQB5JT9qZO6o2WLY5zFAqdJPQ?e=rf8GY0")
+        },
+        {
             title: "Synthesis of Portrait Images with 3D Control",
             venue: "CVPR NTIRE workshop 2021", 
             data: "[slides]".link("https://nextcloud.mpi-inf.mpg.de/index.php/s/H2fJet3mqjdjyKy")
