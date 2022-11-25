@@ -377,6 +377,10 @@ module.exports = {
             data: "[video]".link("https://www.youtube.com/watch?v=fNlMGWm7bbk&t=362s")
         },
         {
+            title: "Self-supervised Multi-level Face Model Learning for Monocular Reconstruction at over 250 Hz",
+            venue: "CVPR 2018", 
+            data: "[video]".link("https://youtu.be/x18WUuBNK7E?t=2030")
+        },        {
             title: "MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction",
             venue: "ICCV 2017", 
             data: "[video]".link("https://www.youtube.com/watch?v=NnWaNaq_86M")
