@@ -52,6 +52,7 @@ const OhadFried = "Ohad Fried".link("https://www.ohadf.com/");
 const PabloGarrido = "Pablo Garrido".link("https://www.linkedin.com/in/pablo-garrido-485472169/");
 const PatrickPerez = "Patrick Perez".link("https://ptrckprz.github.io/");
 const PrafullSharma = "Prafull Sharma".link("https://prafullsharma.net/");
+const PramodRao = "Pramod Rao".link("https://people.mpi-inf.mpg.de/~prao/")
 const PratulSrinivasan = "Pratul Srinivasan".link("https://pratulsrinivasan.github.io/");
 const VolkerBlanz = "Volker Blanz".link("http://www.grk1564.uni-siegen.de/de/blanz-volker");
 const QianruSun = "Qianru Sun".link("https://qianrusun.com/");
@@ -153,6 +154,13 @@ module.exports = {
             authors: authorListEqual([XingangPan, AyushTewari, LingjieLiu, ChristianTheobalt], 0),
             conference: ThreeDV + " 2022",
             data: ["[project page]".link("https://people.mpi-inf.mpg.de/~xpan/GAN2X/"), "[paper]".link("https://arxiv.org/abs/2206.09244")].join(" ")
+        },
+        {
+            title: "VoRF: Volumetric Relightable Faces",
+            teaser: "assets/VORF.png",
+            authors: authorListEqual([PramodRao, MallikarjunBR, GereonFox, TimWeyrich, BerndBickel, HansPeterPfister, WojciechMatusik, AyushTewari, ChristianTheobalt, MohamedElgharib], 0),
+            conference: BMVC + " 2022 (Oral, Best Paper Honorable Mention)",
+            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/VoRF/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/VoRF/data/vorf_main.pdf")].join(" ")
         },
         {
             title: "Disentangled3D: Learning a 3D Generative Model with Disentangled Geometry and Appearance from Monocular Images",
