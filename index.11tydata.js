@@ -157,7 +157,7 @@ module.exports = {
         },
         {
             title: "VoRF: Volumetric Relightable Faces",
-            teaser: "assets/VORF.png",
+            teaser: "assets/VoRF.png",
             authors: authorListEqual([PramodRao, MallikarjunBR, GereonFox, TimWeyrich, BerndBickel, HansPeterPfister, WojciechMatusik, AyushTewari, ChristianTheobalt, MohamedElgharib], 0),
             conference: BMVC + " 2022 (Oral, Best Paper Honorable Mention)",
             data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/VoRF/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/VoRF/data/vorf_main.pdf")].join(" ")
