@@ -18,7 +18,7 @@ const ChristianTheobalt = "Christian Theobalt".link("https://people.mpi-inf.mpg.
 const ChristophLassner = "Christoph Lassner".link("https://christophlassner.de/");
 const DanBGoldman = "Dan B Goldman".link("https://www.danbgoldman.com/home/");
 const DanielCremers = "Daniel Cremers".link("https://vision.in.tum.de/members/cremers");
-const EdgarTretschk = "Edgar Tretschk".link("http://people.mpi-inf.mpg.de/~tretschk/");
+const EdgarTretschk = "Edith Tretschk".link("http://people.mpi-inf.mpg.de/~tretschk/");
 const EliShectman = "Eli Schectman".link("https://research.adobe.com/person/eli-shechtman/");
 const FengXu = "Feng Xu".link("http://cgcad.thss.tsinghua.edu.cn/xufeng/");
 const FlorianBernard = "Florian Bernard".link("https://sites.google.com/site/fbernardpi/");
@@ -145,7 +145,7 @@ module.exports = {
             title: "Neural Radiance Transfer Fields for Relightable Novel-view Synthesis with Global Illumination",
             teaser: "assets/eccv22.gif",
             authors: authorListEqual([LinjieLyu, AyushTewari, ThomasLeimkuehler, MarcHabermann, ChristianTheobalt], 0),
-            conference: ECCV + " 2022 (Oral)",
+            conference: ECCV + " 2022 <font color=\"red\"> (Oral Presentation) </font>",
             data: ["[project page]".link("https://people.mpi-inf.mpg.de/~llyu/projects/2022-NRTF/"), "[paper]".link("https://arxiv.org/pdf/2207.13607.pdf")].join(" ")
         },
         {
@@ -159,7 +159,7 @@ module.exports = {
             title: "VoRF: Volumetric Relightable Faces",
             teaser: "assets/VoRF.png",
             authors: authorListEqual([PramodRao, MallikarjunBR, GereonFox, TimWeyrich, BerndBickel, HansPeterPfister, WojciechMatusik, AyushTewari, ChristianTheobalt, MohamedElgharib], 0),
-            conference: BMVC + " 2022 (Oral, Best Paper Honorable Mention)",
+            conference: BMVC + " 2022 <font color=\"red\"> (Oral Presentation, Best Paper Honorable Mention) </font>",
             data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/VoRF/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/VoRF/data/vorf_main.pdf")].join(" ")
         },
         {
@@ -177,10 +177,10 @@ module.exports = {
             data: ["[paper]".link("https://arxiv.org/abs/2111.05849")].join(" ")
         },
         {
-            title: "StyleVideoGAN: A Temporal Generative Model using a Pretrained StyleGAN",
+            title: "StyleVideoGAN: A TempOral Presentation Generative Model using a Pretrained StyleGAN",
             teaser: "assets/StyleVideoGAN.png",
             authors: authorListEqual([GereonFox, AyushTewari, MohamedElgharib, ChristianTheobalt], 0),
-            conference: BMVC + " 2021 (Oral)",
+            conference: BMVC + " 2021 <font color=\"red\"> (Oral Presentation) </font>",
             data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/stylevideogan/"), "[paper]".link("https://arxiv.org/pdf/2107.07224.pdf")].join(" ")
         },
         {
@@ -208,7 +208,7 @@ module.exports = {
             title: "i3DMM: Deep Implicit 3D Morphable Model of Human Heads",
             teaser: "assets/i3dmm.png",
             authors: authorListEqual([TarunYenamandra, AyushTewari, FlorianBernard, HansPeterSeidel, MohamedElgharib, DanielCremers, ChristianTheobalt], 0),
-            conference: CVPR + " 2021 (Oral)",
+            conference: CVPR + " 2021 <font color=\"red\"> (Oral Presentation) </font>",
             data: ["[project page]".link("http://gvv.mpi-inf.mpg.de/projects/i3DMM/"), "[paper]".link("https://arxiv.org/pdf/2011.14143.pdf"), "[code]".link("https://github.com/tarun738/i3DMM")].join(" ")
         },
         {
@@ -278,7 +278,7 @@ module.exports = {
             title: "StyleRig: Rigging StyleGAN for 3D Control over Portrait Images",
             teaser: "assets/StyleRig.png",
             authors: authorListEqual([AyushTewari, MohamedElgharib, GauravBharaj, FlorianBernard, HansPeterSeidel, PatrickPerez, MichaelZollhoefer, ChristianTheobalt], 0),
-            conference: CVPR + " 2020 (Oral)",
+            conference: CVPR + " 2020 <font color=\"red\"> (Oral Presentation) </font>",
             data: ["[project page]".link("http://gvv.mpi-inf.mpg.de/projects/StyleRig/"), "[paper]".link("http://gvv.mpi-inf.mpg.de/projects/StyleRig/data/paper.pdf")].join(" ")
         },
         {
@@ -292,7 +292,7 @@ module.exports = {
             title: "FML: Face Model Learning from Videos",
             teaser: "assets/FML.png",
             authors: authorListEqual([AyushTewari, FlorianBernard, PabloGarrido, GauravBharaj, MohamedElgharib, HansPeterSeidel, PatrickPerez, MichaelZollhoefer, ChristianTheobalt], 0),
-            conference: CVPR + " 2019 (Oral)",
+            conference: CVPR + " 2019 <font color=\"red\"> (Oral Presentation) </font>",
             data: ["[project page]".link("http://gvv.mpi-inf.mpg.de/projects/FML19/"), "[paper]".link("https://arxiv.org/abs/1812.07603")].join(" ")
         },
         {
@@ -320,7 +320,7 @@ module.exports = {
             title: "Self-supervised Multi-level Face Model Learning for Monocular Reconstruction at over 250 Hz",
             teaser: "assets/MultiLevelModel.png",
             authors: authorListEqual([AyushTewari, MichaelZollhoefer, PabloGarrido, FlorianBernard, HyeongwooKim, PatrickPerez, ChristianTheobalt], 0),
-            conference: CVPR + " 2018 (Oral)",
+            conference: CVPR + " 2018 <font color=\"red\"> (Oral Presentation) </font>",
             data: ["[project page]".link("https://gvv.mpi-inf.mpg.de/projects/FML/"), "[paper]".link("https://gvv.mpi-inf.mpg.de/projects/FML/paper.pdf")].join(" ")
         },
         {
@@ -334,7 +334,7 @@ module.exports = {
             title: "MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction",
             teaser: "assets/MoFA.png",
             authors: authorListEqual([AyushTewari, MichaelZollhoefer, HyeongwooKim, PabloGarrido, FlorianBernard, PatrickPerez, ChristianTheobalt], 0),
-            conference: ICCV + " 2017 (Oral)",
+            conference: ICCV + " 2017 <font color=\"red\"> (Oral Presentation) </font>",
             data: ["[project page]".link("http://gvv.mpi-inf.mpg.de/projects/MZ/Papers/arXiv2017_FA/page.html"), "[paper]".link("http://gvv.mpi-inf.mpg.de/projects/MZ/Papers/arXiv2017_FA/paper.pdf")].join(" ")
         },
     ],
