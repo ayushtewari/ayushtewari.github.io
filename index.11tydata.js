@@ -177,7 +177,7 @@ module.exports = {
             data: ["[paper]".link("https://arxiv.org/abs/2111.05849")].join(" ")
         },
         {
-            title: "StyleVideoGAN: A TempOral Presentation Generative Model using a Pretrained StyleGAN",
+            title: "StyleVideoGAN: A Temporal Generative Model using a Pretrained StyleGAN",
             teaser: "assets/StyleVideoGAN.png",
             authors: authorListEqual([GereonFox, AyushTewari, MohamedElgharib, ChristianTheobalt], 0),
             conference: BMVC + " 2021 <font color=\"red\"> (Oral Presentation) </font>",
