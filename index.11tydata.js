@@ -9,6 +9,7 @@ const AbdallahDib = "Abdallah Dib".link("https://www.interdigital.com/talent/?id
 const AdamFinkelstein = "Adam Finkelstein".link("https://www.cs.princeton.edu/~af/");
 const AdamKortylewski = "Adam Kortylewski".link("https://adamkortylewski.com/");
 const AdrienGaidon = "Adrien Gaidon".link("https://adriengaidon.com/");
+const AnneHarrington = "Anne Harrington".link("https://scholar.google.com/citations?user=7M9eSFMAAAAJ&hl=en");
 const BenMildenhall = "Ben Mildenhall".link("https://bmild.github.io/");
 const BerndBickel = "Bernd Bickel".link("http://berndbickel.com/");
 const BerntSchiele = "Bernt Schiele".link("https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/");
@@ -48,6 +49,7 @@ const MohitMendiratta = "Mohit Mendiratta".link("http://people.mpi-inf.mpg.de/~m
 const LinjieLyu = "Linjie Lyu".link("http://people.mpi-inf.mpg.de/~atewari/");
 const LingjieLiu = "Lingjie Liu".link("https://lingjie0206.github.io/");
 const LouisChevallier = "Louis Chevallier".link("https://scholar.google.fr/citations?user=hC_BTU8AAAAJ&hl=en");
+const MarkHamilton = "Mark Hamilton".link("https://mhamilton.net/");
 const OhadFried = "Ohad Fried".link("https://www.ohadf.com/");
 const PabloGarrido = "Pablo Garrido".link("https://www.linkedin.com/in/pablo-garrido-485472169/");
 const PatrickPerez = "Patrick Perez".link("https://ptrckprz.github.io/");
@@ -59,8 +61,10 @@ const QianruSun = "Qianru Sun".link("https://qianrusun.com/");
 const RaresAmbrus = "Rares Ambrus".link("https://scholar.google.se/citations?user=2xjjS3oAAAAJ&hl=en");
 const RicardoMartinBrualla = "Ricardo Martin-Brualla".link("http://ricardomartinbrualla.com/");
 const RohitPandey = "Rohit Pandey".link("https://research.google/people/106687/");
+const RuthRosenholtz = "Ruth Rosenholtz".link("http://persci.mit.edu/people/rosenholtz");
 const SeanFanello = "Sean Fanello".link("http://www.seanfanello.it/");
 const SergeyZakharov = "Sergey Zakharov".link("https://zakharos.github.io/");
+const SimonStent = "Simon Stent".link("https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en");
 const StephenLombardi = "Stepehen Lombardi".link("https://stephenlombardi.github.io/");
 const StefanieWuhrer = "Stefanie Wuhrer".link("http://morpheo.inrialpes.fr/~wuhrer/");
 const SamiRomdhani = "Sami Romdhani".link("https://www.linkedin.com/in/sami-romdhani-09775827/");
@@ -72,6 +76,7 @@ const ThomasLeimkuehler = "Thomas Leimkuehler".link("https://people.mpi-inf.mpg.
 const TimoBolkart = "Timo Bolkart".link("https://ps.is.mpg.de/person/tbolkart");
 const TimWeyrich = "Tim Weyrich".link("http://reality.cs.ucl.ac.uk/weyrich.html");
 const TomasSimon = "Tomas Simon".link("http://www.cs.cmu.edu/~tsimon/");
+const VasshaDutell = "Vasha DuTell".link("https://vashadutell.com/");
 const VincentSitzmann = "Vincent Sitzmann".link("http://web.stanford.edu/~sitzmann/");
 const VladislavGolyanik = "Vladislav Golyanik".link("http://people.mpi-inf.mpg.de/~golyanik/");
 const WeipengXu = "Weipeng Xu".link("http://people.mpi-inf.mpg.de/~wxu/");
@@ -96,6 +101,7 @@ const STAR = "Eurographics State-of-the-Art Report"
 const ECCV = "ECCV"
 const ThreeDV = "3DV"
 const TPAMI = "TPAMI"
+const ICLR = "ICLR"
 
 function authorList(authors) {
     var list = [];
@@ -138,8 +144,15 @@ module.exports = {
             title: "Seeing 3D Objects in a Single Image via Self-Supervised Static-Dynamic Disentanglement",
             teaser: "assets/seeing3d.gif",
             authors: authorListEqual([PrafullSharma, AyushTewari, YilunDu, SergeyZakharov, RaresAmbrus, AdrienGaidon, WilliamTFreeman, FredoDurand, JoshTenenbaum, VincentSitzmann], 0),
-            conference: "arXiv",
+            conference: ICLR + " 2023",
             data: ["[project page]".link("https://prafullsharma.net/see3d/"), "[paper]".link("https://prafullsharma.net/see3d/paper.pdf")].join(" ")
+        },
+        {
+            title: "Exploring Perceptual Straightness in Learned Visual Representations",
+            teaser: "assets/Straight_ICLR.png",
+            authors: authorListEqual([AnneHarrington, VasshaDutell, AyushTewari, MarkHamilton, SimonStent, RuthRosenholtz, WilliamTFreeman], 0),
+            conference: ICLR + " 2023",
+            data: ["[project page]".link(""), "[paper]".link("")].join(" ")
         },
         {
             title: "Neural Radiance Transfer Fields for Relightable Novel-view Synthesis with Global Illumination",
