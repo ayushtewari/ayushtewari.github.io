@@ -354,7 +354,7 @@ module.exports = {
     talks: [
         {
             title: "Finding 3D Structure in Unstructured 2D Data",
-            venue: "Rank Prize Seminar, Oxford University, Adobe, 2022", 
+            venue: "Rank Prize Seminar, Oxford University, Adobe, 2022, Princeton University, 2023", 
             data: "[slides]".link("https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EXroiViFphtAmlF8Jv5NHoQBZlf3e1u3N_36TSDHQUIl1Q?e=0L7Jxq")
         },
         {
