@@ -152,7 +152,7 @@ module.exports = {
             teaser: "assets/Straight_ICLR.png",
             authors: authorListEqual([AnneHarrington, VasshaDutell, AyushTewari, MarkHamilton, SimonStent, RuthRosenholtz, WilliamTFreeman], 0),
             conference: ICLR + " 2023",
-            data: ["[project page]".link(""), "[paper]".link("")].join(" ")
+            data: ["[paper]".link("https://openreview.net/pdf?id=4cOfD2qL6T")].join(" ")
         },
         {
             title: "Neural Radiance Transfer Fields for Relightable Novel-view Synthesis with Global Illumination",
