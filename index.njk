@@ -35,7 +35,13 @@
               <tbody>
                 <tr>
                   <td class="pub-photo">
-                    <img src={{ pub.teaser }} width="100%">
+                    {%- if 'mp4' in pub.teaser %}
+                      <video width="100%" autoplay loop muted>
+                        <source src={{ pub.teaser }} type="video/mp4" />
+                      </video>
+                    {%- else -%}
+                      <img src={{ pub.teaser }} width="100%">
+                    {%- endif -%}  
                   </td>
                   <td>
                     <span class="pub-title">{{ pub.title }}</span><br/>
