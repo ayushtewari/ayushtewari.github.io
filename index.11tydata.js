@@ -14,6 +14,7 @@ const BenMildenhall = "Ben Mildenhall".link("https://bmild.github.io/");
 const BerndBickel = "Bernd Bickel".link("http://berndbickel.com/");
 const BerntSchiele = "Bernt Schiele".link("https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/");
 const BernhardEgger = "Bernhard Egger".link("https://eggerbernhard.ch/");
+const CameronSmith = "Cameron Smith".link("https://cameronosmith.github.io/");
 const ChristianRichardt = "Christian Richardt".link("https://richardt.name/");
 const ChristianTheobalt = "Christian Theobalt".link("https://people.mpi-inf.mpg.de/~theobalt/");
 const ChristophLassner = "Christoph Lassner".link("https://christophlassner.de/");
@@ -138,8 +139,36 @@ function authorListEqual(authors, numEqual) {
     return list.join(", ");
 }
 
+function authorListEqualEnd(authors, numEqual) {
+    var list = [];
+    authors.forEach((name, i) => {
+        if (name == AyushTewari) {
+            name = '<span class="self-author">' + name + "</span>";
+        }
+        if (i > authors.length - numEqual -1) {
+            name = name + '*'
+        }
+        if (i == authors.length - 1) {
+            list.push("and " + name);
+        } else {
+            list.push(name + ",");
+        }
+    });
+    if (numEqual > 1) {
+        list.push("(* equal contribution)")
+    } 
+    return list.join(" ");
+}
+
 module.exports = {
     publications: [
+        {
+            title: "Learning to Render Novel Views from Wide-Baseline Stereo Pairs",
+            teaser: "assets/CVPR23.mp4",
+            authors: authorListEqualEnd([YilunDu, CameronSmith, AyushTewari, VincentSitzmann], 2),
+            conference: CVPR + " 2023",
+            data: ["[project page]".link("https://yilundu.github.io/wide_baseline/"), "[paper]".link("https://yilundu.github.io/wide_baseline/paper.pdf"), "[code]".link("https://github.com/yilundu/cross_attention_renderer")].join(" ")
+        },
         {
             title: "Seeing 3D Objects in a Single Image via Self-Supervised Static-Dynamic Disentanglement",
             teaser: "assets/seeing3d.gif",
