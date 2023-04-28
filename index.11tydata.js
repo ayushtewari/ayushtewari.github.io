@@ -6,6 +6,7 @@
 // lets us flexibly prepare the data and simplifies the template.
 const AyushTewari = "Ayush Tewari";
 const AbdallahDib = "Abdallah Dib".link("https://www.interdigital.com/talent/?id=38");
+const AbhimitraMeka = "Abhimitra Meka".link("https://www.meka.page/");
 const AdamFinkelstein = "Adam Finkelstein".link("https://www.cs.princeton.edu/~af/");
 const AdamKortylewski = "Adam Kortylewski".link("https://adamkortylewski.com/");
 const AdrienGaidon = "Adrien Gaidon".link("https://adriengaidon.com/");
@@ -38,6 +39,7 @@ const JonBarron = "Jonathan T. Barron".link("https://jonbarron.info/");
 const JunYanZhu = "Jun-Yan Zhu".link("https://www.cs.cmu.edu/~junyanz/");
 const JustusThies = "Justus Thies".link("https://justusthies.github.io/");
 const KalyanSunkavalli = "Kalyan Sunkavalli".link("http://www.kalyans.org/");
+const KrishnaMurthy = "Krishna Murthy Jatavallabhula".link("https://krrish94.github.io/");
 const KyleGenova = "Kyle Genova".link("https://www.kylegenova.com/");
 const MarcHabermann = "Marc Habermann".link("http://people.mpi-inf.mpg.de/~mhaberma/");
 const MarioFritz = "Mario Fritz".link("https://cispa.saarland/group/fritz/");
@@ -103,6 +105,7 @@ const ECCV = "ECCV"
 const ThreeDV = "3DV"
 const TPAMI = "TPAMI"
 const ICLR = "ICLR"
+const RSS = "RSS"
 
 function authorList(authors) {
     var list = [];
@@ -110,7 +113,7 @@ function authorList(authors) {
         if (name == AyushTewari) {
             name = '<span class="self-author">' + name + "</span>";
         }
-        if (i == authors.length - 1) {
+        if (i == authors.length - 1 && authors.length != 1) {
             list.push("and " + name);
         } else {
             list.push(name);
@@ -163,11 +166,25 @@ function authorListEqualEnd(authors, numEqual) {
 module.exports = {
     publications: [
         {
+            title: "Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold",
+            teaser: "assets/DragGAN.gif",
+            authors: authorList([XingangPan, AyushTewari, ThomasLeimkuehler, LingjieLiu, AbhimitraMeka, ChristianTheobalt]),
+            conference: SIGGRAPH + " 2023",
+            data: ["[project page]".link(""), "[paper]".link("")].join(" ")
+        },
+        {
             title: "Learning to Render Novel Views from Wide-Baseline Stereo Pairs",
             teaser: "assets/CVPR23.mp4",
             authors: authorListEqualEnd([YilunDu, CameronSmith, AyushTewari, VincentSitzmann], 2),
             conference: CVPR + " 2023",
             data: ["[project page]".link("https://yilundu.github.io/wide_baseline/"), "[paper]".link("https://yilundu.github.io/wide_baseline/paper.pdf"), "[code]".link("https://github.com/yilundu/cross_attention_renderer")].join(" ")
+        },
+        {
+            title: "ConceptFusion: Open-set Multimodal 3D Mapping",
+            teaser: "assets/conceptfusion.gif",
+            authors: authorList([KrishnaMurthy + " et al."]),
+            conference: RSS + " 2023",
+            data: ["[project page]".link("https://concept-fusion.github.io/"), "[paper]".link("https://arxiv.org/abs/2302.07241")].join(" ")
         },
         {
             title: "Seeing 3D Objects in a Single Image via Self-Supervised Static-Dynamic Disentanglement",
