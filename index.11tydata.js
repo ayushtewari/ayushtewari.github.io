@@ -91,7 +91,7 @@ const YifanWang = "Yifan Wang".link("https://yifita.github.io/");
 const YilunDu = "Yilun Du".link("https://yilundu.github.io/");
 const YuxiaoZhou = "Yuxiao Zhou".link("https://calciferzh.github.io/");
 const ZeyuJin = "Zeyu Jin".link("https://research.adobe.com/person/zeyu-jin/");
-
+const etal = "et. al"
 
 /////Conferences
 const ICCV = "ICCV"
@@ -113,7 +113,7 @@ function authorList(authors) {
         if (name == AyushTewari) {
             name = '<span class="self-author">' + name + "</span>";
         }
-        if (i == authors.length - 1 && authors.length != 1) {
+        if (i == authors.length - 1 && name != etal) {
             list.push("and " + name);
         } else {
             list.push(name);
@@ -182,7 +182,7 @@ module.exports = {
         {
             title: "ConceptFusion: Open-set Multimodal 3D Mapping",
             teaser: "assets/conceptfusion.gif",
-            authors: authorList([KrishnaMurthy + " et al."]),
+            authors: authorList([KrishnaMurthy, "...", AyushTewari, etal]),
             conference: RSS + " 2023",
             data: ["[project page]".link("https://concept-fusion.github.io/"), "[paper]".link("https://arxiv.org/abs/2302.07241")].join(" ")
         },
