@@ -170,7 +170,7 @@ module.exports = {
             teaser: "assets/DragGAN.gif",
             authors: authorList([XingangPan, AyushTewari, ThomasLeimkuehler, LingjieLiu, AbhimitraMeka, ChristianTheobalt]),
             conference: SIGGRAPH + " 2023",
-            data: ["[project page]".link(""), "[paper]".link("")].join(" ")
+            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/DragGAN/"), "[paper]".link("https://arxiv.org/abs/2305.10973"), "[code]".link("https://github.com/XingangPan/DragGAN")].join(" ")
         },
         {
             title: "Learning to Render Novel Views from Wide-Baseline Stereo Pairs",
