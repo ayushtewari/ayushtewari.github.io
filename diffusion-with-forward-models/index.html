@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision">
+  <meta name="keywords" content="diffusion, nerf">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" >
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://vcai.mpi-inf.mpg.de/projects/DragGAN/">
+            Drag Your GAN
+          </a>
+          <a class="navbar-item" href="https://yilundu.github.io/wide_baseline/">
+            Learning to Render Novel Views from Wide-Baseline Stereo Pairs
+          </a>
+          <a class="navbar-item" href="https://prafullsharma.net/see3d/">
+            Seeing 3D Objects in a Single Image
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://ayushtewari.com/">Ayush Tewari</a><sup><img src="static/resources/emoji/beaver.png" width="30"></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://tianweiy.github.io/">Tianwei Yin</a><sup><img src="static/resources/emoji/beaver.png" width="30"></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://georgecazenavette.github.io/">George Cazenavette</a><sup><img src="static/resources/emoji/beaver.png" width="30"></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.rezchikov.me/">Semon Rezchikov</a><sup><img src="static/resources/emoji/tiger.png" width="30"></sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://cocosci.mit.edu/josh">Joshua B. Tenenbaum</a><sup><img src="static/resources/emoji/beaver.png" width="30"></sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://people.csail.mit.edu/fredo/">Frédo Durand</a><sup><img src="static/resources/emoji/beaver.png" width="30"></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://billf.mit.edu/">William T. Freeman</a><sup><img src="static/resources/emoji/beaver.png" width="30"></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.vincentsitzmann.com/">Vincent Sitzmann</a><sup><img src="static/resources/emoji/beaver.png" width="30"></sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup><img src="static/resources/emoji/beaver.png" width="30"></sup>Massachusetts Institute of Technology,</span>
+            <span class="author-block"><sup><img src="static/resources/emoji/tiger.png" width="30"></sup>Princeton IAS</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="index.html"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fas fa-file-pdf"></i>-->
+<!--                  </span>-->
+<!--                  <span>Paper</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <span class="link-block">
+                <a href="index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://github.com/google/nerfies/releases/tag/0.1"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="far fa-images"></i>-->
+<!--                  </span>-->
+<!--                  <span>Data</span>-->
+<!--                  </a>-->
+<!--              </span>-->
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Denoising diffusion models have emerged as a powerful class of generative models capable of capturing the distributions of complex, real-world signals.
+            However, current approaches can only model distributions for which training samples are directly accessible, which is not the case in many real-world tasks.
+            In inverse graphics, for instance, we seek to sample from a distribution over 3D scenes consistent with an image but do not have access to ground-truth 3D scenes, only 2D images.
+          </p>
+          <p>
+            We present a new class of denoising diffusion probabilistic models that learn to sample from distributions of signals that are never observed directly, but instead are only measured through a known differentiable forward model that generates partial observations of the unknown signal.
+            To accomplish this, we directly integrate the forward model into the denoising process.
+            At test time, our approach enables us to sample from the distribution over underlying signals consistent with some partial observation.
+          </p>
+          <p>
+            We demonstrate the efficacy of our approach on three challenging computer vision tasks. For instance, in inverse graphics, we demonstrate that our model enables us to directly sample from the distribution 3D scenes consistent with a single 2D input image.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="row">
+        <h2 class="title is-3 has-text-centered">Inverse Graphics</h2>
+        <h2 class="subtitle has-text-justified">
+            We first show results on reconstructing 3D scenes from a single input image. Each result shows the input image (left), a smooth camera rendering from the reconstructed 3D scene (middle), and the corresponding depth map 
+            rendered from the recosntructed 3D scene (right). Note that our method can reconstruct high-quality geometry for the visible part, and can reconstruct plausible geometry and appearance even outside the visible 3D region, thanks to our generative model. 
+            Our model can directly reason about the uncertainties in the 3D space, conditioned on a single image.   <br><br>
+            We show results on two challenging datasets, RealEstate10k that includes complex unbounded indoor and outdoor scenes, and Co3D that includes 360 degree object-centric scenes. 
+        </h2>
+        <br>
+      </div>
+
+<!--      <div class="rows">-->
+        <div class="row">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/RealEstate.mp4"
+                type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Realesate10k
+          </h2><br>
+        </div>
+        <div class="row">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/Co3D.mp4"
+                type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Co3D
+          </h2><br>
+        </div>
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+      <div class="row">
+        <h2 class="title is-3 has-text-centered">Sample Diversity</h2>
+        <h2 class="subtitle has-text-justified">
+          Our model learns to reason about the uncertainty in the 3D reconstruction. 
+          We can sample from this space of uncertainty, i.e., we can sample multiple plausble scenes conditioned on the same context image.<br><br>
+          
+          Here, the input image is shown on left,  the middle cell shows results of our method, where in the middle of the video, we stop and explore multiple plausible scenes from that viewpoint.<br><br>
+          The cell on the right visualizes the pixel-wise variance across 10 sampled scenes. Note that close to the input view, there is very little uncertainty, and that the uncertainty is largest in the invisble parts of the scene. 
+          Our model even captures the monocular geometric uncertainties in the visible regions of the scene, for example, notice that away from the input camera view, the table and couch at different distances to the camera in the first example.
+          <br><br>
+          You can find complete videos of many different samples at the <a href="#variations">bottom of the page</a>.
+        </h2>
+        <br>
+      </div>
+
+<!--      <div class="rows">-->
+        <div class="row has-text-centered">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/Diversity-150_2.mp4"
+                type="video/mp4">
+          </video>
+
+          <h2 class="subtitle has-text-centered">
+            Example 1
+          </h2><br>
+        </div>
+        <div class="row has-text-centered">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/Diversity-5179_2.mp4"
+                type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Example 2
+          </h2><br>
+        </div>
+
+
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body is-max-desktop">-->
+      <div class="row">
+        <h2 class="title is-3 has-text-centered">Comparison to Other Methods</h2>
+
+        <h2 class="subtitle has-text-justified">
+          Our approach is the first to sample directly from the space of 3D scenes consistent with an image. Nevertheless, we compare to two state-of-the-art baselines. 
+          We significantly outperform them qualitatively as well as quantitatively, see the paper for details. All results used for comparisons are from models trained at 64 x 64 resolution. <br><br>
+
+          Left to Right: Input image, PixelNeRF, SparseFusion, Ours
+
+        </h2>
+        <br>
+      </div>
+      <div class="row has-text-centered">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/Comparisons%20Re_1.mp4"
+                type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Realestate10k
+          </h2><br>
+      </div>
+      <div class="row has-text-centered">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/Comparisons%20Co3D.mp4"
+                type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Co3D
+          </h2><br>
+      </div>
+
+<!--      <div class="rows">-->
+
+
+<!--      </div>-->
+      <div class="row">
+        <h2 class="title is-3 has-text-centered">Sampling Motion Fields</h2>
+        <h2 class="subtitle has-text-justified">
+          We further demonstrate two more applications of our model. Here, we show results for sampling multiple plausible motion fields consistent with a single static image. 
+          Our model can reason about potential motion that is consitent with the static input image. <br><br>
+
+          In this visualization, we apply the motion field continuously to the input image, in order to create a very short video clip.
+          Note that the motion field only describes local, small, motion. Please look closer and zoom in to observe the deformations (for example, in the left-most example, notice the motion on the face in the first sample, and on the hands in the second sample).
+          Left to right for each result: input image, sample 1, sample 2.
+          
+        </h2><br>
+        
+      </div>
+      <div class="row has-text-centered">
+          <video id="motion" autoplay muted loop playsinline width="100%">
+            <source src="videos/Motion.mp4"
+                type="video/mp4">
+          </video>
+      </div> <br><br>
+
+      <div class="row">
+        <a id="variations"></a>
+        <h2 class="title is-3 has-text-centered">More Variations of 3D Reconstructions</h2>
+        <h2 class="subtitle has-text-centered">
+            Each grid shows a distribution of scenes generated from the same context image.<br>
+            The right-most cell represents the per-pixel variance across samples.<br>
+            Notice how the variance increases as we move farther from the context image.
+        </h2>
+        <br>
+      </div>
+            <div class="row has-text-centered">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/var_big_grid_150.mp4"
+                type="video/mp4">
+          </video>
+
+        </div>
+      <div class="row has-text-centered">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/var_big_grid_300.mp4"
+                type="video/mp4">
+          </video>
+
+        </div>
+      <div class="row has-text-centered">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/var_big_grid_5119.mp4"
+                type="video/mp4">
+          </video>
+
+        </div>
+      <div class="row has-text-centered">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/var_big_grid_5145.mp4"
+                type="video/mp4">
+          </video>
+
+        </div>
+      <div class="row has-text-centered">
+          <video id="r10k" autoplay muted loop playsinline width="100%">
+            <source src="videos/var_big_grid_5179.mp4"
+                type="video/mp4">
+          </video>
+
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              Website source based on <a href="https://github.com/nerfies/nerfies.github.io">this source code</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
