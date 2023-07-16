@@ -413,7 +413,6 @@ module.exports = {
         {
             title: "Teaching AI to See the 3D World",
             venue: "CSAIL + Imagination in Action: AI Frontiers & Implications, 2023", 
-            data: "[slides]".link("")
         },
         {
             title: "Finding 3D Structure in Unstructured 2D Data",
