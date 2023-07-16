@@ -411,6 +411,11 @@ module.exports = {
     ],
     talks: [
         {
+            title: "Teaching AI to See the 3D World",
+            venue: "CSAIL + Imagination in Action: AI Frontiers & Implications, 2023", 
+            data: "[slides]".link("")
+        },
+        {
             title: "Finding 3D Structure in Unstructured 2D Data",
             venue: "Rank Prize Seminar, Oxford University, Adobe, 2022, Princeton University, 2023", 
             data: "[slides]".link("https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EXroiViFphtAmlF8Jv5NHoQBZlf3e1u3N_36TSDHQUIl1Q?e=0L7Jxq")
