@@ -11,6 +11,7 @@ const AdamFinkelstein = "Adam Finkelstein".link("https://www.cs.princeton.edu/~a
 const AdamKortylewski = "Adam Kortylewski".link("https://adamkortylewski.com/");
 const AdrienGaidon = "Adrien Gaidon".link("https://adriengaidon.com/");
 const AnneHarrington = "Anne Harrington".link("https://scholar.google.com/citations?user=7M9eSFMAAAAJ&hl=en");
+const AutomnePetitjean = "Automne Petitjean".link("");
 const BenMildenhall = "Ben Mildenhall".link("https://bmild.github.io/");
 const BerndBickel = "Bernd Bickel".link("http://berndbickel.com/");
 const BerntSchiele = "Bernt Schiele".link("https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/");
@@ -27,8 +28,10 @@ const FengXu = "Feng Xu".link("http://cgcad.thss.tsinghua.edu.cn/xufeng/");
 const FlorianBernard = "Florian Bernard".link("https://sites.google.com/site/fbernardpi/");
 const FredoDurand = "Fredo Durand".link("http://people.csail.mit.edu/fredo/");
 const GauravBharaj = "Gaurav Bharaj".link("http://gauravbharaj.com/");
+const GeorgeDrettakis = "George Drettakis".link("http://www-sop.inria.fr/members/George.Drettakis/");
 const GereonFox = "Gereon Fox".link("https://people.mpi-inf.mpg.de/~gfox/");
 const GordonWetzstein = "Gordon Wetzstein".link("https://stanford.edu/~gordonwz/");
+const GuillaumeCordonnier = "Guillaume Cordonnier".link("www-sop.inria.fr/members/Guillaume.Cordonnier/");
 const HansPeterPfister = "Hanspeter Pfister".link("https://vcg.seas.harvard.edu/people/hanspeter-pfister");
 const HansPeterSeidel = "Hans-Peter Seidel".link("https://people.mpi-inf.mpg.de/~hpseidel/english.html");
 const HyeongwooKim = "Hyeongwoo Kim".link("http://www.mpi-inf.mpg.de/~hkim/");
@@ -89,6 +92,7 @@ const WojciechMatusik = "Wojciech Matusik".link("https://cdfg.csail.mit.edu/wojc
 const XingangPan = "Xingang Pan".link("https://xingangpan.github.io//");
 const YifanWang = "Yifan Wang".link("https://yifita.github.io/");
 const YilunDu = "Yilun Du".link("https://yilundu.github.io/");
+const YohanPoirierGinter = "Yohan Poirier-Ginter".link("https://scholar.google.com/citations?user=nwjjHYcAAAAJ&hl=en");
 const YuxiaoZhou = "Yuxiao Zhou".link("https://calciferzh.github.io/");
 const ZeyuJin = "Zeyu Jin".link("https://research.adobe.com/person/zeyu-jin/");
 const etal = "et. al"
@@ -96,6 +100,7 @@ const etal = "et. al"
 /////Conferences
 const ICCV = "ICCV"
 const CVPR = "CVPR"
+const EGSR = "EGSR, Computer Graphics Forum"
 const SIGGRAPH = "SIGGRAPH"
 const SIGGRAPHASIA = "SIGGRAPH Asia"
 const TOG = "ACM Transactions on Graphics"
@@ -165,6 +170,13 @@ function authorListEqualEnd(authors, numEqual) {
 
 module.exports = {
     publications: [
+        {
+            title: "ModalNeRF: Neural Modal Analysis and Synthesis for Free-Viewpoint Navigation in Dynamically Vibrating Scenes",
+            teaser: "assets/ModalNeRF.mp4",
+            authors: authorList([AutomnePetitjean, YohanPoirierGinter, AyushTewari, GuillaumeCordonnier, GeorgeDrettakis]),
+            conference: EGSR + " 2023",
+            data: ["[project page]".link("https://hal.science/hal-04131503"), "[paper]".link("https://hal.science/hal-04131503v1/file/modal_nerf_submission.pdf")].join(" ")
+        },
         {
             title: "Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold",
             teaser: "assets/DragGAN.gif",
