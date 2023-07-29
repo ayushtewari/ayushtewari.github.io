@@ -59,7 +59,7 @@
     <ul class="talks">
       {% for talk in talks %}
         <li class="talk">
-            <span class="talk-title">{{ talk.title }}</span>, {{ talk.venue }}<br/>
+            <span class="talk-title">{{ talk.title }}</span>, {{ talk.venue | safe}}<br/>
             {{ talk.data | safe }}<br/>
         </li>
       {% endfor %}
