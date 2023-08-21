@@ -28,10 +28,11 @@ const FengXu = "Feng Xu".link("http://cgcad.thss.tsinghua.edu.cn/xufeng/");
 const FlorianBernard = "Florian Bernard".link("https://sites.google.com/site/fbernardpi/");
 const FredoDurand = "Fredo Durand".link("http://people.csail.mit.edu/fredo/");
 const GauravBharaj = "Gaurav Bharaj".link("http://gauravbharaj.com/");
+const GeorgeCazenavette = "George Cazenavette".link("https://georgecazenavette.github.io/");
 const GeorgeDrettakis = "George Drettakis".link("http://www-sop.inria.fr/members/George.Drettakis/");
 const GereonFox = "Gereon Fox".link("https://people.mpi-inf.mpg.de/~gfox/");
 const GordonWetzstein = "Gordon Wetzstein".link("https://stanford.edu/~gordonwz/");
-const GuillaumeCordonnier = "Guillaume Cordonnier".link("www-sop.inria.fr/members/Guillaume.Cordonnier/");
+const GuillaumeCordonnier = "Guillaume Cordonnier".link("https://www-sop.inria.fr/members/Guillaume.Cordonnier/");
 const HansPeterPfister = "Hanspeter Pfister".link("https://vcg.seas.harvard.edu/people/hanspeter-pfister");
 const HansPeterSeidel = "Hans-Peter Seidel".link("https://people.mpi-inf.mpg.de/~hpseidel/english.html");
 const HyeongwooKim = "Hyeongwoo Kim".link("http://www.mpi-inf.mpg.de/~hkim/");
@@ -69,6 +70,7 @@ const RicardoMartinBrualla = "Ricardo Martin-Brualla".link("http://ricardomartin
 const RohitPandey = "Rohit Pandey".link("https://research.google/people/106687/");
 const RuthRosenholtz = "Ruth Rosenholtz".link("http://persci.mit.edu/people/rosenholtz");
 const SeanFanello = "Sean Fanello".link("http://www.seanfanello.it/");
+const SemonRezchikov = "Semon Rezchikov".link("https://www.rezchikov.me/");
 const SergeyZakharov = "Sergey Zakharov".link("https://zakharos.github.io/");
 const SimonStent = "Simon Stent".link("https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en");
 const StephenLombardi = "Stepehen Lombardi".link("https://stephenlombardi.github.io/");
@@ -79,6 +81,7 @@ const TarunYenamandra = "Tarun Yenamandra".link("https://vision.in.tum.de/member
 const ThaboBeeler = "Thabo Beeler".link("https://thabobeeler.com/");
 const ThomasVetter = "Thomas Vetter".link("https://gravis.dmi.unibas.ch/");
 const ThomasLeimkuehler = "Thomas Leimkuehler".link("https://people.mpi-inf.mpg.de/~tleimkue/");
+const TianweiYin = "Tianwei Yin".link("https://tianweiy.github.io/");
 const TimoBolkart = "Timo Bolkart".link("https://ps.is.mpg.de/person/tbolkart");
 const TimWeyrich = "Tim Weyrich".link("http://reality.cs.ucl.ac.uk/weyrich.html");
 const TomasSimon = "Tomas Simon".link("http://www.cs.cmu.edu/~tsimon/");
@@ -170,6 +173,20 @@ function authorListEqualEnd(authors, numEqual) {
 
 module.exports = {
     publications: [
+        {
+            title: " Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision",
+            teaser: "assets/diffusion_teaser.mp4",
+            authors: authorListEqual([AyushTewari, TianweiYin, GeorgeCazenavette, SemonRezchikov, JoshTenenbaum, FredoDurand, WilliamTFreeman, VincentSitzmann], 2),
+            // conference:  + " 2023",
+            data: ["[project page]".link("https://diffusion-with-forward-models.github.io/"), "[paper]".link("https://diffusion-with-forward-models.github.io/diffusion-forward-paper.pdf")].join(" ")
+        },
+        {
+            title: "Learning to Render Novel Views from Wide-Baseline Stereo Pairs FlowCam: Training Generalizable 3D Radiance Fields without Camera Poses via Pixel-Aligned Scene Flow",
+            teaser: "assets/flow_teaser.mp4",
+            authors: authorList([CameronSmith, YilunDu, AyushTewari, VincentSitzmann]),
+            // conference:  + " 2023",
+            data: ["[project page]".link("https://cameronosmith.github.io/flowcam/"), "[paper]".link("https://arxiv.org/abs/2306.00180"), "[code]".link("https://github.com/cameronosmith/FlowCam")].join(" ")
+        },
         {
             title: "ModalNeRF: Neural Modal Analysis and Synthesis for Free-Viewpoint Navigation in Dynamically Vibrating Scenes",
             teaser: "assets/ModalNeRF.mp4",
