@@ -429,8 +429,8 @@ module.exports = {
     talks: [
         {
             title: "Structured Generative Models",
-            venue: "John Hopkins University, 2023",
-            data: "[slides]".link("https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EfugUlGtF6JCoo3TFfzS0ZsBuNUa1HvG8rsixO73BTPp1A?e=skWF9G"),
+            venue: "John Hopkins University, CMU, Reality Labs Research, 2023",
+            data: "[slides]".link("https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/ETpPlRe56ZBKoglFgVwOysABmW1aZhAo1Y0tt47dMHe7CQ?e=0YpeWr"),
         },
         {
             title: "Teaching AI to See the 3D World",
