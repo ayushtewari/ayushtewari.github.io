@@ -181,7 +181,7 @@ module.exports = {
             data: ["[project page]".link("https://diffusion-with-forward-models.github.io/"), "[paper]".link("https://diffusion-with-forward-models.github.io/diffusion-forward-paper.pdf")].join(" ")
         },
         {
-            title: "Learning to Render Novel Views from Wide-Baseline Stereo Pairs FlowCam: Training Generalizable 3D Radiance Fields without Camera Poses via Pixel-Aligned Scene Flow",
+            title: "FlowCam: Training Generalizable 3D Radiance Fields without Camera Poses via Pixel-Aligned Scene Flow",
             teaser: "assets/flow_teaser.mp4",
             authors: authorList([CameronSmith, YilunDu, AyushTewari, VincentSitzmann]),
             // conference:  + " 2023",
