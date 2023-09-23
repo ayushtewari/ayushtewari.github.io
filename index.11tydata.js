@@ -446,7 +446,7 @@ module.exports = {
     talks: [
         {
             title: "Structured Generative Models",
-            venue: "John Hopkins University, CMU, Reality Labs Research, 2023",
+            venue: "John Hopkins University, CMU, Meta Reality Labs Research, Princeton, 2023",
             data: "[slides]".link("https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/ETpPlRe56ZBKoglFgVwOysABmW1aZhAo1Y0tt47dMHe7CQ?e=0YpeWr"),
         },
         {
