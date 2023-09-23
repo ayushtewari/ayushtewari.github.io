@@ -42,6 +42,7 @@ const JoshTenenbaum = "Joshua B. Tenenbaum".link("http://web.mit.edu/cocosci/jos
 const JonBarron = "Jonathan T. Barron".link("https://jonbarron.info/");
 const JunYanZhu = "Jun-Yan Zhu".link("https://www.cs.cmu.edu/~junyanz/");
 const JustusThies = "Justus Thies".link("https://justusthies.github.io/");
+const KartikTeotia = "Kartik Teotia".link("");
 const KalyanSunkavalli = "Kalyan Sunkavalli".link("http://www.kalyans.org/");
 const KrishnaMurthy = "Krishna Murthy Jatavallabhula".link("https://krrish94.github.io/");
 const KyleGenova = "Kyle Genova".link("https://www.kylegenova.com/");
@@ -72,6 +73,7 @@ const RuthRosenholtz = "Ruth Rosenholtz".link("http://persci.mit.edu/people/rose
 const SeanFanello = "Sean Fanello".link("http://www.seanfanello.it/");
 const SemonRezchikov = "Semon Rezchikov".link("https://www.rezchikov.me/");
 const SergeyZakharov = "Sergey Zakharov".link("https://zakharos.github.io/");
+const ShunsukeSaito = "Shunsuke Saito".link("https://shunsukesaito.github.io/")
 const SimonStent = "Simon Stent".link("https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en");
 const StephenLombardi = "Stepehen Lombardi".link("https://stephenlombardi.github.io/");
 const StefanieWuhrer = "Stefanie Wuhrer".link("http://morpheo.inrialpes.fr/~wuhrer/");
@@ -114,6 +116,7 @@ const ThreeDV = "3DV"
 const TPAMI = "TPAMI"
 const ICLR = "ICLR"
 const RSS = "RSS"
+const NEURIPS = "NeurIPS"
 
 function authorList(authors) {
     var list = [];
@@ -141,13 +144,13 @@ function authorListEqual(authors, numEqual) {
         if (i == authors.length - 1) {
             list.push("and " + name);
         } else {
-            list.push(name);
+            list.push(name + ",");
         }
     });
     if (numEqual > 1) {
         list.push("(* equal contribution)")
     }
-    return list.join(", ");
+    return list.join(" ");
 }
 
 function authorListEqualEnd(authors, numEqual) {
@@ -177,15 +180,29 @@ module.exports = {
             title: " Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision",
             teaser: "assets/diffusion_teaser.mp4",
             authors: authorListEqual([AyushTewari, TianweiYin, GeorgeCazenavette, SemonRezchikov, JoshTenenbaum, FredoDurand, WilliamTFreeman, VincentSitzmann], 2),
-            // conference:  + " 2023",
+            conference: NEURIPS + " 2023 <font color=\"red\"> (Spotlight) </font>",
             data: ["[project page]".link("https://diffusion-with-forward-models.github.io/"), "[paper]".link("https://diffusion-with-forward-models.github.io/diffusion-forward-paper.pdf")].join(" ")
         },
         {
             title: "FlowCam: Training Generalizable 3D Radiance Fields without Camera Poses via Pixel-Aligned Scene Flow",
             teaser: "assets/flow_teaser.mp4",
             authors: authorList([CameronSmith, YilunDu, AyushTewari, VincentSitzmann]),
-            // conference:  + " 2023",
+            conference: NEURIPS + " 2023",
             data: ["[project page]".link("https://cameronosmith.github.io/flowcam/"), "[paper]".link("https://arxiv.org/abs/2306.00180"), "[code]".link("https://github.com/cameronosmith/FlowCam")].join(" ")
+        },
+        {
+            title: "Diffusion Posterior Illumination for Ambiguity-aware Inverse Rendering",
+            teaser: "assets/sigasia_light.mp4",
+            authors: authorList([LinjieLyu, AyushTewari, MarcHabermann, ShunsukeSaito, MichaelZollhoefer, ThomasLeimkuehler, ChristianTheobalt]),
+            conference: SIGGRAPHASIA + " 2023",
+            data: ["[project page]".link(""), "[paper]".link("")].join(" ")
+        },
+        {
+            title: "AvatarStudio: Text-driven Editing of 3D Dynamic Human Head Avatars",
+            teaser: "assets/AvatarStudio.gif",
+            authors: authorList([MohitMendiratta, XingangPan, MohamedElgharib, KartikTeotia, MallikarjunBR, AyushTewari, VladislavGolyanik, AdamKortylewski, ChristianTheobalt]),
+            conference: SIGGRAPHASIA + " 2023",
+            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/AvatarStudio/"), "[paper]".link("https://arxiv.org/abs/2306.00547")].join(" ")
         },
         {
             title: "ModalNeRF: Neural Modal Analysis and Synthesis for Free-Viewpoint Navigation in Dynamically Vibrating Scenes",
