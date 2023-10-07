@@ -181,7 +181,7 @@ module.exports = {
             teaser: "assets/diffusion_teaser.mp4",
             authors: authorListEqual([AyushTewari, TianweiYin, GeorgeCazenavette, SemonRezchikov, JoshTenenbaum, FredoDurand, WilliamTFreeman, VincentSitzmann], 2),
             conference: NEURIPS + " 2023 <font color=\"red\"> (Spotlight) </font>",
-            data: ["[project page]".link("https://diffusion-with-forward-models.github.io/"), "[paper]".link("https://diffusion-with-forward-models.github.io/diffusion-forward-paper.pdf")].join(" ")
+            data: ["[project page]".link("https://diffusion-with-forward-models.github.io/"), "[paper]".link("https://diffusion-with-forward-models.github.io/diffusion-forward-paper.pdf"), "[code]".link("https://github.com/ayushtewari/DFM/tree/main")].join(" ")
         },
         {
             title: "FlowCam: Training Generalizable 3D Radiance Fields without Camera Poses via Pixel-Aligned Scene Flow",
