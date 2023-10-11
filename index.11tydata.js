@@ -159,7 +159,7 @@ function authorListEqualEnd(authors, numEqual) {
         if (name == AyushTewari) {
             name = '<span class="self-author">' + name + "</span>";
         }
-        if (i > authors.length - numEqual -1) {
+        if (i > authors.length - numEqual - 1) {
             name = name + '*'
         }
         if (i == authors.length - 1) {
@@ -170,7 +170,7 @@ function authorListEqualEnd(authors, numEqual) {
     });
     if (numEqual > 1) {
         list.push("(* equal contribution)")
-    } 
+    }
     return list.join(" ");
 }
 
@@ -195,7 +195,7 @@ module.exports = {
             teaser: "assets/sigasia_light.mp4",
             authors: authorList([LinjieLyu, AyushTewari, MarcHabermann, ShunsukeSaito, MichaelZollhoefer, ThomasLeimkuehler, ChristianTheobalt]),
             conference: SIGGRAPHASIA + " 2023",
-            data: ["[project page]".link(""), "[paper]".link("")].join(" ")
+            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/2023-DPE/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/2023-DPE/papers/main_paper.pdf")].join(" ")
         },
         {
             title: "AvatarStudio: Text-driven Editing of 3D Dynamic Human Head Avatars",
@@ -277,7 +277,7 @@ module.exports = {
         {
             title: "Advances in Neural Rendering",
             teaser: "assets/NeuralRendering.png",
-            authors: authorListEqual([AyushTewari,  JustusThies, BenMildenhall, PratulSrinivasan, EdgarTretschk, YifanWang, ChristophLassner, VincentSitzmann, RicardoMartinBrualla, StephenLombardi, TomasSimon, ChristianTheobalt, MatthiasNiessner, JonBarron, GordonWetzstein, MichaelZollhoefer, VladislavGolyanik], 4),
+            authors: authorListEqual([AyushTewari, JustusThies, BenMildenhall, PratulSrinivasan, EdgarTretschk, YifanWang, ChristophLassner, VincentSitzmann, RicardoMartinBrualla, StephenLombardi, TomasSimon, ChristianTheobalt, MatthiasNiessner, JonBarron, GordonWetzstein, MichaelZollhoefer, VladislavGolyanik], 4),
             conference: STAR + " 2022",
             data: ["[paper]".link("https://arxiv.org/abs/2111.05849")].join(" ")
         },
@@ -451,60 +451,60 @@ module.exports = {
         },
         {
             title: "Teaching AI to See the 3D World",
-            venue: "CSAIL + Imagination in Action: AI Frontiers & Implications, 2023".link("https://www.imaginationinaction.co/ai-frontiers-and-implications"), 
+            venue: "CSAIL + Imagination in Action: AI Frontiers & Implications, 2023".link("https://www.imaginationinaction.co/ai-frontiers-and-implications"),
         },
         {
             title: "Finding 3D Structure in Unstructured 2D Data",
-            venue: "Rank Prize Seminar, Oxford University, Adobe, 2022, Princeton University, 2023", 
+            venue: "Rank Prize Seminar, Oxford University, Adobe, 2022, Princeton University, 2023",
             data: "[slides]".link("https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EXroiViFphtAmlF8Jv5NHoQBZlf3e1u3N_36TSDHQUIl1Q?e=0L7Jxq")
         },
         {
             title: "Learning 3D Generative Models from 2D Data",
-            venue: "Dagstuhl Seminar, 2022", 
+            venue: "Dagstuhl Seminar, 2022",
             data: "[slides]".link("https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EVSkLtzYm99OhjnadwRO_SQB5JT9qZO6o2WLY5zFAqdJPQ?e=rf8GY0")
         },
         {
             title: "Synthesis of Portrait Images with 3D Control",
-            venue: "CVPR NTIRE workshop 2021", 
+            venue: "CVPR NTIRE workshop 2021",
             data: "[slides]".link("https://nextcloud.mpi-inf.mpg.de/index.php/s/H2fJet3mqjdjyKy")
         },
         {
             title: "Self-Supervised 3D Digitization of Faces",
-            venue: "MIT vision and graphics seminar 2021", 
+            venue: "MIT vision and graphics seminar 2021",
             data: "[video]".link("https://www.youtube.com/watch?v=wyuMeSlTTfI")
         },
         {
             title: "GANs with 3D Control",
-            venue: "SIGGRAPH course 2021", 
+            venue: "SIGGRAPH course 2021",
             data: "[video]".link("https://www.youtube.com/watch?v=otly9jcZ0Jg&t=1863s")
         },
         {
             title: "PIE: Portrait Image Embedding for Semantic Control",
-            venue: "SIGGRAPH Asia 2020", 
+            venue: "SIGGRAPH Asia 2020",
             data: "[video]".link("https://youtu.be/Q0MS4szpUf4")
         },
         {
             title: "StyleRig: Rigging StyleGAN for 3D Control over Portrait Images",
-            venue: "CVPR 2020", 
+            venue: "CVPR 2020",
             data: "[video]".link("https://www.youtube.com/watch?v=VPHJk-Nm9vM")
         },
         {
             title: "Neural Rendering Fundamentals",
-            venue: "CVPR 2020 tutorial", 
+            venue: "CVPR 2020 tutorial",
             data: "[video]".link("https://www.youtube.com/watch?v=LCTYRqW-ne8&t=890s")
         },
         {
             title: "FML: Face Model Learning from Videos",
-            venue: "CVPR 2019", 
+            venue: "CVPR 2019",
             data: "[video]".link("https://www.youtube.com/watch?v=fNlMGWm7bbk&t=362s")
         },
         {
             title: "Self-supervised Multi-level Face Model Learning for Monocular Reconstruction at over 250 Hz",
-            venue: "CVPR 2018", 
+            venue: "CVPR 2018",
             data: "[video]".link("https://youtu.be/x18WUuBNK7E?t=2030")
-        },        {
+        }, {
             title: "MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction",
-            venue: "ICCV 2017", 
+            venue: "ICCV 2017",
             data: "[video]".link("https://www.youtube.com/watch?v=NnWaNaq_86M")
         },
     ],
