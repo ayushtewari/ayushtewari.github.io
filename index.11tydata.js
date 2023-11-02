@@ -54,7 +54,7 @@ const MatthiasNiessner = "Matthias Niessner".link("http://www.niessnerlab.org/me
 const MichaelZollhoefer = "Michael Zollhoefer".link("https://zollhoefer.com/");
 const MohamedElgharib = "Mohamed Elgharib".link("https://people.mpi-inf.mpg.de/~elgharib/");
 const MohitMendiratta = "Mohit Mendiratta".link("http://people.mpi-inf.mpg.de/~mmendira/");
-const LinjieLyu = "Linjie Lyu".link("http://people.mpi-inf.mpg.de/~atewari/");
+const LinjieLyu = "Linjie Lyu".link("http://people.mpi-inf.mpg.de/~llyu/");
 const LingjieLiu = "Lingjie Liu".link("https://lingjie0206.github.io/");
 const LouisChevallier = "Louis Chevallier".link("https://scholar.google.fr/citations?user=hC_BTU8AAAAJ&hl=en");
 const MarkHamilton = "Mark Hamilton".link("https://mhamilton.net/");
@@ -233,7 +233,7 @@ module.exports = {
             data: ["[project page]".link("https://concept-fusion.github.io/"), "[paper]".link("https://arxiv.org/abs/2302.07241")].join(" ")
         },
         {
-            title: "Seeing 3D Objects in a Single Image via Self-Supervised Static-Dynamic Disentanglement",
+            title: "Neural Groundplans: Persistent Neural Scene Representations from a Single Image",
             teaser: "assets/seeing3d.gif",
             authors: authorListEqual([PrafullSharma, AyushTewari, YilunDu, SergeyZakharov, RaresAmbrus, AdrienGaidon, WilliamTFreeman, FredoDurand, JoshTenenbaum, VincentSitzmann], 0),
             conference: ICLR + " 2023",
