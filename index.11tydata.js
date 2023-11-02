@@ -160,7 +160,7 @@ function authorListEqualEnd(authors, numEqual) {
             name = '<span class="self-author">' + name + "</span>";
         }
         if (i > authors.length - numEqual - 1) {
-            name = name + '*'
+            name = name + '&#8224;'
         }
         if (i == authors.length - 1) {
             list.push("and " + name);
@@ -169,7 +169,7 @@ function authorListEqualEnd(authors, numEqual) {
         }
     });
     if (numEqual > 1) {
-        list.push("(* equal contribution)")
+        list.push("(&#8224; equal advising)")
     }
     return list.join(" ");
 }
