@@ -22,6 +22,7 @@ const ChristianTheobalt = "Christian Theobalt".link("https://people.mpi-inf.mpg.
 const ChristophLassner = "Christoph Lassner".link("https://christophlassner.de/");
 const DanBGoldman = "Dan B Goldman".link("https://www.danbgoldman.com/home/");
 const DanielCremers = "Daniel Cremers".link("https://vision.in.tum.de/members/cremers");
+const DavidCharatan = "David Charatan".link("https://davidcharatan.com/#/");
 const EdgarTretschk = "Edith Tretschk".link("http://people.mpi-inf.mpg.de/~tretschk/");
 const EliShectman = "Eli Schectman".link("https://research.adobe.com/person/eli-shechtman/");
 const FengXu = "Feng Xu".link("http://cgcad.thss.tsinghua.edu.cn/xufeng/");
@@ -50,6 +51,7 @@ const MarcHabermann = "Marc Habermann".link("http://people.mpi-inf.mpg.de/~mhabe
 const MarioFritz = "Mario Fritz".link("https://cispa.saarland/group/fritz/");
 const MallikarjunBR = "Mallikarjun B R".link("http://people.mpi-inf.mpg.de/~mbr");
 const ManeeshAgrawala = "Maneesh Agrawala".link("http://graphics.stanford.edu/~maneesh/");
+const MarcPollefeys = "Marc Pollefeys".link("https://people.inf.ethz.ch/marc.pollefeys/");
 const MatthiasNiessner = "Matthias Niessner".link("http://www.niessnerlab.org/members/matthias_niessner/profile.html");
 const MichaelZollhoefer = "Michael Zollhoefer".link("https://zollhoefer.com/");
 const MohamedElgharib = "Mohamed Elgharib".link("https://people.mpi-inf.mpg.de/~elgharib/");
@@ -89,6 +91,7 @@ const TimWeyrich = "Tim Weyrich".link("http://reality.cs.ucl.ac.uk/weyrich.html"
 const TomasSimon = "Tomas Simon".link("http://www.cs.cmu.edu/~tsimon/");
 const VasshaDutell = "Vasha DuTell".link("https://vashadutell.com/");
 const VincentSitzmann = "Vincent Sitzmann".link("http://web.stanford.edu/~sitzmann/");
+const VincentVanDerBrugge = "Vincent van der Brugge".link("https://linkedin.com/in/vincent-van-der-brugge");
 const VladislavGolyanik = "Vladislav Golyanik".link("http://people.mpi-inf.mpg.de/~golyanik/");
 const WeipengXu = "Weipeng Xu".link("http://people.mpi-inf.mpg.de/~wxu/");
 const WilliamTFreeman = "William T. Freeman".link("https://billf.mit.edu/");
@@ -105,6 +108,7 @@ const etal = "et. al"
 /////Conferences
 const ICCV = "ICCV"
 const CVPR = "CVPR"
+const IROS = "IROS"
 const EGSR = "EGSR, Computer Graphics Forum"
 const SIGGRAPH = "SIGGRAPH"
 const SIGGRAPHASIA = "SIGGRAPH Asia"
@@ -182,6 +186,27 @@ module.exports = {
             authors: authorList([LinjieLyu, AyushTewari, MarcHabermann, ShunsukeSaito, MichaelZollhoefer, ThomasLeimkuehler, ChristianTheobalt]),
             conference: SIGGRAPHASIA + " 2024",
             data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/papers/main_paper.pdf")].join(" ")
+        },
+        {
+            title: "FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent",
+            teaser: "assets/flowmap.mp4",
+            authors: authorListEqual([CameronSmith, DavidCharatan, AyushTewari, VincentSitzmann], 2),
+            conference: ThreeDV + " 2024",
+            data: ["[project page]".link("https://vincentvanderbrugge.github.io/pickscan.github.io/"), "[paper]".link("https://arxiv.org/pdf/2411.11196v1")].join(" ")
+        },
+        {
+            title: "PickScan: Object discovery and reconstruction from handheld interactions",
+            teaser: "assets/Pickscan.mp4",
+            authors: authorListEqualEnd([VincentVanDerBrugge, MarcPollefeys, JoshTenenbaum, KrishnaMurthy, AyushTewari], 2),
+            conference: IROS + " 2024",
+            data: ["[project page]".link("https://vincentvanderbrugge.github.io/pickscan.github.io/"), "[paper]".link("https://arxiv.org/pdf/2411.11196v1")].join(" ")
+        },
+        {
+            title: "COCO-Periph: Bridging the Gap Between Human and Machine Perception in the Periphery",
+            teaser: "assets/cocoperiph.png",
+            authors: authorListEqual([AnneHarrington, VasshaDutell, MarkHamilton, AyushTewari, SimonStent, WilliamTFreeman, RuthRosenholtz]),
+            conference: ICLR + " 2024",
+            data: ["[project page]".link("https://github.com/RosenholtzLab/COCOPeriph"), "[paper]".link("https://openreview.net/forum?id=MiRPBbQNHv")].join(" ")
         },
         {
             title: " Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision",
