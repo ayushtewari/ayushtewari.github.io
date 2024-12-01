@@ -177,6 +177,13 @@ function authorListEqualEnd(authors, numEqual) {
 module.exports = {
     publications: [
         {
+            title: "Manifold Sampling for Differentiable Uncertainty in Radiance Fields",
+            teaser: "assets/Manifoldsigasia25.jpeg",
+            authors: authorList([LinjieLyu, AyushTewari, MarcHabermann, ShunsukeSaito, MichaelZollhoefer, ThomasLeimkuehler, ChristianTheobalt]),
+            conference: SIGGRAPHASIA + " 2024",
+            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/papers/main_paper.pdf")].join(" ")
+        },
+        {
             title: " Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision",
             teaser: "assets/diffusion_teaser.mp4",
             authors: authorListEqual([AyushTewari, TianweiYin, GeorgeCazenavette, SemonRezchikov, JoshTenenbaum, FredoDurand, WilliamTFreeman, VincentSitzmann], 2),
