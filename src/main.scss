@@ -108,3 +108,14 @@ ul {
     padding-bottom: 1px;
 }
 
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+}
+
+
