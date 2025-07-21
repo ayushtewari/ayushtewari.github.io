@@ -56,6 +56,7 @@ const MatthiasNiessner = "Matthias Niessner".link("http://www.niessnerlab.org/me
 const MichaelZollhoefer = "Michael Zollhoefer".link("https://zollhoefer.com/");
 const MohamedElgharib = "Mohamed Elgharib".link("https://people.mpi-inf.mpg.de/~elgharib/");
 const MohitMendiratta = "Mohit Mendiratta".link("http://people.mpi-inf.mpg.de/~mmendira/");
+const NancyKanwisher = "Nancy Kanwisher".link("https://mcgovern.mit.edu/profile/nancy-kanwisher/");
 const LinjieLyu = "Linjie Lyu".link("http://people.mpi-inf.mpg.de/~llyu/");
 const LingjieLiu = "Lingjie Liu".link("https://lingjie0206.github.io/");
 const LouisChevallier = "Louis Chevallier".link("https://scholar.google.fr/citations?user=hC_BTU8AAAAJ&hl=en");
@@ -85,10 +86,12 @@ const TarunYenamandra = "Tarun Yenamandra".link("https://vision.in.tum.de/member
 const ThaboBeeler = "Thabo Beeler".link("https://thabobeeler.com/");
 const ThomasVetter = "Thomas Vetter".link("https://gravis.dmi.unibas.ch/");
 const ThomasLeimkuehler = "Thomas Leimkuehler".link("https://people.mpi-inf.mpg.de/~tleimkue/");
+const ThomasIConnell = "Thomas P. O’Connell".link("https://scholar.google.com/citations?user=lNQeAXEAAAAJ&hl=en&oi=ao");
 const TianweiYin = "Tianwei Yin".link("https://tianweiy.github.io/");
 const TimoBolkart = "Timo Bolkart".link("https://ps.is.mpg.de/person/tbolkart");
 const TimWeyrich = "Tim Weyrich".link("http://reality.cs.ucl.ac.uk/weyrich.html");
 const TomasSimon = "Tomas Simon".link("http://www.cs.cmu.edu/~tsimon/");
+const TylerBonnen = "Tyler Bonnen".link("tzler.github.io/");
 const VasshaDutell = "Vasha DuTell".link("https://vashadutell.com/");
 const VincentSitzmann = "Vincent Sitzmann".link("http://web.stanford.edu/~sitzmann/");
 const VincentVanDerBrugge = "Vincent van der Brugge".link("https://linkedin.com/in/vincent-van-der-brugge");
@@ -101,6 +104,7 @@ const XingangPan = "Xingang Pan".link("https://xingangpan.github.io//");
 const YifanWang = "Yifan Wang".link("https://yifita.github.io/");
 const YilunDu = "Yilun Du".link("https://yilundu.github.io/");
 const YohanPoirierGinter = "Yohan Poirier-Ginter".link("https://scholar.google.com/citations?user=nwjjHYcAAAAJ&hl=en");
+const YoniFriedman = "Yoni Friedman".link("https://www.yonifriedman.com/");
 const YuxiaoZhou = "Yuxiao Zhou".link("https://calciferzh.github.io/");
 const ZeyuJin = "Zeyu Jin".link("https://research.adobe.com/person/zeyu-jin/");
 const etal = "et. al"
@@ -110,6 +114,7 @@ const ICCV = "ICCV"
 const CVPR = "CVPR"
 const IROS = "IROS"
 const EGSR = "EGSR, Computer Graphics Forum"
+const OpenMind = "Open Mind"
 const SIGGRAPH = "SIGGRAPH"
 const SIGGRAPHASIA = "SIGGRAPH Asia"
 const TOG = "ACM Transactions on Graphics"
@@ -180,6 +185,13 @@ function authorListEqualEnd(authors, numEqual) {
 
 module.exports = {
     publications: [
+        {
+            title: "Approximating Human-Level 3D Visual Inferences With Deep Neural Networks",
+            teaser: "assets/openmind.png",
+            authors: authorList([ThomasIConnell, TylerBonnen, YoniFriedman, AyushTewari, VincentSitzmann, JoshTenenbaum, NancyKanwisher]),
+            conference: OpenMind + " 2025",
+            data: ["[paper]".link("https://direct.mit.edu/opmi/article/doi/10.1162/opmi_a_00189/128124")].join(" ")
+        },
         {
             title: "Manifold Sampling for Differentiable Uncertainty in Radiance Fields",
             teaser: "assets/Manifoldsigasia25.jpeg",
