@@ -266,6 +266,29 @@ a {
         min-height: 100%;
       }
 
+/* Small screens: pull the photo into the normal flow, centered, readable */
+@media (max-width: 768px) {
+  #profile-photo {
+    float: none !important;            /* cancel Tufte float */
+    clear: both !important;
+    width: min(60vw, 280px) !important;/* sensible size on phones */
+    margin: 1rem auto 1.5rem !important;
+    position: static !important;       /* avoid weird margin offsets */
+  }
+  /* If tufte.css applies negative margins to marginnote, neutralize them */
+  #profile-photo.marginnote {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  /* Ensure image scales correctly */
+  #profile-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
 /* --- End of Styles --- */
     </style>
   </head>
