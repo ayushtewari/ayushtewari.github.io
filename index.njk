@@ -1,73 +1,93 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ayush Tewari</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ayush Tewari is an Assistant Professor at the University of Cambridge">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <table>
-      <tbody>
-        <tr>
-          <td class="bio">
-            <h1 class="name ">Ayush Tewari</h1>
-            <div class="email ">at2164@cam.ac.uk</div>
-            <p>
-            {# <i>I will join the <a href="https://www.eng.cam.ac.uk/">Department of Engineering</a> at the <a href="https://www.cam.ac.uk/">University of Cambridge</a> as an Assistant Professor in 2025 and will be looking for PhD students.  #}
-            {# Join me to understand and build models of visual perception. Feel free to reach out for more details. Apply <a href="https://www.postgraduate.study.cam.ac.uk/courses/directory/egegpdpeg">here</a>. </i><br/><br/> #}
-          
-            I am an assistant professor at University of Cambridge. I was previously a postdoctoral researcher at MIT CSAIL with <a href="http://billf.mit.edu">Bill Freeman</a>, <a href="http://web.mit.edu/cocosci/josh.html">Josh Tenenbaum</a>, and <a href="https://www.vincentsitzmann.com/">Vincent Sitzmann</a>. 
-             I completed my Ph.D. at the <a href="https://mpi-inf.mpg.de/departments/visual-computing-and-artificial-intelligence/">Max Planck Institute for Informatics</a> with <a href="https://www.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>.             
-             <!--I received an <a href="https://www.mpg.de/prizes/otto-hahn-medal">Otto Hahn Medal</a> from the Max Planck Society for my PhD.-->
-             My research interests lie in visual perception. I develop methods that infer rich structured representations of the visual world from images and videos, much like the mental models humans infer to interact with and navigate their surroundings.
-             Check out some <a href="#talks">recent talks</a> for an overview. <br/><br/>
-             {{ metadata | safe }}  <a href="#publications" >[Publications]</a>  <a href="#talks" >[Talks]</a>              </p>
-          </td>
-          <td class="photo">
-            <img src="assets/photo.jpg" width="100%"> <br/>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <h2 id="publications">Publications</h2>
-    <ul class="publications">
-      {% for pub in publications %}
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo">
-                    {%- if 'mp4' in pub.teaser %}
-                      <video width="100%" autoplay loop muted>
-                        <source src={{ pub.teaser }} type="video/mp4" />
-                      </video>
-                    {%- else -%}
-                      <img src={{ pub.teaser }} width="100%">
-                    {%- endif -%}  
-                  </td>
-                  <td>
-                    <span class="pub-title">{{ pub.title }}</span><br/>
-                    {{ pub.conference | safe }} <br/>
-                    <span>{{ pub.authors | safe }}<br/>
-                    {{ pub.data | safe }}<br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      {% endfor %}
-    </ul>
-    <h2 id="talks">Talks</h2>
-    <ul class="talks">
-      {% for talk in talks %}
-        <li class="talk">
-            <span class="talk-title">{{ talk.title }}</span>, {{ talk.venue | safe}}<br/>
-            {{ talk.data | safe }}<br/>
-        </li>
-      {% endfor %}
-    </ul>
+{% extends "base.njk" %}
 
-  </body>
-</html>
+{% block title %}
+    Ayush Tewari
+{% endblock %}
+
+{% block content %}
+    <h1>Ayush Tewari</h1>
+    <p class="subtitle">at2164@cam.ac.uk</p>
+
+    <figure class="marginnote" style="width: 17%;">
+        <img src="assets/photo.jpg" alt="A photo of Ayush Tewari"/>
+    </figure>
+      
+    <section>
+        <p>I am an Assistant Professor at the University of Cambridge. My research interests lie in visual perception, and specifically in building world models. I develop methods that infer rich structured representations of the visual world from images and videos, much like the mental models humans infer to interact with and navigate their surroundings.<br/><br/>        
+          
+          I was previously a postdoctoral researcher at MIT CSAIL with <a href="http://billf.mit.edu">Bill Freeman</a>, <a href="http://web.mit.edu/cocosci/josh.html">Josh Tenenbaum</a>, and <a href="https://www.vincentsitzmann.com/">Vincent Sitzmann</a>. I completed my Ph.D. at the <a href="https://mpi-inf.mpg.de/departments/visual-computing-and-artificial-intelligence/">Max Planck Institute for Informatics</a> with <a href="https://www.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>. 
+        </p>
+
+        <p class="main-links">
+            <a href="info/" class="phd-link">Information for prospective PhD students</a> <br/><br/>
+            <a href="#group">[Group]</a>
+            <a href="#publications">[Publications]</a>
+            <!--a href="#talks">[Talks]</a-->
+            {{ metadata | safe }}
+        </p>
+    </section>
+
+    <section id="group">
+        <h2>PhD Students</h2>
+        <div class="group-container">
+            {% for member in group %}
+            <div class="publication-entry"> 
+                <figure style="margin: 0;">
+                    <img class="student-photo" src="{{ member.photo }}" alt="Photo of {{ member.name }}"/>
+                </figure>
+                <div class="pub-details" style="text-align: center;">
+                    <p style="margin: 0; font-size: 1.2rem;">
+                        <b style="font-size: 1.4rem;">
+                            {%- if member.url -%}
+                            <a href="{{ member.url }}">{{ member.name }}</a>
+                            {%- else -%}
+                            {{ member.name }}
+                            {%- endif -%}
+                        </b><br/>
+                        <i>{{ member.role }}</i>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        {% for pub in publications %}
+        <div class="publication-entry">
+            {% if pub.teaser %}
+            <figure class="marginnote">
+                {%- if 'mp4' in pub.teaser %}
+                <video autoplay loop muted playsinline style="width: 100%;">
+                    <source src="{{ pub.teaser }}" type="video/mp4" />
+                </video>
+                {%- else -%}
+                <img src="{{ pub.teaser }}" alt="Teaser for {{ pub.title }}"/>
+                {%- endif -%}
+            </figure>
+            {% endif %}
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">{{ pub.title }}</span><br/>
+                    <i>{{ pub.conference | safe }}</i><br/>
+                    {{ pub.authors | safe }}<br/>
+                    {{ pub.data | safe }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    <p style="text-align: right; font-size: 1.3rem;">
+        Theme inspired and adapted from <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a> and <a href="https://s-m.ac/">Mathias Sablé-Meyer</a>.
+    </p>
+    <!--section id="talks">
+        <h2>Talks</h2>
+        {% for talk in talks %}
+        <p>
+            <b>{{ talk.title }}</b>, <i>{{ talk.venue | safe}}</i>
+            <span>{{ talk.data | safe }}</span>
+        </p>
+        {% endfor %}
+    </section-->
+{% endblock %}
