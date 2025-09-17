@@ -1,99 +1,84 @@
+// background.js (optimized)
 (() => {
-  // --- Helpers ---
-  function randn(m, s) {
-    return m + (Math.sqrt(-2 * Math.log(Math.random())) *
-                Math.cos(2 * Math.PI * Math.random())) * s;
-  }
-  function normalPDF(x, m, s) {
-    return Math.exp(-Math.pow((x - m), 2) / (2 * s * s)) /
-           Math.sqrt(2 * Math.PI * s * s);
-  }
+  const TILE = { w: 640, h: 240, dprCap: 1.5 };
+  const COLORS = {
+    dark:  { bg: '#0b0c10', stroke: 'rgba(229,112,69,0.25)' },
+    light: { bg: '#f7f7f8',  stroke: 'rgba(50,50,150,0.10)' }
+  };
+  const cache = {}; // theme -> dataURL
 
-  function drawBackground() {
-    const container = document.getElementById('background-container');
-    if (!container) {
-      console.error('Error: #background-container not found.');
-      return;
-    }
+  const randn = (m,s)=> m + Math.sqrt(-2*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random())*s;
+  const pdf   = (x,m,s)=> Math.exp(-((x-m)*(x-m))/(2*s*s))/Math.sqrt(2*Math.PI*s*s);
 
-    // Clear any previous canvases
-    while (container.firstChild) container.removeChild(container.firstChild);
+  function makeTile(theme){
+    const dpr = Math.min(TILE.dprCap, window.devicePixelRatio || 1);
+    const c = document.createElement('canvas');
+    c.width  = Math.floor(TILE.w * dpr);
+    c.height = Math.floor(TILE.h * dpr);
+    const g = c.getContext('2d');
+    g.setTransform(dpr,0,0,dpr,0,0);
 
-    const mainCanvas = document.createElement('canvas');
-    const patternCanvas = document.createElement('canvas');
-    container.appendChild(mainCanvas);
+    g.fillStyle = COLORS[theme].bg;
+    g.fillRect(0,0,TILE.w,TILE.h);
+    g.strokeStyle = COLORS[theme].stroke;
+    g.lineWidth = 1.2;
 
-    const mainCtx = mainCanvas.getContext('2d');
-    const patternCtx = patternCanvas.getContext('2d');
-
-    const currentTheme = document.body.dataset.theme || 'dark';
-    const colors = {
-      dark:  { bg: '#000008', stroke: 'rgba(229,112,69,0.15)' },
-      light: { bg: '#f5f5f5', stroke: 'rgba(50,50,150,0.05)' }
-    };
-
-    // Size + HiDPI
-    const dpr = Math.max(1, window.devicePixelRatio || 1);
-    const viewWidth = window.innerWidth;
-    const canvasHeight = Math.max(document.body.scrollHeight, window.innerHeight);
-
-    mainCanvas.style.width  = viewWidth + 'px';
-    mainCanvas.style.height = canvasHeight + 'px';
-    mainCanvas.width  = Math.floor(viewWidth  * dpr);
-    mainCanvas.height = Math.floor(canvasHeight * dpr);
-    mainCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-    const patternHeight = 250;
-    patternCanvas.width  = Math.floor(viewWidth * dpr);
-    patternCanvas.height = Math.floor(patternHeight * dpr);
-    patternCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-    // Paint pattern tile
-    patternCtx.fillStyle = colors[currentTheme].bg;
-    patternCtx.strokeStyle = colors[currentTheme].stroke;
-    patternCtx.lineWidth = 2;
-    patternCtx.fillRect(0, 0, viewWidth, patternHeight);
-
-    const lineSpacing = 50;
-    const lineCount = Math.floor(patternHeight / lineSpacing);
-
-    for (let i = 0; i < lineCount; i++) {
-      const y = lineSpacing + i * lineSpacing;
-      const modes  = Math.floor(Math.random() * 5) + 1;
-      const mus    = Array.from({ length: modes }, () => randn(viewWidth / 2, viewWidth / 15));
-      const sigmas = Array.from({ length: modes }, () => Math.max(10, Math.abs(randn(0.03 * viewWidth, viewWidth / 200))));
+    const spacing = 72, step = 16, rows = Math.floor(TILE.h/spacing);
+    for (let i=0;i<rows;i++){
+      const y = spacing + i*spacing;
+      const modes = (Math.random()*3|0)+1;
+      const mus   = Array.from({length:modes}, ()=> randn(TILE.w/2, TILE.w/10));
+      const sig   = Array.from({length:modes}, ()=> Math.max(12, Math.abs(randn(0.03*TILE.w, TILE.w/180))));
       let w = y;
-      patternCtx.beginPath();
-      for (let x = 0; x <= viewWidth; x += 10) {
-        let noise = 0;
-        for (let l = 0; l < modes; l++) noise += normalPDF(x, mus[l], sigmas[l]);
-        w = 0.5 * w + 0.5 * (y - (lineSpacing / 20) * viewWidth * noise + randn(0, lineSpacing / 20));
-        (x === 0 ? patternCtx.moveTo : patternCtx.lineTo).call(patternCtx, x, w);
+      g.beginPath();
+      for (let x=0;x<=TILE.w;x+=step){
+        let noise=0; for (let k=0;k<modes;k++) noise += pdf(x, mus[k], sig[k]);
+        w = 0.5*w + 0.5*(y - (spacing/22)*TILE.w*noise + randn(0, spacing/22));
+        x===0 ? g.moveTo(x,w) : g.lineTo(x,w);
       }
-      patternCtx.stroke();
+      g.stroke();
     }
-
-    // Fill page with repeated tile
-    const pattern = mainCtx.createPattern(patternCanvas, 'repeat');
-    mainCtx.fillStyle = pattern;
-    mainCtx.fillRect(0, 0, viewWidth, canvasHeight);
+    return c.toDataURL('image/png');
   }
 
-  // Expose if you want to call manually elsewhere
-  window.drawBackground = drawBackground;
+function applyBG(theme){
+  const target = document.body; // was: document.getElementById('background-container')
+  if (!target || !cache[theme]) return;
+  target.style.backgroundImage  = `url(${cache[theme]})`;
+  target.style.backgroundRepeat = 'repeat';
+  target.style.backgroundSize   = `${TILE.w}px ${TILE.h}px`;
+  // Important: let it scroll with content (default behavior)
+  target.style.backgroundAttachment = 'scroll'; // explicit for clarity
+  target.style.backgroundPosition = 'top left'; // or '0 0'
+}
 
-  // Draw on load
-  document.addEventListener('DOMContentLoaded', drawBackground);
+  function currentTheme(){
+    return document.body.dataset.theme ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
 
-  // Redraw on resize (throttled)
-  let resizeTimer = null;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(drawBackground, 150);
+  document.addEventListener('DOMContentLoaded', () => {
+    const el = document.getElementById('background-container');
+    // if (el) {
+    //   el.style.position='fixed';
+    //   el.style.inset='0';
+    //   el.style.zIndex='-1';
+    //   el.style.pointerEvents='none';
+    // }
+
+    const build = t => { cache[t] = makeTile(t); };
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(()=> build('light')); requestIdleCallback(()=> build('dark'));
+    } else {
+      setTimeout(()=> build('light'),0); setTimeout(()=> build('dark'),0);
+    }
+    // apply as soon as available
+    const t = currentTheme();
+    const applyWhenReady = () => cache[t] ? applyBG(t) : setTimeout(applyWhenReady, 30);
+    applyWhenReady();
   });
 
-  // Redraw if theme changes (watch body[data-theme])
-  new MutationObserver(drawBackground).observe(document.body, {
-    attributes: true, attributeFilter: ['data-theme']
-  });
+  // On theme attribute change: just swap image (no re-draw)
+  new MutationObserver(() => applyBG(currentTheme()))
+    .observe(document.body, { attributes:true, attributeFilter:['data-theme'] });
 })();
