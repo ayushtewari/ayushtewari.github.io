@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.css"/> #}
+    <link rel="stylesheet" href="{{ '/assets/tufte/tufte.min.css' | url }}"/>
+    <style>
+      /* --- Base Layout & Tufte CSS Overrides --- */
+      .marginnote img {
+          width: 100%;
+      }
+      .marginnote {
+        margin-right: 25%;
+        width: 15%;
+        box-sizing: border-box;
+      }
+      figure.marginnote img {
+        /* Try a smaller value here for a more subtle effect */
+        --fade-size: 1%;
+
+        /* The rest of the code remains the same */
+        -webkit-mask-image: 
+            linear-gradient(to right, transparent, black var(--fade-size), black calc(0% - var(--fade-size)), transparent),
+            linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+        -webkit-mask-composite: source-in;
+        
+        mask-image: 
+            linear-gradient(to right, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent),
+            linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+        mask-composite: intersect;
+       }
+      .publication-entry::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      #publications,
+      #talks {
+        margin-top: 4rem;
+      }
+      .marginnote img,
+      .marginnote video {
+        width: 100%;
+      }
+      .publication-entry {
+        display: flex;
+        flex-direction: row; /* Changed from column to row */
+        align-items: center;  /* Vertically centers the items */
+        gap: 25px;          /* Adds space between the image and text */
+      }
+      #publications .marginnote {
+       /* This margin will ONLY apply to publication teasers */
+        margin-right: 0%; /* Example: a smaller margin */
+      }
+
+      /* --- Add this new rule for the text block --- */
+      .pub-details {
+        flex: 1; /* Allows the text block to fill the available space */
+        max-width: 125ch; /* Caps the width of the text block */
+      }
+
+      .phd-info {
+        flex: 1; /* Allows the text block to fill the available space */
+        max-width: 125ch;
+        margin-left: 5%;
+        margin-right: 0%;
+        box-sizing: border-box;
+        padding: 0 1rem;
+     }
+     .phd-link {
+        font-size: 1.2em; /* Change this value as needed */
+        font-weight: bold;
+    }
+      body {
+        color: #e2e2e2;
+      }
+
+      .background-link {
+        color: rgba(229, 112, 69, 1.0) !important;
+      }
+
+      h1, h2, h3 {
+        color: #ffffff;
+      }
+      hr, blockquote {
+        border-color: #444;
+      }
+
+      #group {
+        margin-top: 4rem;
+      }
+
+      .group-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px); /* Creates columns of a fixed 220px width */
+        gap: 1.5rem; /* This now reliably controls the space between all items */
+        margin-left: -5.5%; /* Add this line to pull the container into alignment */
+      }
+      /* This rule now defines the size for each member's block */
+      #group .publication-entry {
+        width: 300px; /* Sets the container width */
+        display: flex;
+        flex-direction: column; /* Stacks photo and text */
+        align-items: center; /* Centers them horizontally */
+        gap: 10px; /* Space between photo and name */
+      }
+
+      /* This rule ensures the photo is not distorted */
+      .student-photo {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+      }
+
+      #background-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10; /* This is crucial to keep it in the back */
+      }
+      article {
+        position: relative; /* This is the most important change */
+        background-color: transparent;
+      }
+    .phd-button {
+        /* Basic Button Styling */
+        display: inline-block;
+        padding: 12px 24px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        text-decoration: none !important;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-align: center;
+        /* Color and Hover Effects */
+        background-color: rgba(229, 112, 69, 1.0);
+        color: #ffffff;
+        border: 2px solid rgba(229, 112, 69, 1.0);
+        transition: all 0.3s ease;
+      }
+
+      /* --- End of Styles --- */
+    </style>
+  </head>
+
+  <body>
+    <div id="background-container"></div>
+    <article>
+    </article>
+    <article>
+        {% block content %}{% endblock %}
+    </article>
+    <script src="{{ '/background.js' | url }}" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.main-links');
+            if (container) {
+                const links = container.querySelectorAll('a');
+                links.forEach(link => {
+                    link.classList.add('background-link');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
