@@ -10,6 +10,8 @@ module.exports = function(eleventyConfig) {
     //
     // See https://www.11ty.dev/docs/copy/
     eleventyConfig.addPassthroughCopy("assets/**");
+    eleventyConfig.addPassthroughCopy("background.js");
+
 
     // You won't need this by default but if you're using a custom domain with
     // GitHub Pages, following the instructions at

@@ -184,6 +184,26 @@ function authorListEqualEnd(authors, numEqual) {
 }
 
 module.exports = {
+    group: [
+// After
+        {
+            name: "Felix O'Mahony",
+            role: "co-advised by Roberto Cipolla",
+            photo: "assets/students/felix_omahony.jpeg",
+            url: "https://felixomahony.github.io/"
+        },
+        {
+            name: "Jieying Chen",
+            role: "co-advised by Joan Lasenby",
+            photo: "assets/students/jieying_chen.jpg",
+        },
+        {
+            name: "Jeffrey Hu",
+            role: "starting Oct 2025",
+            photo: "assets/students/jeffrey_hu.jpg",
+            url: "https://jefequien.github.io/"
+        },
+    ],
     publications: [
         {
             title: "Approximating Human-Level 3D Visual Inferences With Deep Neural Networks",
@@ -553,5 +573,6 @@ module.exports = {
             data: "[video]".link("https://www.youtube.com/watch?v=NnWaNaq_86M")
         },
     ],
-    metadata: ["[Google Scholar]".link("https://scholar.google.com/citations?user=pDnzpeoAAAAJ&hl=en"), "[CV]".link("assets/cv.pdf")].join(" "),
+    // metadata: ["[Google Scholar]".link("https://scholar.google.com/citations?user=pDnzpeoAAAAJ&hl=en"), "[CV]".link("assets/cv.pdf")].join(" "),
+    metadata: ["[CV]".link("assets/cv.pdf")].join(" "),
 };
