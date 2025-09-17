@@ -1,818 +1,937 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Ayush Tewari</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ayush Tewari is an Assistant Professor at the University of Cambridge">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <table>
-      <tbody>
-        <tr>
-          <td class="bio">
-            <h1 class="name ">Ayush Tewari</h1>
-            <div class="email ">at2164@cam.ac.uk</div>
-            <p>
-            
-            
-          
-            I am an assistant professor at University of Cambridge. I was previously a postdoctoral researcher at MIT CSAIL with <a href="http://billf.mit.edu">Bill Freeman</a>, <a href="http://web.mit.edu/cocosci/josh.html">Josh Tenenbaum</a>, and <a href="https://www.vincentsitzmann.com/">Vincent Sitzmann</a>. 
-             I completed my Ph.D. at the <a href="https://mpi-inf.mpg.de/departments/visual-computing-and-artificial-intelligence/">Max Planck Institute for Informatics</a> with <a href="https://www.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>.             
-             <!--I received an <a href="https://www.mpg.de/prizes/otto-hahn-medal">Otto Hahn Medal</a> from the Max Planck Society for my PhD.-->
-             My research interests lie in visual perception. I develop methods that infer rich structured representations of the visual world from images and videos, much like the mental models humans infer to interact with and navigate their surroundings.
-             Check out some <a href="#talks">recent talks</a> for an overview. <br/><br/>
-             <a href="https://scholar.google.com/citations?user=pDnzpeoAAAAJ&hl=en">[Google Scholar]</a> <a href="assets/cv.pdf">[CV]</a>  <a href="#publications" >[Publications]</a>  <a href="#talks" >[Talks]</a>              </p>
-          </td>
-          <td class="photo">
-            <img src="assets/photo.jpg" width="100%"> <br/>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <h2 id="publications">Publications</h2>
-    <ul class="publications">
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/openmind.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Approximating Human-Level 3D Visual Inferences With Deep Neural Networks</span><br/>
-                    Open Mind 2025 <br/>
-                    <span><a href="https://scholar.google.com/citations?user=lNQeAXEAAAAJ&hl=en&oi=ao">Thomas P. O’Connell</a>, <a href="tzler.github.io/">Tyler Bonnen</a>, <a href="https://www.yonifriedman.com/">Yoni Friedman</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, and <a href="https://mcgovern.mit.edu/profile/nancy-kanwisher/">Nancy Kanwisher</a><br/>
-                    <a href="https://direct.mit.edu/opmi/article/doi/10.1162/opmi_a_00189/128124">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/Manifoldsigasia25.jpeg width="100%"></td>
-                  <td>
-                    <span class="pub-title">Manifold Sampling for Differentiable Uncertainty in Radiance Fields</span><br/>
-                    SIGGRAPH Asia 2024 <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~llyu/">Linjie Lyu</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, <a href="https://shunsukesaito.github.io/">Shunsuke Saito</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkuehler</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/">[project page]</a> <a href="https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/papers/main_paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo">
-                      <video width="100%" autoplay loop muted>
-                        <source src=assets/flowmap.mp4 type="video/mp4" />
-                      </video></td>
-                  <td>
-                    <span class="pub-title">FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent</span><br/>
-                    3DV 2024 <br/>
-                    <span><a href="https://cameronosmith.github.io/">Cameron Smith</a>*, <a href="https://davidcharatan.com/#/">David Charatan</a>*, <span class="self-author">Ayush Tewari</span>, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a> (* equal contribution)<br/>
-                    <a href="https://vincentvanderbrugge.github.io/pickscan.github.io/">[project page]</a> <a href="https://arxiv.org/pdf/2411.11196v1">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo">
-                      <video width="100%" autoplay loop muted>
-                        <source src=assets/Pickscan.mp4 type="video/mp4" />
-                      </video></td>
-                  <td>
-                    <span class="pub-title">PickScan: Object discovery and reconstruction from handheld interactions</span><br/>
-                    IROS 2024 <br/>
-                    <span><a href="https://linkedin.com/in/vincent-van-der-brugge">Vincent van der Brugge</a>, <a href="https://people.inf.ethz.ch/marc.pollefeys/">Marc Pollefeys</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, <a href="https://krrish94.github.io/">Krishna Murthy Jatavallabhula</a>&#8224;, and <span class="self-author">Ayush Tewari</span>&#8224; (&#8224; equal advising)<br/>
-                    <a href="https://vincentvanderbrugge.github.io/pickscan.github.io/">[project page]</a> <a href="https://arxiv.org/pdf/2411.11196v1">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/cocoperiph.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">COCO-Periph: Bridging the Gap Between Human and Machine Perception in the Periphery</span><br/>
-                    ICLR 2024 <br/>
-                    <span><a href="https://scholar.google.com/citations?user=7M9eSFMAAAAJ&hl=en">Anne Harrington</a>, <a href="https://vashadutell.com/">Vasha DuTell</a>, <a href="https://mhamilton.net/">Mark Hamilton</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en">Simon Stent</a>, <a href="https://billf.mit.edu/">William T. Freeman</a>, and <a href="http://persci.mit.edu/people/rosenholtz">Ruth Rosenholtz</a><br/>
-                    <a href="https://github.com/RosenholtzLab/COCOPeriph">[project page]</a> <a href="https://openreview.net/forum?id=MiRPBbQNHv">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo">
-                      <video width="100%" autoplay loop muted>
-                        <source src=assets/diffusion_teaser.mp4 type="video/mp4" />
-                      </video></td>
-                  <td>
-                    <span class="pub-title"> Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision</span><br/>
-                    NeurIPS 2023 <font color="red"> (Spotlight) </font> <br/>
-                    <span><span class="self-author">Ayush Tewari</span>*, <a href="https://tianweiy.github.io/">Tianwei Yin</a>*, <a href="https://georgecazenavette.github.io/">George Cazenavette</a>, <a href="https://www.rezchikov.me/">Semon Rezchikov</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, <a href="http://people.csail.mit.edu/fredo/">Fredo Durand</a>, <a href="https://billf.mit.edu/">William T. Freeman</a>, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a> (* equal contribution)<br/>
-                    <a href="https://diffusion-with-forward-models.github.io/">[project page]</a> <a href="https://diffusion-with-forward-models.github.io/diffusion-forward-paper.pdf">[paper]</a> <a href="https://github.com/ayushtewari/DFM/tree/main">[code]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo">
-                      <video width="100%" autoplay loop muted>
-                        <source src=assets/flow_teaser.mp4 type="video/mp4" />
-                      </video></td>
-                  <td>
-                    <span class="pub-title">FlowCam: Training Generalizable 3D Radiance Fields without Camera Poses via Pixel-Aligned Scene Flow</span><br/>
-                    NeurIPS 2023 <br/>
-                    <span><a href="https://cameronosmith.github.io/">Cameron Smith</a>, <a href="https://yilundu.github.io/">Yilun Du</a>, <span class="self-author">Ayush Tewari</span>, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a><br/>
-                    <a href="https://cameronosmith.github.io/flowcam/">[project page]</a> <a href="https://arxiv.org/abs/2306.00180">[paper]</a> <a href="https://github.com/cameronosmith/FlowCam">[code]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo">
-                      <video width="100%" autoplay loop muted>
-                        <source src=assets/sigasia_light.mp4 type="video/mp4" />
-                      </video></td>
-                  <td>
-                    <span class="pub-title">Diffusion Posterior Illumination for Ambiguity-aware Inverse Rendering</span><br/>
-                    SIGGRAPH Asia 2023 <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~llyu/">Linjie Lyu</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, <a href="https://shunsukesaito.github.io/">Shunsuke Saito</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkuehler</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://vcai.mpi-inf.mpg.de/projects/2023-DPE/">[project page]</a> <a href="https://vcai.mpi-inf.mpg.de/projects/2023-DPE/papers/main_paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/AvatarStudio.gif width="100%"></td>
-                  <td>
-                    <span class="pub-title">AvatarStudio: Text-driven Editing of 3D Dynamic Human Head Avatars</span><br/>
-                    SIGGRAPH Asia 2023 <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~mmendira/">Mohit Mendiratta</a>, <a href="https://xingangpan.github.io//">Xingang Pan</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="">Kartik Teotia</a>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, <a href="https://adamkortylewski.com/">Adam Kortylewski</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://vcai.mpi-inf.mpg.de/projects/AvatarStudio/">[project page]</a> <a href="https://arxiv.org/abs/2306.00547">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo">
-                      <video width="100%" autoplay loop muted>
-                        <source src=assets/ModalNeRF.mp4 type="video/mp4" />
-                      </video></td>
-                  <td>
-                    <span class="pub-title">ModalNeRF: Neural Modal Analysis and Synthesis for Free-Viewpoint Navigation in Dynamically Vibrating Scenes</span><br/>
-                    EGSR, Computer Graphics Forum 2023 <br/>
-                    <span><a href="">Automne Petitjean</a>, <a href="https://scholar.google.com/citations?user=nwjjHYcAAAAJ&hl=en">Yohan Poirier-Ginter</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://www-sop.inria.fr/members/Guillaume.Cordonnier/">Guillaume Cordonnier</a>, and <a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a><br/>
-                    <a href="https://hal.science/hal-04131503">[project page]</a> <a href="https://hal.science/hal-04131503v1/file/modal_nerf_submission.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/DragGAN.gif width="100%"></td>
-                  <td>
-                    <span class="pub-title">Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold</span><br/>
-                    SIGGRAPH 2023 <br/>
-                    <span><a href="https://xingangpan.github.io//">Xingang Pan</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkuehler</a>, <a href="https://lingjie0206.github.io/">Lingjie Liu</a>, <a href="https://www.meka.page/">Abhimitra Meka</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://vcai.mpi-inf.mpg.de/projects/DragGAN/">[project page]</a> <a href="https://arxiv.org/abs/2305.10973">[paper]</a> <a href="https://github.com/XingangPan/DragGAN">[code]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo">
-                      <video width="100%" autoplay loop muted>
-                        <source src=assets/CVPR23.mp4 type="video/mp4" />
-                      </video></td>
-                  <td>
-                    <span class="pub-title">Learning to Render Novel Views from Wide-Baseline Stereo Pairs</span><br/>
-                    CVPR 2023 <br/>
-                    <span><a href="https://yilundu.github.io/">Yilun Du</a>, <a href="https://cameronosmith.github.io/">Cameron Smith</a>, <span class="self-author">Ayush Tewari</span>&#8224;, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a>&#8224; (&#8224; equal advising)<br/>
-                    <a href="https://yilundu.github.io/wide_baseline/">[project page]</a> <a href="https://yilundu.github.io/wide_baseline/paper.pdf">[paper]</a> <a href="https://github.com/yilundu/cross_attention_renderer">[code]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/conceptfusion.gif width="100%"></td>
-                  <td>
-                    <span class="pub-title">ConceptFusion: Open-set Multimodal 3D Mapping</span><br/>
-                    RSS 2023 <br/>
-                    <span><a href="https://krrish94.github.io/">Krishna Murthy Jatavallabhula</a>, ..., <span class="self-author">Ayush Tewari</span>, et. al<br/>
-                    <a href="https://concept-fusion.github.io/">[project page]</a> <a href="https://arxiv.org/abs/2302.07241">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/seeing3d.gif width="100%"></td>
-                  <td>
-                    <span class="pub-title">Neural Groundplans: Persistent Neural Scene Representations from a Single Image</span><br/>
-                    ICLR 2023 <br/>
-                    <span><a href="https://prafullsharma.net/">Prafull Sharma</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://yilundu.github.io/">Yilun Du</a>, <a href="https://zakharos.github.io/">Sergey Zakharov</a>, <a href="https://scholar.google.se/citations?user=2xjjS3oAAAAJ&hl=en">Rares Ambrus</a>, <a href="https://adriengaidon.com/">Adrien Gaidon</a>, <a href="https://billf.mit.edu/">William T. Freeman</a>, <a href="http://people.csail.mit.edu/fredo/">Fredo Durand</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a><br/>
-                    <a href="https://prafullsharma.net/see3d/">[project page]</a> <a href="https://prafullsharma.net/see3d/paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/Straight_ICLR.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Exploring Perceptual Straightness in Learned Visual Representations</span><br/>
-                    ICLR 2023 <br/>
-                    <span><a href="https://scholar.google.com/citations?user=7M9eSFMAAAAJ&hl=en">Anne Harrington</a>, <a href="https://vashadutell.com/">Vasha DuTell</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://mhamilton.net/">Mark Hamilton</a>, <a href="https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en">Simon Stent</a>, <a href="http://persci.mit.edu/people/rosenholtz">Ruth Rosenholtz</a>, and <a href="https://billf.mit.edu/">William T. Freeman</a><br/>
-                    <a href="https://openreview.net/pdf?id=4cOfD2qL6T">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/eccv22.gif width="100%"></td>
-                  <td>
-                    <span class="pub-title">Neural Radiance Transfer Fields for Relightable Novel-view Synthesis with Global Illumination</span><br/>
-                    ECCV 2022 <font color="red"> (Oral Presentation) </font> <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~llyu/">Linjie Lyu</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkuehler</a>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://people.mpi-inf.mpg.de/~llyu/projects/2022-NRTF/">[project page]</a> <a href="https://arxiv.org/pdf/2207.13607.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/gan2x.gif width="100%"></td>
-                  <td>
-                    <span class="pub-title">GAN2X: Non-Lambertian Inverse Rendering of Image GANs</span><br/>
-                    3DV 2022 <br/>
-                    <span><a href="https://xingangpan.github.io//">Xingang Pan</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://lingjie0206.github.io/">Lingjie Liu</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://people.mpi-inf.mpg.de/~xpan/GAN2X/">[project page]</a> <a href="https://arxiv.org/abs/2206.09244">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/VoRF.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">VoRF: Volumetric Relightable Faces</span><br/>
-                    BMVC 2022 <font color="red"> (Oral Presentation, Best Paper Honorable Mention) </font> <br/>
-                    <span><a href="https://people.mpi-inf.mpg.de/~prao/">Pramod Rao</a>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <a href="https://people.mpi-inf.mpg.de/~gfox/">Gereon Fox</a>, <a href="http://reality.cs.ucl.ac.uk/weyrich.html">Tim Weyrich</a>, <a href="http://berndbickel.com/">Bernd Bickel</a>, <a href="https://vcg.seas.harvard.edu/people/hanspeter-pfister">Hanspeter Pfister</a>, <a href="https://cdfg.csail.mit.edu/wojciech">Wojciech Matusik</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a><br/>
-                    <a href="https://vcai.mpi-inf.mpg.de/projects/VoRF/">[project page]</a> <a href="https://vcai.mpi-inf.mpg.de/projects/VoRF/data/vorf_main.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/D3D.gif width="100%"></td>
-                  <td>
-                    <span class="pub-title">Disentangled3D: Learning a 3D Generative Model with Disentangled Geometry and Appearance from Monocular Images</span><br/>
-                    CVPR 2022 <br/>
-                    <span><span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <a href="https://xingangpan.github.io//">Xingang Pan</a>, <a href="https://www.ohadf.com/">Ohad Fried</a>, <a href="http://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://vcai.mpi-inf.mpg.de/projects/D3D/">[project page]</a> <a href="https://vcai.mpi-inf.mpg.de/projects/D3D/data/paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/NeuralRendering.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Advances in Neural Rendering</span><br/>
-                    Eurographics State-of-the-Art Report 2022 <br/>
-                    <span><span class="self-author">Ayush Tewari</span>*, <a href="https://justusthies.github.io/">Justus Thies</a>*, <a href="https://bmild.github.io/">Ben Mildenhall</a>*, <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>*, <a href="http://people.mpi-inf.mpg.de/~tretschk/">Edith Tretschk</a>, <a href="https://yifita.github.io/">Yifan Wang</a>, <a href="https://christophlassner.de/">Christoph Lassner</a>, <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a>, <a href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a href="https://stephenlombardi.github.io/">Stepehen Lombardi</a>, <a href="http://www.cs.cmu.edu/~tsimon/">Tomas Simon</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://jonbarron.info/">Jonathan T. Barron</a>, <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a> (* equal contribution)<br/>
-                    <a href="https://arxiv.org/abs/2111.05849">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/StyleVideoGAN.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">StyleVideoGAN: A Temporal Generative Model using a Pretrained StyleGAN</span><br/>
-                    BMVC 2021 <font color="red"> (Oral Presentation) </font> <br/>
-                    <span><a href="https://people.mpi-inf.mpg.de/~gfox/">Gereon Fox</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://vcai.mpi-inf.mpg.de/projects/stylevideogan/">[project page]</a> <a href="https://arxiv.org/pdf/2107.07224.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/EfficientShadows.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Efficient and Differentiable Shadow Computation for Inverse Problems</span><br/>
-                    ICCV 2021 <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~llyu/">Linjie Lyu</a>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, <a href="https://lingjie0206.github.io/">Lingjie Liu</a>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/DifferentiableShadows/">[project page]</a> <a href="https://arxiv.org/pdf/2104.00359.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/NRNeRF.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Non-Rigid Neural Radiance Fields: Reconstruction and Novel View Synthesis of a Deforming Scene from Monocular Video</span><br/>
-                    ICCV 2021 <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~tretschk/">Edith Tretschk</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://christophlassner.de/">Christoph Lassner</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">[project page]</a> <a href="https://arxiv.org/pdf/2012.12247.pdf">[paper]</a> <a href="https://github.com/facebookresearch/nonrigid_nerf">[code]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/PhotoApp.jpeg width="100%"></td>
-                  <td>
-                    <span class="pub-title">PhotoApp: Photorealistic Appearance Editing of Head Portraits</span><br/>
-                    SIGGRAPH 2021 <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://www.interdigital.com/talent/?id=38">Abdallah Dib</a>, <a href="http://reality.cs.ucl.ac.uk/weyrich.html">Tim Weyrich</a>, <a href="http://berndbickel.com/">Bernd Bickel</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://vcg.seas.harvard.edu/people/hanspeter-pfister">Hanspeter Pfister</a>, <a href="https://cdfg.csail.mit.edu/wojciech">Wojciech Matusik</a>, <a href="https://scholar.google.fr/citations?user=hC_BTU8AAAAJ&hl=en">Louis Chevallier</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/PhotoApp/">[project page]</a> <a href="https://arxiv.org/pdf/2103.07658.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/i3dmm.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">i3DMM: Deep Implicit 3D Morphable Model of Human Heads</span><br/>
-                    CVPR 2021 <font color="red"> (Oral Presentation) </font> <br/>
-                    <span><a href="https://vision.in.tum.de/members/yenamand">Tarun Yenamandra</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="https://vision.in.tum.de/members/cremers">Daniel Cremers</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/i3DMM/">[project page]</a> <a href="https://arxiv.org/pdf/2011.14143.pdf">[paper]</a> <a href="https://github.com/tarun738/i3DMM">[code]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/reflectance.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Monocular Reconstruction of Neural Face Reflectance Fields</span><br/>
-                    CVPR 2021 <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://scholar.google.com/citations?user=dMCBjeIAAAAJ&hl=en">Tae-Hyun Oh</a>, <a href="http://reality.cs.ucl.ac.uk/weyrich.html">Tim Weyrich</a>, <a href="http://berndbickel.com/">Bernd Bickel</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://vcg.seas.harvard.edu/people/hanspeter-pfister">Hanspeter Pfister</a>, <a href="https://cdfg.csail.mit.edu/wojciech">Wojciech Matusik</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/FaceReflectanceFields/">[project page]</a> <a href="https://arxiv.org/pdf/2008.10247.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/lemomo.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Learning Complete 3D Morphable Face Models from Images and Videos</span><br/>
-                    CVPR 2021 <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/LeMoMo/">[project page]</a> <a href="https://arxiv.org/pdf/2010.01679.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/yuxiao.jpeg width="100%"></td>
-                  <td>
-                    <span class="pub-title">Monocular Real-time Full Body Capture with Inter-part Correlations</span><br/>
-                    CVPR 2021 <br/>
-                    <span><a href="https://calciferzh.github.io/">Yuxiao Zhou</a>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, <a href="https://www.mpi-inf.mpg.de/~ihabibie/">Ikhsanul Habibie</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="http://cgcad.thss.tsinghua.edu.cn/xufeng/">Feng Xu</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/2021-cvpr-full-body-capture/">[project page]</a> <a href="https://arxiv.org/pdf/2012.06087.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/3dmm.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">3D Morphable Face Models - Past, Present and Future</span><br/>
-                    ACM Transactions on Graphics 2021 <br/>
-                    <span><a href="https://eggerbernhard.ch/">Bernhard Egger</a>, <a href="https://www-users.cs.york.ac.uk/wsmith/">Will Smith</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://morpheo.inrialpes.fr/~wuhrer/">Stefanie Wuhrer</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://thabobeeler.com/">Thabo Beeler</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://ps.is.mpg.de/person/tbolkart">Timo Bolkart</a>, <a href="https://adamkortylewski.com/">Adam Kortylewski</a>, <a href="https://www.linkedin.com/in/sami-romdhani-09775827/">Sami Romdhani</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://www.grk1564.uni-siegen.de/de/blanz-volker">Volker Blanz</a>, and <a href="https://gravis.dmi.unibas.ch/">Thomas Vetter</a><br/>
-                    <a href="https://arxiv.org/abs/1909.01815">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/EgoChat.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Egocentric Videoconferencing</span><br/>
-                    SIGGRAPH Asia 2020 <br/>
-                    <span><a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>*, <a href="http://people.mpi-inf.mpg.de/~mmendira/">Mohit Mendiratta</a>*, <a href="https://justusthies.github.io/">Justus Thies</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a> (* equal contribution)<br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/PIE/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/PIE/data/paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/PIE.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">PIE: Portrait Image Embedding for Semantic Control</span><br/>
-                    SIGGRAPH Asia 2020 <br/>
-                    <span><span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/PIE/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/PIE/data/paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/PatchNets.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">PatchNets: Patch-Based Generalizable Deep Implicit 3D Shape Representations</span><br/>
-                    ECCV 2020 <br/>
-                    <span><a href="http://people.mpi-inf.mpg.de/~tretschk/">Edith Tretschk</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://gvv.mpi-inf.mpg.de/projects/PatchNets/">[project page]</a> <a href="arXiv">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/NeuralVoicePuppetry.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Neural Voice Puppetry: Audio-driven Facial Reenactment</span><br/>
-                    ECCV 2020 <br/>
-                    <span><a href="https://justusthies.github.io/">Justus Thies</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a><br/>
-                    <a href="https://justusthies.github.io/posts/neural-voice-puppetry/">[project page]</a> <a href="https://arxiv.org/pdf/1912.05566.pdf%22">[paper]</a> <a href="https://github.com/JustusThies/NeuralVoicePuppetry">[code]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/STAR.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">State of the Art on Neural Rendering</span><br/>
-                    Eurographics State-of-the-Art Report 2020 <br/>
-                    <span><span class="self-author">Ayush Tewari</span>*, <a href="https://www.ohadf.com/">Ohad Fried</a>*, <a href="https://justusthies.github.io/">Justus Thies</a>*, <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a>*, <a href="https://stephenlombardi.github.io/">Stepehen Lombardi</a>, <a href="http://www.kalyans.org/">Kalyan Sunkavalli</a>, <a href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a href="http://www.cs.cmu.edu/~tsimon/">Tomas Simon</a>, <a href="http://jsaragih.org/Home_Page.html">Jason Saragih</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://research.google/people/106687/">Rohit Pandey</a>, <a href="http://www.seanfanello.it/">Sean Fanello</a>, <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>, <a href="https://www.cs.cmu.edu/~junyanz/">Jun-Yan Zhu</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>, <a href="https://research.adobe.com/person/eli-shechtman/">Eli Schectman</a>, <a href="https://www.danbgoldman.com/home/">Dan B Goldman</a>, and <a href="https://zollhoefer.com/">Michael Zollhoefer</a> (* equal contribution)<br/>
-                    <a href="https://arxiv.org/abs/2004.03805">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/StyleRig.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">StyleRig: Rigging StyleGAN for 3D Control over Portrait Images</span><br/>
-                    CVPR 2020 <font color="red"> (Oral Presentation) </font> <br/>
-                    <span><span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="http://gauravbharaj.com/">Gaurav Bharaj</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/StyleRig/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/StyleRig/data/paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/TextBasedEditing.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Text-based Editing of Talking-head Video</span><br/>
-                    SIGGRAPH 2019 <br/>
-                    <span><a href="https://www.ohadf.com/">Ohad Fried</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://www.cs.princeton.edu/~af/">Adam Finkelstein</a>, <a href="https://research.adobe.com/person/eli-shechtman/">Eli Schectman</a>, <a href="https://www.danbgoldman.com/home/">Dan B Goldman</a>, <a href="https://www.kylegenova.com/">Kyle Genova</a>, <a href="https://research.adobe.com/person/zeyu-jin/">Zeyu Jin</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="http://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a><br/>
-                    <a href="https://www.ohadf.com/projects/text-based-editing/">[project page]</a> <a href="https://arxiv.org/pdf/1906.01524.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/FML.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">FML: Face Model Learning from Videos</span><br/>
-                    CVPR 2019 <font color="red"> (Oral Presentation) </font> <br/>
-                    <span><span class="self-author">Ayush Tewari</span>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <a href="http://gauravbharaj.com/">Gaurav Bharaj</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/FML19/">[project page]</a> <a href="https://arxiv.org/abs/1812.07603">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/MOFA++.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">High-Fidelity Monocular Face Reconstruction based on an Unsupervised Model-based Face Autoencoder</span><br/>
-                    TPAMI 2018, special issue on The Best of ICCV 2017 <br/>
-                    <span><span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/TPAMI_Face/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/TPAMI_Face/paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/obfuscation.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">A Hybrid Model for Identity Obfuscation by Face Replacement</span><br/>
-                    ECCV 2018 <br/>
-                    <span><a href="https://qianrusun.com/">Qianru Sun</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~wxu/">Weipeng Xu</a>, <a href="https://cispa.saarland/group/fritz/">Mario Fritz</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/">Bernt Schiele</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/Obfuscation_ECCV/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/Obfuscation_ECCV/paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/DeepVideoPortraits.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Deep Video Portraits</span><br/>
-                    SIGGRAPH 2018 <br/>
-                    <span><a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~wxu/">Weipeng Xu</a>, <a href="https://justusthies.github.io/">Justus Thies</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, <a href="https://richardt.name/">Christian Richardt</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/DeepVideoPortraits/">[project page]</a> <a href="https://arxiv.org/pdf/1805.11714.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/MultiLevelModel.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">Self-supervised Multi-level Face Model Learning for Monocular Reconstruction at over 250 Hz</span><br/>
-                    CVPR 2018 <font color="red"> (Oral Presentation) </font> <br/>
-                    <span><span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="https://gvv.mpi-inf.mpg.de/projects/FML/">[project page]</a> <a href="https://gvv.mpi-inf.mpg.de/projects/FML/paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/InverseFaceNet.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">InverseFaceNet: Deep Single-Shot Inverse Face Rendering From A Single Image</span><br/>
-                    CVPR 2018 <br/>
-                    <span><a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://justusthies.github.io/">Justus Thies</a>, <a href="https://richardt.name/">Christian Richardt</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/InverseFaceNet/">[project page]</a> <a href="https://arxiv.org/pdf/1703.10956">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-        <li class="pub">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="pub-photo"><img src=assets/MoFA.png width="100%"></td>
-                  <td>
-                    <span class="pub-title">MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction</span><br/>
-                    ICCV 2017 <font color="red"> (Oral Presentation) </font> <br/>
-                    <span><span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
-                    <a href="http://gvv.mpi-inf.mpg.de/projects/MZ/Papers/arXiv2017_FA/page.html">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/MZ/Papers/arXiv2017_FA/paper.pdf">[paper]</a><br/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-        </li>
-      
-    </ul>
-    <h2 id="talks">Talks</h2>
-    <ul class="talks">
-      
-        <li class="talk">
-            <span class="talk-title">Structured Generative Models</span>, John Hopkins University, CMU, Meta Reality Labs Research, Princeton University, Chennai Mathematical Institute, IIT Madras, 2023<br/>
-            <a href="https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/ETpPlRe56ZBKoglFgVwOysABmW1aZhAo1Y0tt47dMHe7CQ?e=0YpeWr">[slides]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">Teaching AI to See the 3D World</span>, <a href="https://www.imaginationinaction.co/ai-frontiers-and-implications">CSAIL + Imagination in Action: AI Frontiers & Implications, 2023</a><br/>
-            <a href="https://www.youtube.com/watch?v=joZ1OvQgGa8">[video]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">Finding 3D Structure in Unstructured 2D Data</span>, Rank Prize Seminar, Oxford University, Adobe, 2022, Princeton University, 2023<br/>
-            <a href="https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EXroiViFphtAmlF8Jv5NHoQBZlf3e1u3N_36TSDHQUIl1Q?e=0L7Jxq">[slides]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">Learning 3D Generative Models from 2D Data</span>, Dagstuhl Seminar, 2022<br/>
-            <a href="https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EVSkLtzYm99OhjnadwRO_SQB5JT9qZO6o2WLY5zFAqdJPQ?e=rf8GY0">[slides]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">Synthesis of Portrait Images with 3D Control</span>, CVPR NTIRE workshop 2021<br/>
-            <a href="https://nextcloud.mpi-inf.mpg.de/index.php/s/H2fJet3mqjdjyKy">[slides]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">Self-Supervised 3D Digitization of Faces</span>, MIT vision and graphics seminar 2021<br/>
-            <a href="https://www.youtube.com/watch?v=wyuMeSlTTfI">[video]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">GANs with 3D Control</span>, SIGGRAPH course 2021<br/>
-            <a href="https://www.youtube.com/watch?v=otly9jcZ0Jg&t=1863s">[video]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">PIE: Portrait Image Embedding for Semantic Control</span>, SIGGRAPH Asia 2020<br/>
-            <a href="https://youtu.be/Q0MS4szpUf4">[video]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">StyleRig: Rigging StyleGAN for 3D Control over Portrait Images</span>, CVPR 2020<br/>
-            <a href="https://www.youtube.com/watch?v=VPHJk-Nm9vM">[video]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">Neural Rendering Fundamentals</span>, CVPR 2020 tutorial<br/>
-            <a href="https://www.youtube.com/watch?v=LCTYRqW-ne8&t=890s">[video]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">FML: Face Model Learning from Videos</span>, CVPR 2019<br/>
-            <a href="https://www.youtube.com/watch?v=fNlMGWm7bbk&t=362s">[video]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">Self-supervised Multi-level Face Model Learning for Monocular Reconstruction at over 250 Hz</span>, CVPR 2018<br/>
-            <a href="https://youtu.be/x18WUuBNK7E?t=2030">[video]</a><br/>
-        </li>
-      
-        <li class="talk">
-            <span class="talk-title">MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction</span>, ICCV 2017<br/>
-            <a href="https://www.youtube.com/watch?v=NnWaNaq_86M">[video]</a><br/>
-        </li>
-      
-    </ul>
+    <title>
+    Ayush Tewari
+</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="/ayushtewari.github.io/assets/tufte/tufte.min.css"/>
+    <style>
+      /* --- Base Layout & Tufte CSS Overrides --- */
+      .marginnote img {
+          width: 100%;
+      }
+      .marginnote {
+        margin-right: 25%;
+        width: 15%;
+        box-sizing: border-box;
+      }
+      figure.marginnote img {
+        /* Try a smaller value here for a more subtle effect */
+        --fade-size: 1%;
 
-  </body>
+        /* The rest of the code remains the same */
+        -webkit-mask-image: 
+            linear-gradient(to right, transparent, black var(--fade-size), black calc(0% - var(--fade-size)), transparent),
+            linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+        -webkit-mask-composite: source-in;
+        
+        mask-image: 
+            linear-gradient(to right, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent),
+            linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+        mask-composite: intersect;
+       }
+      .publication-entry::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      #publications,
+      #talks {
+        margin-top: 4rem;
+      }
+      .marginnote img,
+      .marginnote video {
+        width: 100%;
+      }
+      .publication-entry {
+        display: flex;
+        flex-direction: row; /* Changed from column to row */
+        align-items: center;  /* Vertically centers the items */
+        gap: 25px;          /* Adds space between the image and text */
+      }
+      #publications .marginnote {
+       /* This margin will ONLY apply to publication teasers */
+        margin-right: 0%; /* Example: a smaller margin */
+      }
+
+      /* --- Add this new rule for the text block --- */
+      .pub-details {
+        flex: 1; /* Allows the text block to fill the available space */
+        max-width: 125ch; /* Caps the width of the text block */
+      }
+
+      .phd-info {
+        flex: 1; /* Allows the text block to fill the available space */
+        max-width: 125ch;
+        margin-left: 5%;
+        margin-right: 0%;
+        box-sizing: border-box;
+        padding: 0 1rem;
+     }
+     .phd-link {
+        font-size: 1.2em; /* Change this value as needed */
+        font-weight: bold;
+    }
+      body {
+        color: #e2e2e2;
+      }
+
+      .background-link {
+        color: rgba(229, 112, 69, 1.0) !important;
+      }
+
+      h1, h2, h3 {
+        color: #ffffff;
+      }
+      hr, blockquote {
+        border-color: #444;
+      }
+
+      #group {
+        margin-top: 4rem;
+      }
+
+      .group-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px); /* Creates columns of a fixed 220px width */
+        gap: 1.5rem; /* This now reliably controls the space between all items */
+        margin-left: -5.5%; /* Add this line to pull the container into alignment */
+      }
+      /* This rule now defines the size for each member's block */
+      #group .publication-entry {
+        width: 300px; /* Sets the container width */
+        display: flex;
+        flex-direction: column; /* Stacks photo and text */
+        align-items: center; /* Centers them horizontally */
+        gap: 10px; /* Space between photo and name */
+      }
+
+      /* This rule ensures the photo is not distorted */
+      .student-photo {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+      }
+
+      #background-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10; /* This is crucial to keep it in the back */
+      }
+      article {
+        position: relative; /* This is the most important change */
+        background-color: transparent;
+      }
+    .phd-button {
+        /* Basic Button Styling */
+        display: inline-block;
+        padding: 12px 24px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        text-decoration: none !important;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-align: center;
+        /* Color and Hover Effects */
+        background-color: rgba(229, 112, 69, 1.0);
+        color: #ffffff;
+        border: 2px solid rgba(229, 112, 69, 1.0);
+        transition: all 0.3s ease;
+      }
+
+      /* --- End of Styles --- */
+    </style>
+  </head>
+
+  <body>
+    <div id="background-container"></div>
+    <article>
+    </article>
+    <article>
+        
+    <h1>Ayush Tewari</h1>
+    <p class="subtitle">at2164@cam.ac.uk</p>
+
+    <figure class="marginnote" style="width: 17%;">
+        <img src="assets/photo.jpg" alt="A photo of Ayush Tewari"/>
+    </figure>
+      
+    <section>
+        <p>I am an Assistant Professor at the University of Cambridge. My research interests lie in visual perception, and specifically in building world models. I develop methods that infer rich structured representations of the visual world from images and videos, much like the mental models humans infer to interact with and navigate their surroundings.<br/><br/>        
+          
+          I was previously a postdoctoral researcher at MIT CSAIL with <a href="http://billf.mit.edu">Bill Freeman</a>, <a href="http://web.mit.edu/cocosci/josh.html">Josh Tenenbaum</a>, and <a href="https://www.vincentsitzmann.com/">Vincent Sitzmann</a>. I completed my Ph.D. at the <a href="https://mpi-inf.mpg.de/departments/visual-computing-and-artificial-intelligence/">Max Planck Institute for Informatics</a> with <a href="https://www.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>. 
+        </p>
+
+        <p class="main-links">
+            <a href="info/" class="phd-link">Information for prospective PhD students</a> <br/><br/>
+            <a href="#group">[Group]</a>
+            <a href="#publications">[Publications]</a>
+            <!--a href="#talks">[Talks]</a-->
+            <a href="assets/cv.pdf">[CV]</a>
+        </p>
+    </section>
+
+    <section id="group">
+        <h2>PhD Students</h2>
+        <div class="group-container">
+            
+            <div class="publication-entry"> 
+                <figure style="margin: 0;">
+                    <img class="student-photo" src="assets/students/felix_omahony.jpeg" alt="Photo of Felix O&#39;Mahony"/>
+                </figure>
+                <div class="pub-details" style="text-align: center;">
+                    <p style="margin: 0; font-size: 1.2rem;">
+                        <b style="font-size: 1.4rem;"><a href="https://felixomahony.github.io/">Felix O&#39;Mahony</a></b><br/>
+                        <i>co-advised by Roberto Cipolla</i>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="publication-entry"> 
+                <figure style="margin: 0;">
+                    <img class="student-photo" src="assets/students/jieying_chen.jpg" alt="Photo of Jieying Chen"/>
+                </figure>
+                <div class="pub-details" style="text-align: center;">
+                    <p style="margin: 0; font-size: 1.2rem;">
+                        <b style="font-size: 1.4rem;">Jieying Chen</b><br/>
+                        <i>co-advised by Joan Lasenby</i>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="publication-entry"> 
+                <figure style="margin: 0;">
+                    <img class="student-photo" src="assets/students/jeffrey_hu.jpg" alt="Photo of Jeffrey Hu"/>
+                </figure>
+                <div class="pub-details" style="text-align: center;">
+                    <p style="margin: 0; font-size: 1.2rem;">
+                        <b style="font-size: 1.4rem;"><a href="https://jefequien.github.io/">Jeffrey Hu</a></b><br/>
+                        <i>starting Oct 2025</i>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/openmind.png" alt="Teaser for Approximating Human-Level 3D Visual Inferences With Deep Neural Networks"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Approximating Human-Level 3D Visual Inferences With Deep Neural Networks</span><br/>
+                    <i>Open Mind 2025</i><br/>
+                    <a href="https://scholar.google.com/citations?user=lNQeAXEAAAAJ&hl=en&oi=ao">Thomas P. O’Connell</a>, <a href="tzler.github.io/">Tyler Bonnen</a>, <a href="https://www.yonifriedman.com/">Yoni Friedman</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, and <a href="https://mcgovern.mit.edu/profile/nancy-kanwisher/">Nancy Kanwisher</a><br/>
+                    <a href="https://direct.mit.edu/opmi/article/doi/10.1162/opmi_a_00189/128124">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/Manifoldsigasia25.jpeg" alt="Teaser for Manifold Sampling for Differentiable Uncertainty in Radiance Fields"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Manifold Sampling for Differentiable Uncertainty in Radiance Fields</span><br/>
+                    <i>SIGGRAPH Asia 2024</i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~llyu/">Linjie Lyu</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, <a href="https://shunsukesaito.github.io/">Shunsuke Saito</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkuehler</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/">[project page]</a> <a href="https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/papers/main_paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote">
+                <video autoplay loop muted playsinline style="width: 100%;">
+                    <source src="assets/flowmap.mp4" type="video/mp4" />
+                </video></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent</span><br/>
+                    <i>3DV 2024</i><br/>
+                    <a href="https://cameronosmith.github.io/">Cameron Smith</a>*, <a href="https://davidcharatan.com/#/">David Charatan</a>*, <span class="self-author">Ayush Tewari</span>, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a> (* equal contribution)<br/>
+                    <a href="https://vincentvanderbrugge.github.io/pickscan.github.io/">[project page]</a> <a href="https://arxiv.org/pdf/2411.11196v1">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote">
+                <video autoplay loop muted playsinline style="width: 100%;">
+                    <source src="assets/Pickscan.mp4" type="video/mp4" />
+                </video></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">PickScan: Object discovery and reconstruction from handheld interactions</span><br/>
+                    <i>IROS 2024</i><br/>
+                    <a href="https://linkedin.com/in/vincent-van-der-brugge">Vincent van der Brugge</a>, <a href="https://people.inf.ethz.ch/marc.pollefeys/">Marc Pollefeys</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, <a href="https://krrish94.github.io/">Krishna Murthy Jatavallabhula</a>&#8224;, and <span class="self-author">Ayush Tewari</span>&#8224; (&#8224; equal advising)<br/>
+                    <a href="https://vincentvanderbrugge.github.io/pickscan.github.io/">[project page]</a> <a href="https://arxiv.org/pdf/2411.11196v1">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/cocoperiph.png" alt="Teaser for COCO-Periph: Bridging the Gap Between Human and Machine Perception in the Periphery"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">COCO-Periph: Bridging the Gap Between Human and Machine Perception in the Periphery</span><br/>
+                    <i>ICLR 2024</i><br/>
+                    <a href="https://scholar.google.com/citations?user=7M9eSFMAAAAJ&hl=en">Anne Harrington</a>, <a href="https://vashadutell.com/">Vasha DuTell</a>, <a href="https://mhamilton.net/">Mark Hamilton</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en">Simon Stent</a>, <a href="https://billf.mit.edu/">William T. Freeman</a>, and <a href="http://persci.mit.edu/people/rosenholtz">Ruth Rosenholtz</a><br/>
+                    <a href="https://github.com/RosenholtzLab/COCOPeriph">[project page]</a> <a href="https://openreview.net/forum?id=MiRPBbQNHv">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote">
+                <video autoplay loop muted playsinline style="width: 100%;">
+                    <source src="assets/diffusion_teaser.mp4" type="video/mp4" />
+                </video></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;"> Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision</span><br/>
+                    <i>NeurIPS 2023 <font color="red"> (Spotlight) </font></i><br/>
+                    <span class="self-author">Ayush Tewari</span>*, <a href="https://tianweiy.github.io/">Tianwei Yin</a>*, <a href="https://georgecazenavette.github.io/">George Cazenavette</a>, <a href="https://www.rezchikov.me/">Semon Rezchikov</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, <a href="http://people.csail.mit.edu/fredo/">Fredo Durand</a>, <a href="https://billf.mit.edu/">William T. Freeman</a>, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a> (* equal contribution)<br/>
+                    <a href="https://diffusion-with-forward-models.github.io/">[project page]</a> <a href="https://diffusion-with-forward-models.github.io/diffusion-forward-paper.pdf">[paper]</a> <a href="https://github.com/ayushtewari/DFM/tree/main">[code]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote">
+                <video autoplay loop muted playsinline style="width: 100%;">
+                    <source src="assets/flow_teaser.mp4" type="video/mp4" />
+                </video></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">FlowCam: Training Generalizable 3D Radiance Fields without Camera Poses via Pixel-Aligned Scene Flow</span><br/>
+                    <i>NeurIPS 2023</i><br/>
+                    <a href="https://cameronosmith.github.io/">Cameron Smith</a>, <a href="https://yilundu.github.io/">Yilun Du</a>, <span class="self-author">Ayush Tewari</span>, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a><br/>
+                    <a href="https://cameronosmith.github.io/flowcam/">[project page]</a> <a href="https://arxiv.org/abs/2306.00180">[paper]</a> <a href="https://github.com/cameronosmith/FlowCam">[code]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote">
+                <video autoplay loop muted playsinline style="width: 100%;">
+                    <source src="assets/sigasia_light.mp4" type="video/mp4" />
+                </video></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Diffusion Posterior Illumination for Ambiguity-aware Inverse Rendering</span><br/>
+                    <i>SIGGRAPH Asia 2023</i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~llyu/">Linjie Lyu</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, <a href="https://shunsukesaito.github.io/">Shunsuke Saito</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkuehler</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://vcai.mpi-inf.mpg.de/projects/2023-DPE/">[project page]</a> <a href="https://vcai.mpi-inf.mpg.de/projects/2023-DPE/papers/main_paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/AvatarStudio.gif" alt="Teaser for AvatarStudio: Text-driven Editing of 3D Dynamic Human Head Avatars"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">AvatarStudio: Text-driven Editing of 3D Dynamic Human Head Avatars</span><br/>
+                    <i>SIGGRAPH Asia 2023</i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~mmendira/">Mohit Mendiratta</a>, <a href="https://xingangpan.github.io//">Xingang Pan</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="">Kartik Teotia</a>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, <a href="https://adamkortylewski.com/">Adam Kortylewski</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://vcai.mpi-inf.mpg.de/projects/AvatarStudio/">[project page]</a> <a href="https://arxiv.org/abs/2306.00547">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote">
+                <video autoplay loop muted playsinline style="width: 100%;">
+                    <source src="assets/ModalNeRF.mp4" type="video/mp4" />
+                </video></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">ModalNeRF: Neural Modal Analysis and Synthesis for Free-Viewpoint Navigation in Dynamically Vibrating Scenes</span><br/>
+                    <i>EGSR, Computer Graphics Forum 2023</i><br/>
+                    <a href="">Automne Petitjean</a>, <a href="https://scholar.google.com/citations?user=nwjjHYcAAAAJ&hl=en">Yohan Poirier-Ginter</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://www-sop.inria.fr/members/Guillaume.Cordonnier/">Guillaume Cordonnier</a>, and <a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a><br/>
+                    <a href="https://hal.science/hal-04131503">[project page]</a> <a href="https://hal.science/hal-04131503v1/file/modal_nerf_submission.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/DragGAN.gif" alt="Teaser for Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold</span><br/>
+                    <i>SIGGRAPH 2023</i><br/>
+                    <a href="https://xingangpan.github.io//">Xingang Pan</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkuehler</a>, <a href="https://lingjie0206.github.io/">Lingjie Liu</a>, <a href="https://www.meka.page/">Abhimitra Meka</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://vcai.mpi-inf.mpg.de/projects/DragGAN/">[project page]</a> <a href="https://arxiv.org/abs/2305.10973">[paper]</a> <a href="https://github.com/XingangPan/DragGAN">[code]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote">
+                <video autoplay loop muted playsinline style="width: 100%;">
+                    <source src="assets/CVPR23.mp4" type="video/mp4" />
+                </video></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Learning to Render Novel Views from Wide-Baseline Stereo Pairs</span><br/>
+                    <i>CVPR 2023</i><br/>
+                    <a href="https://yilundu.github.io/">Yilun Du</a>, <a href="https://cameronosmith.github.io/">Cameron Smith</a>, <span class="self-author">Ayush Tewari</span>&#8224;, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a>&#8224; (&#8224; equal advising)<br/>
+                    <a href="https://yilundu.github.io/wide_baseline/">[project page]</a> <a href="https://yilundu.github.io/wide_baseline/paper.pdf">[paper]</a> <a href="https://github.com/yilundu/cross_attention_renderer">[code]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/conceptfusion.gif" alt="Teaser for ConceptFusion: Open-set Multimodal 3D Mapping"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">ConceptFusion: Open-set Multimodal 3D Mapping</span><br/>
+                    <i>RSS 2023</i><br/>
+                    <a href="https://krrish94.github.io/">Krishna Murthy Jatavallabhula</a>, ..., <span class="self-author">Ayush Tewari</span>, et. al<br/>
+                    <a href="https://concept-fusion.github.io/">[project page]</a> <a href="https://arxiv.org/abs/2302.07241">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/seeing3d.gif" alt="Teaser for Neural Groundplans: Persistent Neural Scene Representations from a Single Image"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Neural Groundplans: Persistent Neural Scene Representations from a Single Image</span><br/>
+                    <i>ICLR 2023</i><br/>
+                    <a href="https://prafullsharma.net/">Prafull Sharma</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://yilundu.github.io/">Yilun Du</a>, <a href="https://zakharos.github.io/">Sergey Zakharov</a>, <a href="https://scholar.google.se/citations?user=2xjjS3oAAAAJ&hl=en">Rares Ambrus</a>, <a href="https://adriengaidon.com/">Adrien Gaidon</a>, <a href="https://billf.mit.edu/">William T. Freeman</a>, <a href="http://people.csail.mit.edu/fredo/">Fredo Durand</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a><br/>
+                    <a href="https://prafullsharma.net/see3d/">[project page]</a> <a href="https://prafullsharma.net/see3d/paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/Straight_ICLR.png" alt="Teaser for Exploring Perceptual Straightness in Learned Visual Representations"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Exploring Perceptual Straightness in Learned Visual Representations</span><br/>
+                    <i>ICLR 2023</i><br/>
+                    <a href="https://scholar.google.com/citations?user=7M9eSFMAAAAJ&hl=en">Anne Harrington</a>, <a href="https://vashadutell.com/">Vasha DuTell</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://mhamilton.net/">Mark Hamilton</a>, <a href="https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en">Simon Stent</a>, <a href="http://persci.mit.edu/people/rosenholtz">Ruth Rosenholtz</a>, and <a href="https://billf.mit.edu/">William T. Freeman</a><br/>
+                    <a href="https://openreview.net/pdf?id=4cOfD2qL6T">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/eccv22.gif" alt="Teaser for Neural Radiance Transfer Fields for Relightable Novel-view Synthesis with Global Illumination"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Neural Radiance Transfer Fields for Relightable Novel-view Synthesis with Global Illumination</span><br/>
+                    <i>ECCV 2022 <font color="red"> (Oral Presentation) </font></i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~llyu/">Linjie Lyu</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkuehler</a>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://people.mpi-inf.mpg.de/~llyu/projects/2022-NRTF/">[project page]</a> <a href="https://arxiv.org/pdf/2207.13607.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/gan2x.gif" alt="Teaser for GAN2X: Non-Lambertian Inverse Rendering of Image GANs"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">GAN2X: Non-Lambertian Inverse Rendering of Image GANs</span><br/>
+                    <i>3DV 2022</i><br/>
+                    <a href="https://xingangpan.github.io//">Xingang Pan</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://lingjie0206.github.io/">Lingjie Liu</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://people.mpi-inf.mpg.de/~xpan/GAN2X/">[project page]</a> <a href="https://arxiv.org/abs/2206.09244">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/VoRF.png" alt="Teaser for VoRF: Volumetric Relightable Faces"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">VoRF: Volumetric Relightable Faces</span><br/>
+                    <i>BMVC 2022 <font color="red"> (Oral Presentation, Best Paper Honorable Mention) </font></i><br/>
+                    <a href="https://people.mpi-inf.mpg.de/~prao/">Pramod Rao</a>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <a href="https://people.mpi-inf.mpg.de/~gfox/">Gereon Fox</a>, <a href="http://reality.cs.ucl.ac.uk/weyrich.html">Tim Weyrich</a>, <a href="http://berndbickel.com/">Bernd Bickel</a>, <a href="https://vcg.seas.harvard.edu/people/hanspeter-pfister">Hanspeter Pfister</a>, <a href="https://cdfg.csail.mit.edu/wojciech">Wojciech Matusik</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a><br/>
+                    <a href="https://vcai.mpi-inf.mpg.de/projects/VoRF/">[project page]</a> <a href="https://vcai.mpi-inf.mpg.de/projects/VoRF/data/vorf_main.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/D3D.gif" alt="Teaser for Disentangled3D: Learning a 3D Generative Model with Disentangled Geometry and Appearance from Monocular Images"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Disentangled3D: Learning a 3D Generative Model with Disentangled Geometry and Appearance from Monocular Images</span><br/>
+                    <i>CVPR 2022</i><br/>
+                    <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <a href="https://xingangpan.github.io//">Xingang Pan</a>, <a href="https://www.ohadf.com/">Ohad Fried</a>, <a href="http://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://vcai.mpi-inf.mpg.de/projects/D3D/">[project page]</a> <a href="https://vcai.mpi-inf.mpg.de/projects/D3D/data/paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/NeuralRendering.png" alt="Teaser for Advances in Neural Rendering"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Advances in Neural Rendering</span><br/>
+                    <i>Eurographics State-of-the-Art Report 2022</i><br/>
+                    <span class="self-author">Ayush Tewari</span>*, <a href="https://justusthies.github.io/">Justus Thies</a>*, <a href="https://bmild.github.io/">Ben Mildenhall</a>*, <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>*, <a href="http://people.mpi-inf.mpg.de/~tretschk/">Edith Tretschk</a>, <a href="https://yifita.github.io/">Yifan Wang</a>, <a href="https://christophlassner.de/">Christoph Lassner</a>, <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a>, <a href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a href="https://stephenlombardi.github.io/">Stepehen Lombardi</a>, <a href="http://www.cs.cmu.edu/~tsimon/">Tomas Simon</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://jonbarron.info/">Jonathan T. Barron</a>, <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a> (* equal contribution)<br/>
+                    <a href="https://arxiv.org/abs/2111.05849">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/StyleVideoGAN.png" alt="Teaser for StyleVideoGAN: A Temporal Generative Model using a Pretrained StyleGAN"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">StyleVideoGAN: A Temporal Generative Model using a Pretrained StyleGAN</span><br/>
+                    <i>BMVC 2021 <font color="red"> (Oral Presentation) </font></i><br/>
+                    <a href="https://people.mpi-inf.mpg.de/~gfox/">Gereon Fox</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://vcai.mpi-inf.mpg.de/projects/stylevideogan/">[project page]</a> <a href="https://arxiv.org/pdf/2107.07224.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/EfficientShadows.png" alt="Teaser for Efficient and Differentiable Shadow Computation for Inverse Problems"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Efficient and Differentiable Shadow Computation for Inverse Problems</span><br/>
+                    <i>ICCV 2021</i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~llyu/">Linjie Lyu</a>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, <a href="https://lingjie0206.github.io/">Lingjie Liu</a>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/DifferentiableShadows/">[project page]</a> <a href="https://arxiv.org/pdf/2104.00359.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/NRNeRF.png" alt="Teaser for Non-Rigid Neural Radiance Fields: Reconstruction and Novel View Synthesis of a Deforming Scene from Monocular Video"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Non-Rigid Neural Radiance Fields: Reconstruction and Novel View Synthesis of a Deforming Scene from Monocular Video</span><br/>
+                    <i>ICCV 2021</i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~tretschk/">Edith Tretschk</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://christophlassner.de/">Christoph Lassner</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">[project page]</a> <a href="https://arxiv.org/pdf/2012.12247.pdf">[paper]</a> <a href="https://github.com/facebookresearch/nonrigid_nerf">[code]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/PhotoApp.jpeg" alt="Teaser for PhotoApp: Photorealistic Appearance Editing of Head Portraits"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">PhotoApp: Photorealistic Appearance Editing of Head Portraits</span><br/>
+                    <i>SIGGRAPH 2021</i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://www.interdigital.com/talent/?id=38">Abdallah Dib</a>, <a href="http://reality.cs.ucl.ac.uk/weyrich.html">Tim Weyrich</a>, <a href="http://berndbickel.com/">Bernd Bickel</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://vcg.seas.harvard.edu/people/hanspeter-pfister">Hanspeter Pfister</a>, <a href="https://cdfg.csail.mit.edu/wojciech">Wojciech Matusik</a>, <a href="https://scholar.google.fr/citations?user=hC_BTU8AAAAJ&hl=en">Louis Chevallier</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/PhotoApp/">[project page]</a> <a href="https://arxiv.org/pdf/2103.07658.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/i3dmm.png" alt="Teaser for i3DMM: Deep Implicit 3D Morphable Model of Human Heads"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">i3DMM: Deep Implicit 3D Morphable Model of Human Heads</span><br/>
+                    <i>CVPR 2021 <font color="red"> (Oral Presentation) </font></i><br/>
+                    <a href="https://vision.in.tum.de/members/yenamand">Tarun Yenamandra</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="https://vision.in.tum.de/members/cremers">Daniel Cremers</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/i3DMM/">[project page]</a> <a href="https://arxiv.org/pdf/2011.14143.pdf">[paper]</a> <a href="https://github.com/tarun738/i3DMM">[code]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/reflectance.png" alt="Teaser for Monocular Reconstruction of Neural Face Reflectance Fields"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Monocular Reconstruction of Neural Face Reflectance Fields</span><br/>
+                    <i>CVPR 2021</i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://scholar.google.com/citations?user=dMCBjeIAAAAJ&hl=en">Tae-Hyun Oh</a>, <a href="http://reality.cs.ucl.ac.uk/weyrich.html">Tim Weyrich</a>, <a href="http://berndbickel.com/">Bernd Bickel</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://vcg.seas.harvard.edu/people/hanspeter-pfister">Hanspeter Pfister</a>, <a href="https://cdfg.csail.mit.edu/wojciech">Wojciech Matusik</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/FaceReflectanceFields/">[project page]</a> <a href="https://arxiv.org/pdf/2008.10247.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/lemomo.png" alt="Teaser for Learning Complete 3D Morphable Face Models from Images and Videos"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Learning Complete 3D Morphable Face Models from Images and Videos</span><br/>
+                    <i>CVPR 2021</i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/LeMoMo/">[project page]</a> <a href="https://arxiv.org/pdf/2010.01679.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/yuxiao.jpeg" alt="Teaser for Monocular Real-time Full Body Capture with Inter-part Correlations"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Monocular Real-time Full Body Capture with Inter-part Correlations</span><br/>
+                    <i>CVPR 2021</i><br/>
+                    <a href="https://calciferzh.github.io/">Yuxiao Zhou</a>, <a href="http://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a>, <a href="https://www.mpi-inf.mpg.de/~ihabibie/">Ikhsanul Habibie</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="http://cgcad.thss.tsinghua.edu.cn/xufeng/">Feng Xu</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/2021-cvpr-full-body-capture/">[project page]</a> <a href="https://arxiv.org/pdf/2012.06087.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/3dmm.png" alt="Teaser for 3D Morphable Face Models - Past, Present and Future"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">3D Morphable Face Models - Past, Present and Future</span><br/>
+                    <i>ACM Transactions on Graphics 2021</i><br/>
+                    <a href="https://eggerbernhard.ch/">Bernhard Egger</a>, <a href="https://www-users.cs.york.ac.uk/wsmith/">Will Smith</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://morpheo.inrialpes.fr/~wuhrer/">Stefanie Wuhrer</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://thabobeeler.com/">Thabo Beeler</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://ps.is.mpg.de/person/tbolkart">Timo Bolkart</a>, <a href="https://adamkortylewski.com/">Adam Kortylewski</a>, <a href="https://www.linkedin.com/in/sami-romdhani-09775827/">Sami Romdhani</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://www.grk1564.uni-siegen.de/de/blanz-volker">Volker Blanz</a>, and <a href="https://gravis.dmi.unibas.ch/">Thomas Vetter</a><br/>
+                    <a href="https://arxiv.org/abs/1909.01815">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/EgoChat.png" alt="Teaser for Egocentric Videoconferencing"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Egocentric Videoconferencing</span><br/>
+                    <i>SIGGRAPH Asia 2020</i><br/>
+                    <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>*, <a href="http://people.mpi-inf.mpg.de/~mmendira/">Mohit Mendiratta</a>*, <a href="https://justusthies.github.io/">Justus Thies</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a> (* equal contribution)<br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/PIE/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/PIE/data/paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/PIE.png" alt="Teaser for PIE: Portrait Image Embedding for Semantic Control"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">PIE: Portrait Image Embedding for Semantic Control</span><br/>
+                    <i>SIGGRAPH Asia 2020</i><br/>
+                    <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="http://people.mpi-inf.mpg.de/~mbr">Mallikarjun B R</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/PIE/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/PIE/data/paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/PatchNets.png" alt="Teaser for PatchNets: Patch-Based Generalizable Deep Implicit 3D Shape Representations"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">PatchNets: Patch-Based Generalizable Deep Implicit 3D Shape Representations</span><br/>
+                    <i>ECCV 2020</i><br/>
+                    <a href="http://people.mpi-inf.mpg.de/~tretschk/">Edith Tretschk</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://gvv.mpi-inf.mpg.de/projects/PatchNets/">[project page]</a> <a href="arXiv">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/NeuralVoicePuppetry.png" alt="Teaser for Neural Voice Puppetry: Audio-driven Facial Reenactment"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Neural Voice Puppetry: Audio-driven Facial Reenactment</span><br/>
+                    <i>ECCV 2020</i><br/>
+                    <a href="https://justusthies.github.io/">Justus Thies</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a><br/>
+                    <a href="https://justusthies.github.io/posts/neural-voice-puppetry/">[project page]</a> <a href="https://arxiv.org/pdf/1912.05566.pdf%22">[paper]</a> <a href="https://github.com/JustusThies/NeuralVoicePuppetry">[code]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/STAR.png" alt="Teaser for State of the Art on Neural Rendering"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">State of the Art on Neural Rendering</span><br/>
+                    <i>Eurographics State-of-the-Art Report 2020</i><br/>
+                    <span class="self-author">Ayush Tewari</span>*, <a href="https://www.ohadf.com/">Ohad Fried</a>*, <a href="https://justusthies.github.io/">Justus Thies</a>*, <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a>*, <a href="https://stephenlombardi.github.io/">Stepehen Lombardi</a>, <a href="http://www.kalyans.org/">Kalyan Sunkavalli</a>, <a href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a href="http://www.cs.cmu.edu/~tsimon/">Tomas Simon</a>, <a href="http://jsaragih.org/Home_Page.html">Jason Saragih</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://research.google/people/106687/">Rohit Pandey</a>, <a href="http://www.seanfanello.it/">Sean Fanello</a>, <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>, <a href="https://www.cs.cmu.edu/~junyanz/">Jun-Yan Zhu</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>, <a href="https://research.adobe.com/person/eli-shechtman/">Eli Schectman</a>, <a href="https://www.danbgoldman.com/home/">Dan B Goldman</a>, and <a href="https://zollhoefer.com/">Michael Zollhoefer</a> (* equal contribution)<br/>
+                    <a href="https://arxiv.org/abs/2004.03805">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/StyleRig.png" alt="Teaser for StyleRig: Rigging StyleGAN for 3D Control over Portrait Images"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">StyleRig: Rigging StyleGAN for 3D Control over Portrait Images</span><br/>
+                    <i>CVPR 2020 <font color="red"> (Oral Presentation) </font></i><br/>
+                    <span class="self-author">Ayush Tewari</span>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="http://gauravbharaj.com/">Gaurav Bharaj</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/StyleRig/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/StyleRig/data/paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/TextBasedEditing.png" alt="Teaser for Text-based Editing of Talking-head Video"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Text-based Editing of Talking-head Video</span><br/>
+                    <i>SIGGRAPH 2019</i><br/>
+                    <a href="https://www.ohadf.com/">Ohad Fried</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://www.cs.princeton.edu/~af/">Adam Finkelstein</a>, <a href="https://research.adobe.com/person/eli-shechtman/">Eli Schectman</a>, <a href="https://www.danbgoldman.com/home/">Dan B Goldman</a>, <a href="https://www.kylegenova.com/">Kyle Genova</a>, <a href="https://research.adobe.com/person/zeyu-jin/">Zeyu Jin</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="http://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a><br/>
+                    <a href="https://www.ohadf.com/projects/text-based-editing/">[project page]</a> <a href="https://arxiv.org/pdf/1906.01524.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/FML.png" alt="Teaser for FML: Face Model Learning from Videos"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">FML: Face Model Learning from Videos</span><br/>
+                    <i>CVPR 2019 <font color="red"> (Oral Presentation) </font></i><br/>
+                    <span class="self-author">Ayush Tewari</span>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <a href="http://gauravbharaj.com/">Gaurav Bharaj</a>, <a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/FML19/">[project page]</a> <a href="https://arxiv.org/abs/1812.07603">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/MOFA++.png" alt="Teaser for High-Fidelity Monocular Face Reconstruction based on an Unsupervised Model-based Face Autoencoder"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">High-Fidelity Monocular Face Reconstruction based on an Unsupervised Model-based Face Autoencoder</span><br/>
+                    <i>TPAMI 2018, special issue on The Best of ICCV 2017</i><br/>
+                    <span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/TPAMI_Face/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/TPAMI_Face/paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/obfuscation.png" alt="Teaser for A Hybrid Model for Identity Obfuscation by Face Replacement"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">A Hybrid Model for Identity Obfuscation by Face Replacement</span><br/>
+                    <i>ECCV 2018</i><br/>
+                    <a href="https://qianrusun.com/">Qianru Sun</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~wxu/">Weipeng Xu</a>, <a href="https://cispa.saarland/group/fritz/">Mario Fritz</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, and <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/">Bernt Schiele</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/Obfuscation_ECCV/">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/Obfuscation_ECCV/paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/DeepVideoPortraits.png" alt="Teaser for Deep Video Portraits"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Deep Video Portraits</span><br/>
+                    <i>SIGGRAPH 2018</i><br/>
+                    <a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~wxu/">Weipeng Xu</a>, <a href="https://justusthies.github.io/">Justus Thies</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, <a href="https://richardt.name/">Christian Richardt</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/DeepVideoPortraits/">[project page]</a> <a href="https://arxiv.org/pdf/1805.11714.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/MultiLevelModel.png" alt="Teaser for Self-supervised Multi-level Face Model Learning for Monocular Reconstruction at over 250 Hz"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Self-supervised Multi-level Face Model Learning for Monocular Reconstruction at over 250 Hz</span><br/>
+                    <i>CVPR 2018 <font color="red"> (Oral Presentation) </font></i><br/>
+                    <span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="https://gvv.mpi-inf.mpg.de/projects/FML/">[project page]</a> <a href="https://gvv.mpi-inf.mpg.de/projects/FML/paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/InverseFaceNet.png" alt="Teaser for InverseFaceNet: Deep Single-Shot Inverse Face Rendering From A Single Image"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">InverseFaceNet: Deep Single-Shot Inverse Face Rendering From A Single Image</span><br/>
+                    <i>CVPR 2018</i><br/>
+                    <a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <span class="self-author">Ayush Tewari</span>, <a href="https://justusthies.github.io/">Justus Thies</a>, <a href="https://richardt.name/">Christian Richardt</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/InverseFaceNet/">[project page]</a> <a href="https://arxiv.org/pdf/1703.10956">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/MoFA.png" alt="Teaser for MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction</span><br/>
+                    <i>ICCV 2017 <font color="red"> (Oral Presentation) </font></i><br/>
+                    <span class="self-author">Ayush Tewari</span>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, <a href="http://www.mpi-inf.mpg.de/~hkim/">Hyeongwoo Kim</a>, <a href="https://www.linkedin.com/in/pablo-garrido-485472169/">Pablo Garrido</a>, <a href="https://sites.google.com/site/fbernardpi/">Florian Bernard</a>, <a href="https://ptrckprz.github.io/">Patrick Perez</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><br/>
+                    <a href="http://gvv.mpi-inf.mpg.de/projects/MZ/Papers/arXiv2017_FA/page.html">[project page]</a> <a href="http://gvv.mpi-inf.mpg.de/projects/MZ/Papers/arXiv2017_FA/paper.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
+        
+    </section>
+    <p style="text-align: right; font-size: 1.3rem;">
+        Theme inspired and adapted from <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a> and <a href="https://s-m.ac/">Mathias Sablé-Meyer</a>.
+    </p>
+    <!--section id="talks">
+        <h2>Talks</h2>
+        
+        <p>
+            <b>Structured Generative Models</b>, <i>John Hopkins University, CMU, Meta Reality Labs Research, Princeton University, Chennai Mathematical Institute, IIT Madras, 2023</i>
+            <span><a href="https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/ETpPlRe56ZBKoglFgVwOysABmW1aZhAo1Y0tt47dMHe7CQ?e=0YpeWr">[slides]</a></span>
+        </p>
+        
+        <p>
+            <b>Teaching AI to See the 3D World</b>, <i><a href="https://www.imaginationinaction.co/ai-frontiers-and-implications">CSAIL + Imagination in Action: AI Frontiers & Implications, 2023</a></i>
+            <span><a href="https://www.youtube.com/watch?v=joZ1OvQgGa8">[video]</a></span>
+        </p>
+        
+        <p>
+            <b>Finding 3D Structure in Unstructured 2D Data</b>, <i>Rank Prize Seminar, Oxford University, Adobe, 2022, Princeton University, 2023</i>
+            <span><a href="https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EXroiViFphtAmlF8Jv5NHoQBZlf3e1u3N_36TSDHQUIl1Q?e=0L7Jxq">[slides]</a></span>
+        </p>
+        
+        <p>
+            <b>Learning 3D Generative Models from 2D Data</b>, <i>Dagstuhl Seminar, 2022</i>
+            <span><a href="https://mitprod-my.sharepoint.com/:p:/g/personal/ayusht_mit_edu/EVSkLtzYm99OhjnadwRO_SQB5JT9qZO6o2WLY5zFAqdJPQ?e=rf8GY0">[slides]</a></span>
+        </p>
+        
+        <p>
+            <b>Synthesis of Portrait Images with 3D Control</b>, <i>CVPR NTIRE workshop 2021</i>
+            <span><a href="https://nextcloud.mpi-inf.mpg.de/index.php/s/H2fJet3mqjdjyKy">[slides]</a></span>
+        </p>
+        
+        <p>
+            <b>Self-Supervised 3D Digitization of Faces</b>, <i>MIT vision and graphics seminar 2021</i>
+            <span><a href="https://www.youtube.com/watch?v=wyuMeSlTTfI">[video]</a></span>
+        </p>
+        
+        <p>
+            <b>GANs with 3D Control</b>, <i>SIGGRAPH course 2021</i>
+            <span><a href="https://www.youtube.com/watch?v=otly9jcZ0Jg&t=1863s">[video]</a></span>
+        </p>
+        
+        <p>
+            <b>PIE: Portrait Image Embedding for Semantic Control</b>, <i>SIGGRAPH Asia 2020</i>
+            <span><a href="https://youtu.be/Q0MS4szpUf4">[video]</a></span>
+        </p>
+        
+        <p>
+            <b>StyleRig: Rigging StyleGAN for 3D Control over Portrait Images</b>, <i>CVPR 2020</i>
+            <span><a href="https://www.youtube.com/watch?v=VPHJk-Nm9vM">[video]</a></span>
+        </p>
+        
+        <p>
+            <b>Neural Rendering Fundamentals</b>, <i>CVPR 2020 tutorial</i>
+            <span><a href="https://www.youtube.com/watch?v=LCTYRqW-ne8&t=890s">[video]</a></span>
+        </p>
+        
+        <p>
+            <b>FML: Face Model Learning from Videos</b>, <i>CVPR 2019</i>
+            <span><a href="https://www.youtube.com/watch?v=fNlMGWm7bbk&t=362s">[video]</a></span>
+        </p>
+        
+        <p>
+            <b>Self-supervised Multi-level Face Model Learning for Monocular Reconstruction at over 250 Hz</b>, <i>CVPR 2018</i>
+            <span><a href="https://youtu.be/x18WUuBNK7E?t=2030">[video]</a></span>
+        </p>
+        
+        <p>
+            <b>MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction</b>, <i>ICCV 2017</i>
+            <span><a href="https://www.youtube.com/watch?v=NnWaNaq_86M">[video]</a></span>
+        </p>
+        
+    </section-->
+
+    </article>
+    <script src="/ayushtewari.github.io/background.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.main-links');
+            if (container) {
+                const links = container.querySelectorAll('a');
+                links.forEach(link => {
+                    link.classList.add('background-link');
+                });
+            }
+        });
+    </script>
+</body>
 </html>
