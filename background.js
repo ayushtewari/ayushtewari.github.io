@@ -28,7 +28,7 @@
 
     const currentTheme = document.body.dataset.theme || 'dark';
     const colors = {
-      dark:  { bg: '#000008', stroke: 'rgba(229,112,69,0.15)' },
+      dark:  { bg: '#000008', stroke: 'rgba(229,112,69,0.1)' },
       light: { bg: '#f5f5f5', stroke: 'rgba(50,50,150,0.05)' }
     };
 
