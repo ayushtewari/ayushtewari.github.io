@@ -27,7 +27,7 @@ module.exports = function(eleventyConfig) {
         // pathPrefix is used by 11ty's url filter - see
         // https://www.11ty.dev/docs/filters/url/ for where this is useful. It's
         // included here mainly so you know how to change it if you need to.
-        pathPrefix: "/ayushtewari.github.io",
+        pathPrefix: "/",
         dir: {
             includes: "_templates",
             output: "_site",
