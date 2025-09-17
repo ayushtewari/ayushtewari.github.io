@@ -1,0 +1,63 @@
+<h1>Tufte CSS</h1>
+<p>Edward Tufte uses a distinctive style in his handouts: simple, with well-set
+typography, extensive sidenotes, and tight integration of graphics and
+charts. <code>tufte-css</code> brings that style to HTML documents.</p>
+<p>This project is directly inspired by and
+based on <a href="https://tufte-latex.github.io/tufte-latex/">Tufte-LaTeX</a> and the
+<a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">R Markdown Tufte Handout</a>.</p>
+<h2>Getting Started</h2>
+<p>The file <em>index.html</em> is a self-describing demonstration document that walks through
+the features of Tufte CSS. The live version at
+<a href="https://edwardtufte.github.io/tufte-css/">https://edwardtufte.github.io/tufte-css/</a>
+is the best overview of the project.</p>
+<p>To use Tufte CSS, just copy <code>tufte.css</code> and the <code>et-book</code> font
+directory to your project and add the following to your HTML doc's
+head block:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;tufte.css&quot;/&gt;
+</code></pre>
+<p>All other files in the repository can be ignored, as they are merely
+used by the demonstration document.</p>
+<h2>Project Scope and Status</h2>
+<p>Tufte CSS is specifically a CSS-only solution for styling HTML for the web.</p>
+<p>That means that JavaScript solutions, although often superior to pure CSS, are out of scope for this project and will not be used. Also out of scope are handling printed versions of web pages and integration with static site generators or other formats. Thankfully, all these useful applications can be well served by separate work that builds on top of Tufte CSS.</p>
+<p>This project is maintained but not under active development. It is considered essentially feature-complete. Refactoring and new functionality are a very low priority. However, contributions are still welcome to fix bugs or add functionality.</p>
+<h2>Deploying</h2>
+<ol>
+<li>Make changes</li>
+<li>From shell, invoke <a href="https://github.com/jakubpawlowicz/clean-css-cli">clean-css-cli</a>: <code>cleancss -o tufte.min.css tufte.css</code></li>
+<li>Bump version in <em>package.json</em></li>
+<li>From shell: <code>npm publish</code></li>
+</ol>
+<h2>Contributing</h2>
+<p>If you notice something wrong or broken, let us know by opening an
+issue, or better yet, a pull request with how you think it should be
+fixed.</p>
+<p>Please document your issues and fixes thoroughly. This means a clear
+description of the concern, steps on how to reproduce it, and (if
+possible) before and after screenshots and links to prior discussions
+or commits. Please keep pull requests to one change at a time.</p>
+<p>Fixes and new functionality should be tested against <code>index.html</code> on
+screens as small as an iPhone 4 and as big as, well, as big as you use
+normally. (If you don't have a mobile device handy, fake different
+devices with your browser's developer tools.)</p>
+<p>See the Issues page, especially <a href="https://github.com/edwardtufte/tufte-css/labels/help%20wanted">Help
+Wanted</a>,
+for opportunities to contribute.</p>
+<h2>Contributors</h2>
+<ul>
+<li>Dave Liepmann (creator, project maintainer, design)</li>
+<li>Edward Tufte (editing, direction, design)</li>
+<li><a href="https://github.com/adamschwartz">Adam Schwartz</a> (ET Book font)</li>
+<li><a href="https://github.com/edwardtufte/tufte-css/commits/master?author=clayh53">Clay Harmon</a> (media queries, rem units)</li>
+<li><a href="https://github.com/edwardtufte/tufte-css/commits/master?author=pyrocat101">Linjie Ding</a> (italic typeface)</li>
+<li><a href="https://github.com/edwardtufte/tufte-css/commits/master?author=sathomas">Stephen A Thomas</a> (automagically numbered sidenotes)</li>
+<li><a href="https://github.com/edwardtufte/tufte-css/pull/9">Ben Newman</a> (sidenote numbering style)</li>
+<li><a href="https://github.com/edwardtufte/tufte-css/commits/master?author=godbyk">Kevin Godby</a> (booktabs tables)</li>
+<li><a href="https://github.com/edwardtufte/tufte-css/commits/master?author=jameskolce">James Kolce</a> (sidenote fixes)</li>
+<li><a href="https://github.com/crmackay">Chris MacKay</a> (sidenote toggling on small screens)</li>
+<li><a href="https://github.com/edwardtufte/tufte-css/commits/master?author=ruricolist">Paul Rodriguez</a>
+(sidenote style tweaks)</li>
+<li><a href="https://github.com/edwardtufte/tufte-css/commits/master?author=ursachec">Claudiu-Vlad Ursache</a> (HTML5 conformity)</li>
+</ul>
+<h2>License</h2>
+<p>Released under the MIT license. See <a href="https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE">LICENSE</a>.</p>
