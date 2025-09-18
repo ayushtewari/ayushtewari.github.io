@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet" href="/assets/tufte/tufte.min.css"/>
+    <script>
+        (function(){
+        try {
+            var t = localStorage.getItem('theme')
+            || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.dataset.theme = t; // or document.body if that’s what your CSS targets
+        } catch(e){}
+        })();
+    </script>
     <style>
       /* --- Base Layout & Tufte CSS Overrides --- */
       .marginnote img {
@@ -14,70 +23,70 @@
       .marginnote {
         margin-right: 25%;
         width: 15%;
-box-sizing: border-box;
+        box-sizing: border-box;
       }
       figure.marginnote img {
         /* Try a smaller value here for a more subtle effect */
         --fade-size: 1%;
-/* The rest of the code remains the same */
+        /* The rest of the code remains the same */
         -webkit-mask-image: 
             linear-gradient(to right, transparent, black var(--fade-size), black calc(0% - var(--fade-size)), transparent),
             linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
--webkit-mask-composite: source-in;
+            -webkit-mask-composite: source-in;
         
         mask-image: 
             linear-gradient(to right, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent),
             linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
-mask-composite: intersect;
+            mask-composite: intersect;
        }
       .publication-entry::after {
         content: "";
-display: table;
+        display: table;
         clear: both;
       }
       #publications,
       #talks {
         margin-top: 4rem;
-}
+        }
       .marginnote img,
       .marginnote video {
         width: 100%;
-}
+        }
       .publication-entry {
         display: flex;
         flex-direction: row;
-/* Changed from column to row */
+        /* Changed from column to row */
         align-items: center;
-/* Vertically centers the items */
+        /* Vertically centers the items */
         gap: 25px;
-/* Adds space between the image and text */
+        /* Adds space between the image and text */
       }
       #publications .marginnote {
-       /* This margin will ONLY apply to publication teasers */
+        /* This margin will ONLY apply to publication teasers */
         margin-right: 0%;
-/* Example: a smaller margin */
+        /* Example: a smaller margin */
       }
 
       /* --- Add this new rule for the text block --- */
       .pub-details {
         flex: 1;
-/* Allows the text block to fill the available space */
+        /* Allows the text block to fill the available space */
         max-width: 125ch;
-/* Caps the width of the text block */
+        /* Caps the width of the text block */
       }
 
       .phd-info {
         flex: 1;
-/* Allows the text block to fill the available space */
+        /* Allows the text block to fill the available space */
         max-width: 125ch;
-margin-left: 5%;
+        margin-left: 5%;
         margin-right: 0%;
         box-sizing: border-box;
         padding: 0 1rem;
      }
      .phd-link {
         font-size: 1.2em;
-/* Change this value as needed */
+        /* Change this value as needed */
         border-bottom: 1px solid;
         padding-bottom: 2px;
      }
@@ -86,108 +95,105 @@ margin-left: 5%;
         background-color: #0b0c10; /* Add this line */
     }
 
-      .background-link {
+    .background-link {
         
         color: #ff9d7d;
-}
+    }
 
       h1, h2, h3 {
         color: #ffffff;
-}
+    }
       hr, blockquote {
         border-color: #444;
-}
+    }
 
       #group {
         margin-top: 4rem;
-}
+    }
 
-.group-container {
-  display: grid;
-  /* Each column will be at least 180px, but can grow to fill space */
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-  gap: 1.5rem; 
-  margin-left: -5.5%; 
-}
+    .group-container {
+        display: grid;
+        /* Each column will be at least 180px, but can grow to fill space */
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+        gap: 1.5rem; 
+        margin-left: -5.5%; 
+    }
       /* This rule now defines the size for each member's block */
-      #group .publication-entry {
+    #group .publication-entry {
         width: 300px;
-/* Sets the container width */
+        /* Sets the container width */
         display: flex;
         flex-direction: column;
-/* Stacks photo and text */
+        /* Stacks photo and text */
         align-items: center;
-/* Centers them horizontally */
+        /* Centers them horizontally */
         gap: 10px;
-/* Space between photo and name */
-      }
+        /* Space between photo and name */
+    }
 
-      /* This rule ensures the photo is not distorted */
-      .student-photo {
+    /* This rule ensures the photo is not distorted */
+    .student-photo {
         height: 200px;
-width: 200px;
+        width: 200px;
         object-fit: cover;
-      }
+    }
 
-      #background-container {
+    #background-container {
         position: absolute;
-top: 0;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: -10;
-/* This is crucial to keep it in the back */
-      }
-      /* --- Robust Link Styling Override --- */
-      /* This is a more specific rule to override Tufte CSS and fix the "mushed text" issue.
-*/
-      .content-layer a {
+    }
+    /* --- Robust Link Styling Override --- */
+    /* This is a more specific rule to override Tufte CSS and fix the "mushed text" issue.*/
+    .content-layer a {
         text-decoration: none;
-background: none !important;         /* CRITICAL: Disables Tufte's background/underline trick */
+        background: none !important;         /* CRITICAL: Disables Tufte's background/underline trick */
         text-shadow: none !important;
-/* CRITICAL: Disables Tufte's shadow effect */
+        /* CRITICAL: Disables Tufte's shadow effect */
         padding-bottom: 2px;
         transition: color 0.2s;
-      }
+    }
 
       /* --- Link colors for DARK mode (Default) --- */
-      .content-layer a {
+    .content-layer a {
         color: #ff9d7d;
-/* A pleasant, readable light orange */
-      }
+        /* A pleasant, readable light orange */
+    }
 
       /* --- Link colors for LIGHT mode --- */
-      body.light-mode .content-layer a {
-        color: #0056b3;
-/* A standard, accessible blue */
-      }
+    .light-mode .content-layer a {
+        color: #0056b3; /* A standard, accessible blue */
+    }
 
     .phd-button {
         /* Basic Button Styling */
         display: inline-block;
-padding: 12px 24px;
+        padding: 12px 24px;
         margin-bottom: 20px;
         border-radius: 50px;
         text-decoration: none !important;
         font-weight: bold;
         font-size: 1.1em;
         text-align: center;
-/* Color and Hover Effects */
+        /* Color and Hover Effects */
         background-color: rgba(229, 112, 69, 0.5);
         color: #ffffff;
-border: 2px solid rgba(229, 112, 69, 0.5);
+        border: 2px solid rgba(229, 112, 69, 0.5);
         transition: all 0.3s ease;
-}
+    }
 
 
             /* --- Theme Toggle Button --- */
-      #theme-toggle {
+    #theme-toggle {
         position: fixed;
-top: 20px;
+        top: 20px;
         right: 20px;
         z-index: 100; /* Ensure it's on top of other content */
         background-color: #444;
-color: #fff;
+        color: #fff;
         border: 1px solid #666;
         border-radius: 50%;
         width: 45px;
@@ -195,75 +201,73 @@ color: #fff;
         font-size: 1.5rem;
         cursor: pointer;
         transition: background-color 0.3s ease;
-}
+    }
 
       #theme-toggle:hover {
         background-color: #555;
-}
+    }
 
-      /* --- Light Mode Styles --- */
-      body.light-mode {
+    /* --- Light Mode Styles --- */
+    body.light-mode {
         background-color: #f5f5f5;
-
         color: #333333;
+    }
 
-      }
-
-      body.light-mode h1,
-      body.light-mode h2,
-      body.light-mode h3 {
+    body.light-mode h1,
+    body.light-mode h2,
+    body.light-mode h3 {
         color: #000000;
-}
+    }
       
-      body.light-mode .background-link {
+    body.light-mode .background-link {
         color: #d95300 !important;
-}
+    }
 
-      body.light-mode hr, 
-      body.light-mode blockquote {
+    body.light-mode hr, 
+    body.light-mode blockquote {
         border-color: #dddddd;
-}
+    }
 
-      body.light-mode .phd-button {
+    body.light-mode .phd-button {
         background-color: #007bff;
         color: #ffffff;
-border-color: #007bff;
-      }
+        border-color: #007bff;
+    }
 
-       :where(h1,h2,h3,h4,h5,h6) {
-            text-shadow: none !important;
--webkit-text-stroke: 0 !important;
-            filter: none !important;
-            color: var(--text);
-            }
+    :where(h1,h2,h3,h4,h5,h6) {
+        text-shadow: none !important;
+        -webkit-text-stroke: 0 !important;
+        filter: none !important;
+        color: var(--text);
+    }
 
-        /* 2) Prevent double underlines when a heading is a link */
-        :where(h1,h2,h3,h4,h5,h6) a {
-            color: inherit;
-text-decoration: none;         /* kill the link underline inside headings */
-        }
+    /* 2) Prevent double underlines when a heading is a link */
+    :where(h1,h2,h3,h4,h5,h6) a {
+        color: inherit;
+        text-decoration: none;         /* kill the link underline inside headings */
+    }
 
-        /* If you want an underline style for headings, do one consistent line: */
-        :where(h1,h2,h3) {
-            border-bottom: 2px solid var(--border);
-padding-bottom: .15rem;
-        }
+    /* If you want an underline style for headings, do one consistent line: */
+    :where(h1,h2,h3) {
+        border-bottom: 2px solid var(--border);
+        padding-bottom: .15rem;
+    }
 
-        /* 3) Safety reset in case a global text-shadow slipped in */
-        :where(body, body *) {
-            text-shadow: none;
-}
+    /* 3) Safety reset in case a global text-shadow slipped in */
+    :where(body, body *) {
+        text-shadow: none;
+    }
 
         /* Optional: nicer link underlines elsewhere */
     a {
         text-underline-offset: 0.05em;
         /* very close */
     }
-      html, body {
+    html, body {
         background-color: var(--bg);      /* fallback while the tile loads */
         background-attachment: scroll;    /* explicit: background moves with content */
         min-height: 100%;
-      }
+    }
 
     /* Small screens: pull the photo into the normal flow, centered, readable */
     @media (max-width: 768px) {
@@ -314,7 +318,7 @@ padding-bottom: .15rem;
 
   <body>
     <button id="theme-toggle" title="Toggle light/dark mode">☀️</button>
-    
+    <div id="background-container"></div>
     
     <main class="content-layer">
         
