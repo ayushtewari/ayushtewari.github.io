@@ -69,7 +69,8 @@
 
   // --- DOM Interaction ---
   function applyBG(theme) {
-    const target = document.getElementById('background-container');
+    // const target = document.getElementById('background-container');
+    const target = document.body;
     if (!target || !cache[theme]) return;
     target.style.transition = 'opacity 0.8s ease-in-out';
     target.style.backgroundImage = `url(${cache[theme]})`;
