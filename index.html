@@ -11,10 +11,26 @@
     <script>
         (function(){
         try {
-            var t = localStorage.getItem('theme')
-            || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            document.documentElement.dataset.theme = t; // or document.body if that’s what your CSS targets
-        } catch(e){}
+            var theme = localStorage.getItem('theme')
+                || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+            // Set the data attribute for CSS targeting
+            document.documentElement.dataset.theme = theme;
+
+            // --- ADD THIS LOGIC ---
+            // Define the background colors here
+            var themeColors = {
+                light: '#f7f7f8',
+                dark:  '#0b0c10'
+            };
+
+            // Immediately set the body's background color to prevent flashing
+            document.documentElement.style.backgroundColor = themeColors[theme];
+
+        } catch(e) {
+            // Fallback in case of an error
+            document.documentElement.style.backgroundColor = '#0b0c10';
+        }
         })();
     </script>
     <style>
