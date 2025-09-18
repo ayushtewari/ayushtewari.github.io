@@ -1,84 +1,105 @@
-// background.js (optimized)
 (() => {
-  const TILE = { w: 640, h: 240, dprCap: 1.5 };
+  // --- Configuration ---
+  const TILE = { w: 1280, h: 800 };
   const COLORS = {
-    dark:  { bg: '#0b0c10', stroke: 'rgba(229,112,69,0.21)' },
-    light: { bg: '#f7f7f8',  stroke: 'rgba(50,50,150,0.10)' }
+    light: { bg: '#f7f7f8', stroke: 'rgba(50,50,150,0.10)' },
+    dark:  { bg: '#0b0c10', stroke: 'rgba(229,112,69,0.15)' },
   };
-  const cache = {}; // theme -> dataURL
+  const cache = {};
 
-  const randn = (m,s)=> m + Math.sqrt(-2*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random())*s;
-  const pdf   = (x,m,s)=> Math.exp(-((x-m)*(x-m))/(2*s*s))/Math.sqrt(2*Math.PI*s*s);
+  // --- Generative Art Functions ---
+  function randn(m, s) { return m + (Math.sqrt(-2.0 * Math.log(Math.random())) * Math.cos(2.0 * Math.PI * Math.random())) * s; }
+  function normalPDF(x, m, s) { return Math.exp(-Math.pow((x - m), 2) / (2 * s * s)) / Math.sqrt(2 * Math.PI * s * s); }
 
-  function makeTile(theme){
-    const dpr = Math.min(TILE.dprCap, window.devicePixelRatio || 1);
-    const c = document.createElement('canvas');
-    c.width  = Math.floor(TILE.w * dpr);
-    c.height = Math.floor(TILE.h * dpr);
-    const g = c.getContext('2d');
-    g.setTransform(dpr,0,0,dpr,0,0);
+  // --- Main Drawing Function ---
+  function makeTile(theme) {
+    const canvas = document.createElement("canvas");
+    canvas.width = TILE.w; canvas.height = TILE.h;
+    const ctx = canvas.getContext("2d");
+    const themeColors = COLORS[theme];
+    const lineWidth = theme === 'light' ? 1.5 : 2.5;
 
-    g.fillStyle = COLORS[theme].bg;
-    g.fillRect(0,0,TILE.w,TILE.h);
-    g.strokeStyle = COLORS[theme].stroke;
-    g.lineWidth = 1.2;
+    ctx.lineWidth = lineWidth;
+    ctx.strokeStyle = themeColors.stroke;
+    ctx.fillStyle = themeColors.bg;
+    ctx.fillRect(0, 0, canvas.width, canvas.height); // This still colors the whole canvas
 
-    const spacing = 72, step = 16, rows = Math.floor(TILE.h/spacing);
-    for (let i=0;i<rows;i++){
-      const y = spacing + i*spacing;
-      const modes = (Math.random()*3|0)+1;
-      const mus   = Array.from({length:modes}, ()=> randn(TILE.w/2, TILE.w/10));
-      const sig   = Array.from({length:modes}, ()=> Math.max(12, Math.abs(randn(0.03*TILE.w, TILE.w/180))));
-      let w = y;
-      g.beginPath();
-      for (let x=0;x<=TILE.w;x+=step){
-        let noise=0; for (let k=0;k<modes;k++) noise += pdf(x, mus[k], sig[k]);
-        w = 0.5*w + 0.5*(y - (spacing/22)*TILE.w*noise + randn(0, spacing/22));
-        x===0 ? g.moveTo(x,w) : g.lineTo(x,w);
+    // --- NEW: Define the drawing boundaries ---
+    const margin = canvas.width * 0.0; // 7.5% margin on each side. Adjust as you like.
+    const drawableWidth = canvas.width - 2 * margin;
+
+    const dy = 50, xRes = 100, dx = drawableWidth / xRes, yLines = (canvas.height - dy) / dy;
+
+    for (let i = 0; i <= yLines; i++) {
+      const nModes = Math.floor(Math.random() * 6) + 1;
+      ctx.beginPath();
+      const mus = [], sigmas = [];
+      for (let j = 0; j < nModes; j++) {
+        // Center the 'peaks' within the new drawable area
+        mus[j] = randn(margin + drawableWidth / 2, drawableWidth / 15);
+        sigmas[j] = randn(0.03 * drawableWidth, drawableWidth / 200);
       }
-      g.stroke();
+      let y = dy + (i * dy), w = y;
+
+      // UPDATED: Start drawing from the left margin
+      ctx.moveTo(margin, w);
+      const points = [];
+      for (let j = 0; j < xRes; j++) {
+        // UPDATED: Calculate x-position with the margin offset
+        const x = margin + (j + 1) * dx;
+        let noise = 0;
+        for (let l = 0; l < nModes; l++) noise += normalPDF(x, mus[l], sigmas[l]);
+        const noiseEffect = (dy / 30) * canvas.width * noise + randn(0, dy / 35);
+        w = 0.3 * w + 0.7 * (y - noiseEffect);
+        points.push({ x, y: w });
+      }
+
+      // This part for drawing curves remains the same, as it uses the 'points' array
+      // which now contains the correctly offset coordinates.
+      for (let j = 1; j < points.length - 2; j++) {
+        const xc = (points[j].x + points[j + 1].x) / 2;
+        const yc = (points[j].y + points[j + 1].y) / 2;
+        ctx.quadraticCurveTo(points[j].x, points[j].y, xc, yc);
+      }
+      ctx.quadraticCurveTo(points[points.length - 2].x, points[points.length - 2].y, points[points.length - 1].x, points[points.length - 1].y);
+      ctx.fill(); ctx.stroke();
     }
-    return c.toDataURL('image/png');
+    return canvas.toDataURL('image/jpeg', 0.9);
   }
 
-function applyBG(theme){
-  const target = document.body; // was: document.getElementById('background-container')
-  if (!target || !cache[theme]) return;
-  target.style.backgroundImage  = `url(${cache[theme]})`;
-  target.style.backgroundRepeat = 'repeat';
-  target.style.backgroundSize   = `${TILE.w}px ${TILE.h}px`;
-  // Important: let it scroll with content (default behavior)
-  target.style.backgroundAttachment = 'scroll'; // explicit for clarity
-  target.style.backgroundPosition = 'top left'; // or '0 0'
-}
-
-  function currentTheme(){
-    return document.body.dataset.theme ||
-      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  // --- DOM Interaction ---
+  function applyBG(theme) {
+    const target = document.getElementById('background-container');
+    if (!target || !cache[theme]) return;
+    target.style.transition = 'opacity 0.8s ease-in-out';
+    target.style.backgroundImage = `url(${cache[theme]})`;
+    target.style.opacity = 1;
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const el = document.getElementById('background-container');
-    // if (el) {
-    //   el.style.position='fixed';
-    //   el.style.inset='0';
-    //   el.style.zIndex='-1';
-    //   el.style.pointerEvents='none';
-    // }
+  // --- CORRECTED THEME DETECTION ---
+  // This now correctly reads the theme from the `<html>` tag (document.documentElement).
+  function currentTheme() {
+    return document.documentElement.dataset.theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
 
-    const build = t => { cache[t] = makeTile(t); };
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(()=> build('light')); requestIdleCallback(()=> build('dark'));
-    } else {
-      setTimeout(()=> build('light'),0); setTimeout(()=> build('dark'),0);
-    }
-    // apply as soon as available
-    const t = currentTheme();
-    const applyWhenReady = () => cache[t] ? applyBG(t) : setTimeout(applyWhenReady, 30);
-    applyWhenReady();
-  });
+  // This global function is called by the theme toggle button in base.njk
+  window.redrawBackground = () => {
+    applyBG(currentTheme());
+  };
 
-  // On theme attribute change: just swap image (no re-draw)
-  new MutationObserver(() => applyBG(currentTheme()))
-    .observe(document.body, { attributes:true, attributeFilter:['data-theme'] });
+  // --- Initialization ---
+document.addEventListener('DOMContentLoaded', () => {
+  const t = currentTheme();
+  cache[t] = cache[t] || makeTile(t);
+  applyBG(t);
+
+  // build the other theme when idle
+  const other = t === 'dark' ? 'light' : 'dark';
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => { cache[other] = cache[other] || makeTile(other); });
+  } else {
+    setTimeout(() => { cache[other] = cache[other] || makeTile(other); }, 0);
+  }
+});
 })();
+
