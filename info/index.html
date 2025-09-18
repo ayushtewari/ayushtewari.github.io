@@ -140,14 +140,29 @@
         object-fit: cover;
     }
 
+    body {
+        /* Default to dark mode background */
+        background-color: #0b0c10;
+        /* Add a smooth transition for theme changes */
+        transition: background-color 0.8s ease-in-out;
+    }
+
+    body.light-mode {
+        /* Light mode background */
+        background-color: #f7f7f8;
+    }
+
     #background-container {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: -10;
+        background-color: var(--bg);
+
     }
+
     /* --- Robust Link Styling Override --- */
     /* This is a more specific rule to override Tufte CSS and fix the "mushed text" issue.*/
     .content-layer a {
@@ -313,16 +328,14 @@
             object-fit: cover; /* [cite: 47] */ /* Prevents image from being distorted */
         }
     }
-html[data-theme="dark"] {
-  background-color: #0b0c10; /* Dark theme background */
-}
 /* --- End of Styles --- */
     </style>
   </head>
 
   <body>
     <button id="theme-toggle" title="Toggle light/dark mode">☀️</button>
-    <div id="background-container"></div>
+    <div id="background-container">
+    </div>
     
     <main class="content-layer">
         
@@ -381,22 +394,20 @@ html[data-theme="dark"] {
 
             // Function to apply the chosen theme
             const applyTheme = (theme) => {
- 
-               if (theme === 'light') {
+                if (theme === 'light') {
                     body.classList.add('light-mode');
-                    body.dataset.theme = 'light';
-                    themeToggle.textContent = '🌙'; // Set icon for light mode
+                    document.documentElement.dataset.theme = 'light'; // [CORRECTED]
+                    themeToggle.textContent = '🌙';
                 } else {
                     body.classList.remove('light-mode');
-                    body.dataset.theme = 'dark';
-                    themeToggle.textContent = '☀️'; // Set icon for dark mode
+                    document.documentElement.dataset.theme = 'dark';  // [CORRECTED]
+                    themeToggle.textContent = '☀️';
                 }
                 // Redraw the canvas background with the new theme colors
                 if (window.redrawBackground) {
                     window.redrawBackground();
-}
-            };
-// Event listener for the toggle button
+                }
+            };// Event listener for the toggle button
             themeToggle.addEventListener('click', () => {
                 const newTheme = body.classList.contains('light-mode') ? 'dark' : 'light';
                 localStorage.setItem('theme', newTheme);
