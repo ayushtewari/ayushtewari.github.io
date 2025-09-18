@@ -2,7 +2,7 @@
 (() => {
   const TILE = { w: 640, h: 240, dprCap: 1.5 };
   const COLORS = {
-    dark:  { bg: '#0b0c10', stroke: 'rgba(229,112,69,0.25)' },
+    dark:  { bg: '#0b0c10', stroke: 'rgba(229,112,69,0.21)' },
     light: { bg: '#f7f7f8',  stroke: 'rgba(50,50,150,0.10)' }
   };
   const cache = {}; // theme -> dataURL
