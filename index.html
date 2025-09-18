@@ -313,7 +313,9 @@
             object-fit: cover; /* [cite: 47] */ /* Prevents image from being distorted */
         }
     }
-
+    html {
+        background-color: #0b0c10; /* Light theme background */
+    }
 /* --- End of Styles --- */
     </style>
   </head>
@@ -1110,11 +1112,11 @@
  
                if (theme === 'light') {
                     body.classList.add('light-mode');
-body.dataset.theme = 'light';
+                    body.dataset.theme = 'light';
                     themeToggle.textContent = '🌙'; // Set icon for light mode
                 } else {
                     body.classList.remove('light-mode');
-body.dataset.theme = 'dark';
+                    body.dataset.theme = 'dark';
                     themeToggle.textContent = '☀️'; // Set icon for dark mode
                 }
                 // Redraw the canvas background with the new theme colors
