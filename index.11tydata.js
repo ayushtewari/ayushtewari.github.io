@@ -199,7 +199,7 @@ module.exports = {
         },
         {
             name: "Jeffrey Hu",
-            role: "starting Oct 2025",
+            role: "",
             photo: "assets/students/jeffrey_hu.jpg",
             url: "https://jefequien.github.io/"
         },
@@ -301,7 +301,7 @@ module.exports = {
             teaser: "assets/seeing3d.gif",
             authors: authorListEqual([PrafullSharma, AyushTewari, YilunDu, SergeyZakharov, RaresAmbrus, AdrienGaidon, WilliamTFreeman, FredoDurand, JoshTenenbaum, VincentSitzmann], 0),
             conference: ICLR + " 2023",
-            data: ["[project page]".link("https://prafullsharma.net/see3d/"), "[paper]".link("https://prafullsharma.net/see3d/paper.pdf")].join(" ")
+            data: ["[project page]".link("https://prafullsharma.net/neural_groundplans/"), "[paper]".link("https://arxiv.org/pdf/2207.11232")].join(" ")
         },
         {
             title: "Exploring Perceptual Straightness in Learned Visual Representations",
