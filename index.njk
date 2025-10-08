@@ -29,11 +29,11 @@
         <h2>PhD Students</h2>
         <div class="group-container">
             {% for member in group %}
-            <div class="publication-entry"> 
+            <div class="student-entry"> 
                 <figure style="margin: 0;">
                     <img class="student-photo" src="{{ member.photo }}" alt="Photo of {{ member.name }}"/>
                 </figure>
-                <div class="pub-details" style="text-align: center;">
+                <div class="pub-details">
                     <p style="margin: 0; font-size: 1.2rem;">
                         <b style="font-size: 1.4rem;">
                             {%- if member.url -%}

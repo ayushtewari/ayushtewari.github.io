@@ -2,8 +2,8 @@
   // --- Configuration ---
   const TILE = { w: 1280, h: 800 };
   const COLORS = {
-    light: { bg: '#f7f7f8', stroke: 'rgba(50,50,150,0.10)' },
-    dark:  { bg: '#0b0c10', stroke: 'rgba(229,112,69,0.15)' },
+    light: { bg: '#f7f7f8', stroke: 'rgba(50,50,150,0.08)' },
+    dark:  { bg: '#0b0c10', stroke: 'rgba(229,112,69,0.08)' },
   };
   const cache = {};
 
@@ -103,4 +103,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 })();
-
