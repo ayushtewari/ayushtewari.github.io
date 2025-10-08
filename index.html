@@ -18,6 +18,9 @@
         })();
     </script>
     <style>
+      html {
+        font-size: 90%; /* Adjust this percentage to zoom in or out */
+      }
       /* --- Base Layout & Tufte CSS Overrides --- */
       .marginnote img {
           width: 100%;
@@ -95,7 +98,7 @@
     body {
         color: #e2e2e2;
         background-color: #0b0c10; /* Add this line */
-
+        max-width: 180ch;
     }
 
     .background-link {
@@ -111,33 +114,27 @@
     }
 
       #group {
-        margin-top: 4rem;
+        margin-top: 0rem;
     }
 
     .group-container {
         display: grid;
-        /* Each column will be at least 180px, but can grow to fill space */
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-        gap: 1.5rem; 
-        margin-left: -5.5%; 
+        /* Each column will be at least 170px, but can grow to fill space */
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); 
+        
+        
     }
-      /* This rule now defines the size for each member's block */
-    #group .publication-entry {
-        width: 300px;
-        /* Sets the container width */
+    #group .student-entry {
+        width: 280px;
         display: flex;
         flex-direction: column;
-        /* Stacks photo and text */
-        align-items: center;
-        /* Centers them horizontally */
-        gap: 10px;
-        /* Space between photo and name */
+        align-items: flex-start; /* This left-aligns the content */
+        gap: 2px;
     }
-
     /* This rule ensures the photo is not distorted */
     .student-photo {
-        height: 200px;
-        width: 200px;
+        height: 160px;
+        width: 140px;
         object-fit: cover;
     }
 
@@ -334,6 +331,7 @@
             flex-shrink: 0; /* [cite: 91] */ /* Prevent the image from shrinking */
             object-fit: cover; /* [cite: 47] */ /* Prevents image from being distorted */
         }
+
     }
 /* --- End of Styles --- */
     </style>
@@ -369,11 +367,11 @@
         <h2>PhD Students</h2>
         <div class="group-container">
             
-            <div class="publication-entry"> 
+            <div class="student-entry"> 
                 <figure style="margin: 0;">
                     <img class="student-photo" src="assets/students/felix_omahony.jpeg" alt="Photo of Felix O&#39;Mahony"/>
                 </figure>
-                <div class="pub-details" style="text-align: center;">
+                <div class="pub-details">
                     <p style="margin: 0; font-size: 1.2rem;">
                         <b style="font-size: 1.4rem;"><a href="https://felixomahony.github.io/">Felix O&#39;Mahony</a></b><br/>
                         <i>co-advised by Roberto Cipolla</i>
@@ -381,11 +379,11 @@
                 </div>
             </div>
             
-            <div class="publication-entry"> 
+            <div class="student-entry"> 
                 <figure style="margin: 0;">
                     <img class="student-photo" src="assets/students/jieying_chen.jpg" alt="Photo of Jieying Chen"/>
                 </figure>
-                <div class="pub-details" style="text-align: center;">
+                <div class="pub-details">
                     <p style="margin: 0; font-size: 1.2rem;">
                         <b style="font-size: 1.4rem;">Jieying Chen</b><br/>
                         <i>co-advised by Joan Lasenby</i>
@@ -393,11 +391,11 @@
                 </div>
             </div>
             
-            <div class="publication-entry"> 
+            <div class="student-entry"> 
                 <figure style="margin: 0;">
                     <img class="student-photo" src="assets/students/jeffrey_hu.jpg" alt="Photo of Jeffrey Hu"/>
                 </figure>
-                <div class="pub-details" style="text-align: center;">
+                <div class="pub-details">
                     <p style="margin: 0; font-size: 1.2rem;">
                         <b style="font-size: 1.4rem;"><a href="https://jefequien.github.io/">Jeffrey Hu</a></b><br/>
                         <i></i>
