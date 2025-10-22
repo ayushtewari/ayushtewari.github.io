@@ -136,6 +136,17 @@
         height: 160px;
         width: 140px;
         object-fit: cover;
+    /* Add the fade effect here */
+    --fade-size: 2%; /* You can adjust this value, e.g., 2% for a stronger fade */
+    -webkit-mask-image: 
+        linear-gradient(to right, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent),
+        linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+    -webkit-mask-composite: source-in; /* For Safari */
+    
+    mask-image: 
+        linear-gradient(to right, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent),
+        linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+    mask-composite: intersect; /* For other browsers */
     }
 
     body {
@@ -408,6 +419,20 @@
 
     <section id="publications">
         <h2>Publications</h2>
+        
+        <div class="publication-entry">
+            
+            <figure class="marginnote"><img src="assets/understanding25_2.png" alt="Teaser for Understanding Multi-view Transformers"/></figure>
+            
+            <div class="pub-details">
+                <p style="margin-top: 0;">
+                    <span class="pub-title" style="font-size: 1.5rem; font-weight: bold;">Understanding Multi-view Transformers</span><br/>
+                    <i>ICCV 2025 End-to-End Learning Workshop</i><br/>
+                    <a href="https://www.jgaubil.com/">Julien Gaubil</a>*, <a href="https://michal-stary.github.io/">Michal Stary</a>*, <span class="self-author">Ayush Tewari</span>, and <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a> (* equal contribution)<br/>
+                    <a href="https://www.jgaubil.com/docs/und3rstand.pdf">[paper]</a>
+                </p>
+            </div>
+        </div>
         
         <div class="publication-entry">
             
