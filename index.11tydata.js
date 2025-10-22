@@ -41,6 +41,7 @@ const IkhsanulHabibie = "Ikhsanul Habibie".link("https://www.mpi-inf.mpg.de/~iha
 const JasonSaragih = "Jason Saragih".link("http://jsaragih.org/Home_Page.html");
 const JoshTenenbaum = "Joshua B. Tenenbaum".link("http://web.mit.edu/cocosci/josh.html");
 const JonBarron = "Jonathan T. Barron".link("https://jonbarron.info/");
+const JulienGaubil = "Julien Gaubil".link("https://www.jgaubil.com/");
 const JunYanZhu = "Jun-Yan Zhu".link("https://www.cs.cmu.edu/~junyanz/");
 const JustusThies = "Justus Thies".link("https://justusthies.github.io/");
 const KartikTeotia = "Kartik Teotia".link("");
@@ -54,6 +55,7 @@ const ManeeshAgrawala = "Maneesh Agrawala".link("http://graphics.stanford.edu/~m
 const MarcPollefeys = "Marc Pollefeys".link("https://people.inf.ethz.ch/marc.pollefeys/");
 const MatthiasNiessner = "Matthias Niessner".link("http://www.niessnerlab.org/members/matthias_niessner/profile.html");
 const MichaelZollhoefer = "Michael Zollhoefer".link("https://zollhoefer.com/");
+const MichalStary = "Michal Stary".link("https://michal-stary.github.io/");
 const MohamedElgharib = "Mohamed Elgharib".link("https://people.mpi-inf.mpg.de/~elgharib/");
 const MohitMendiratta = "Mohit Mendiratta".link("http://people.mpi-inf.mpg.de/~mmendira/");
 const NancyKanwisher = "Nancy Kanwisher".link("https://mcgovern.mit.edu/profile/nancy-kanwisher/");
@@ -205,6 +207,13 @@ module.exports = {
         },
     ],
     publications: [
+    {
+            title: "Understanding Multi-view Transformers",
+            teaser: "assets/understanding25_2.png",
+            authors: authorListEqual([JulienGaubil, MichalStary, AyushTewari, VincentSitzmann], 2),
+            conference: ICCV + " 2025 End-to-End Learning Workshop",
+            data: ["[paper]".link("https://www.jgaubil.com/docs/und3rstand.pdf")].join(" ")
+        },
         {
             title: "Approximating Human-Level 3D Visual Inferences With Deep Neural Networks",
             teaser: "assets/openmind.png",
