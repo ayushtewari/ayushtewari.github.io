@@ -30,7 +30,7 @@
       }
       figure.marginnote img {
         /* Try a smaller value here for a more subtle effect */
-        --fade-size: 1%;
+        --fade-size: 2%;
         /* The rest of the code remains the same */
         -webkit-mask-image: 
             linear-gradient(to right, transparent, black var(--fade-size), black calc(0% - var(--fade-size)), transparent),
@@ -118,9 +118,7 @@
     .group-container {
         display: grid;
         /* Each column will be at least 170px, but can grow to fill space */
-        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); 
-        
-        
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
     }
     #group .student-entry {
         width: 280px;
