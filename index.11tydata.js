@@ -74,7 +74,7 @@ const VolkerBlanz = "Volker Blanz".link("http://www.grk1564.uni-siegen.de/de/bla
 const QianruSun = "Qianru Sun".link("https://qianrusun.com/");
 const RaresAmbrus = "Rares Ambrus".link("https://scholar.google.se/citations?user=2xjjS3oAAAAJ&hl=en");
 const RicardoMartinBrualla = "Ricardo Martin-Brualla".link("http://ricardomartinbrualla.com/");
-const RobertoCipolla = "Roberto Cipolla".link("mi.eng.cam.ac.uk/~cipolla");
+const RobertoCipolla = "Roberto Cipolla".link("https://mi.eng.cam.ac.uk/~cipolla");
 const RohitPandey = "Rohit Pandey".link("https://research.google/people/106687/");
 const RuthRosenholtz = "Ruth Rosenholtz".link("http://persci.mit.edu/people/rosenholtz");
 const SeanFanello = "Sean Fanello".link("http://www.seanfanello.it/");
@@ -192,13 +192,13 @@ module.exports = {
 // After
         {
             name: "Felix O'Mahony",
-            role: "co-advised by Roberto Cipolla",
+            role: "with Roberto Cipolla",
             photo: "assets/students/felix_omahony.jpeg",
             url: "https://felixomahony.github.io/"
         },
         {
             name: "Jieying Chen",
-            role: "co-advised by Joan Lasenby",
+            role: "with Joan Lasenby",
             photo: "assets/students/jieying_chen.jpg",
         },
         {
