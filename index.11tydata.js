@@ -25,6 +25,7 @@ const DanielCremers = "Daniel Cremers".link("https://vision.in.tum.de/members/cr
 const DavidCharatan = "David Charatan".link("https://davidcharatan.com/#/");
 const EdgarTretschk = "Edith Tretschk".link("http://people.mpi-inf.mpg.de/~tretschk/");
 const EliShectman = "Eli Schectman".link("https://research.adobe.com/person/eli-shechtman/");
+const FelixOMahony = "Felix O'Mahony".link("https://felixomahony.github.io/");
 const FengXu = "Feng Xu".link("http://cgcad.thss.tsinghua.edu.cn/xufeng/");
 const FlorianBernard = "Florian Bernard".link("https://sites.google.com/site/fbernardpi/");
 const FredoDurand = "Fredo Durand".link("http://people.csail.mit.edu/fredo/");
@@ -73,6 +74,7 @@ const VolkerBlanz = "Volker Blanz".link("http://www.grk1564.uni-siegen.de/de/bla
 const QianruSun = "Qianru Sun".link("https://qianrusun.com/");
 const RaresAmbrus = "Rares Ambrus".link("https://scholar.google.se/citations?user=2xjjS3oAAAAJ&hl=en");
 const RicardoMartinBrualla = "Ricardo Martin-Brualla".link("http://ricardomartinbrualla.com/");
+const RobertoCipolla = "Roberto Cipolla".link("mi.eng.cam.ac.uk/~cipolla");
 const RohitPandey = "Rohit Pandey".link("https://research.google/people/106687/");
 const RuthRosenholtz = "Ruth Rosenholtz".link("http://persci.mit.edu/people/rosenholtz");
 const SeanFanello = "Sean Fanello".link("http://www.seanfanello.it/");
@@ -207,12 +209,19 @@ module.exports = {
         },
     ],
     publications: [
-    {
+        {
+            title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
+            teaser: "assets/VDAWorld4.mp4",
+            authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
+            conference: "arXiv, 2025",
+            data: ["[Project page]".link("https://felixomahony.github.io/vdaworld/")].join(" ")
+        },
+        {
             title: "Understanding Multi-view Transformers",
             teaser: "assets/understanding25_2.png",
             authors: authorListEqual([JulienGaubil, MichalStary, AyushTewari, VincentSitzmann], 2),
             conference: ICCV + " 2025 End-to-End Learning Workshop",
-            data: ["[paper]".link("https://www.jgaubil.com/docs/und3rstand.pdf")].join(" ")
+            data: ["[paper]".link("https://www.arxiv.org/abs/2510.24907"), "[code]".link("https://github.com/JulienGaubil/und3rstand")].join(" ")
         },
         {
             title: "Approximating Human-Level 3D Visual Inferences With Deep Neural Networks",
