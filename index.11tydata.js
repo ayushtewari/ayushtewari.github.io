@@ -214,7 +214,7 @@ module.exports = {
             teaser: "assets/VDAWorld4.mp4",
             authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
             conference: "arXiv, 2025",
-            data: ["[Project page]".link("https://felixomahony.github.io/vdaworld/")].join(" ")
+            data: ["[project page]".link("https://felixomahony.github.io/vdaworld/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061")].join(" ")
         },
         {
             title: "Understanding Multi-view Transformers",
