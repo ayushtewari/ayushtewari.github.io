@@ -231,19 +231,20 @@ module.exports = {
             data: ["[paper]".link("https://direct.mit.edu/opmi/article/doi/10.1162/opmi_a_00189/128124")].join(" ")
         },
         {
+            title: "FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent",
+            teaser: "assets/flowmap.mp4",
+            authors: authorListEqual([CameronSmith, DavidCharatan, AyushTewari, VincentSitzmann], 2),
+            conference: ThreeDV + " 2025",
+            data: ["[project page]".link("https://cameronosmith.github.io/flowmap//"), "[paper]".link("https://arxiv.org/abs/2404.15259")].join(" ")
+        },
+        {
             title: "Manifold Sampling for Differentiable Uncertainty in Radiance Fields",
             teaser: "assets/Manifoldsigasia25.jpeg",
             authors: authorList([LinjieLyu, AyushTewari, MarcHabermann, ShunsukeSaito, MichaelZollhoefer, ThomasLeimkuehler, ChristianTheobalt]),
             conference: SIGGRAPHASIA + " 2024",
             data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/papers/main_paper.pdf")].join(" ")
         },
-        {
-            title: "FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent",
-            teaser: "assets/flowmap.mp4",
-            authors: authorListEqual([CameronSmith, DavidCharatan, AyushTewari, VincentSitzmann], 2),
-            conference: ThreeDV + " 2024",
-            data: ["[project page]".link("https://vincentvanderbrugge.github.io/pickscan.github.io/"), "[paper]".link("https://arxiv.org/pdf/2411.11196v1")].join(" ")
-        },
+
         {
             title: "PickScan: Object discovery and reconstruction from handheld interactions",
             teaser: "assets/Pickscan.mp4",
