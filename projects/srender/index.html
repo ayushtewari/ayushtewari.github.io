@@ -1,0 +1,336 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Efficient Camera-Controlled Video Generation of Static Scenes via SparseDiffusion and 3D Rendering">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Efficient Camera-Controlled Video Generation of Static Scenes via SparseDiffusion and 3D Rendering</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <style>
+    .video-margin {
+      margin-bottom: 20px; 
+    }
+  </style>
+  <style>
+  .reduce-space {
+    margin-bottom: -100px;  
+  }
+</style>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="reduce-space">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span class='main-title'>Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering</span></h1>
+          <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/jieying-chen-5bb4381a1/">Jieying Chen</a>,</span>
+                <span class="author-block">
+                  <a href="https://jefequien.github.io/">Jeffrey Hu</a>,</span>
+                <span class="author-block">
+                  <a href="https://www.eng.cam.ac.uk/profiles/jl221">Joan Lasenby</a>,</span>
+                <span class="author-block">
+                  <a href="https://ayushtewari.com/">Ayush Tewari</a>
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">University of Cambridge</span>
+              </div>
+              <div class="is-size-5 paper-link">
+                <span class="author-block"><a href="./static/paper.pdf">[Paper PDF]</a></span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <br>
+    <div class="content has-text-justified">
+      <p style="font-size: 16px;">
+          <b>TL;DR</b> Given an input image and a camera trajectory, our method, SRENDER, generates sparse keyframes, reconstructs the 3D scene, and renders the full video efficiently. On average, SRENDER is 43 times faster than a history-guided diffusion baseline (HG) when generating a 20-second 30-fps video from the DL3DV dataset, achieving real-time performance while maintaining comparable or better video quality.
+      </p>
+      <div class="rows is-centered">
+        <video id="main" class="video-margin video-border" controls autoplay muted loop playsinline width="100%">
+          <source src="videos/Teaser Video.mp4"
+              type="video/mp4">
+        </video>
+      </div>
+        <div class="content has-text-justified">
+          <p>
+<b>Abstract</b>: Modern video generative models based on diffusion models can produce very realistic clips, but they are computationally inefficient, often requiring minutes of GPU time for just a few seconds of video. This inefficiency poses a critical barrier to deploying generative video in applications that require real-time interactions, such as embodied AI and VR/AR. This paper explores a new strategy for camera-conditioned video generation of static scenes: using diffusion-based generative models to generate a sparse set of keyframes, and then synthesizing the full video through 3D reconstruction and rendering. By lifting keyframes into a 3D representation and rendering intermediate views, our approach amortizes the generation cost across hundreds of frames while enforcing geometric consistency. We further introduce a model that predicts the optimal number of keyframes for a given camera trajectory, allowing the system to adaptively allocate computation. Our final method, SRENDER, uses very sparse keyframes for simple trajectories and denser ones for complex motion. This results in video generation that is more than 40 times faster than the diffusion-based baseline in generating 20 seconds of video, while maintaining high visual fidelity and temporal stability, offering a practical path toward efficient and controllable video synthesis.
+        </div>
+        <br> 
+      </div>
+    <!--/ Abstract. -->
+  </div>
+
+
+  <div class="container is-max-desktop">
+  <div class="rows is-centered">
+    <div class="row">
+      <h2 class="title is-3 has-text-centered"><u>Qualitative Results</u></h2><br>
+
+      <h3 class="title is-4 has-text-centered">Results on the RE10K Dataset (20s @ 10 fps, 200 frames)</h3>
+      <h3 class="content has-text-justified">
+        <p>
+        </p>
+      </h3>
+
+    </div>
+    <h3 class="">
+          Below are qualitative comparisons of our method and the History-Guided Video Diffusion (HG) baseline on the RE10K dataset. <br> Despite being over 20× faster, our method produces videos with comparable visual quality. Notably, videos generated by the baseline often exhibit flickering artifacts, whereas our approach yields temporally coherent results due to the underlying 3D representation and rendering process.
+    </h3><br>
+
+      <div class="row">
+        <video id="main" class="video-margin" autoplay muted loop playsinline width="100%">
+          <source src="videos/RE10K/RE10K_comparison_others.mp4"
+              type="video/mp4">
+        </video>
+      </div>
+    
+        <h3 class="">
+          More examples can be found at the end of the page.
+    </h3><br>
+
+
+<br><br>
+  <div class="container is-max-desktop">
+    <div class="rows is-centered">
+      <div class="row">
+        <h3 class="title is-4 has-text-centered">Results on the DL3DV Dataset (20s @ 30 fps, 600 frames)</h3>
+        <h3 class="content has-text-justified">
+          <p>
+          </p>
+        </h3>
+
+      </div>
+      <h3 class="">
+            Below are qualitative comparisons between our method and the HG baseline for generating longer, high-fps videos on the DL3DV dataset. Our method produces videos with comparable visual quality while being more than 40× faster. As we need to interpolate a large number of frames, the videos generated by the HG model exhibit more pronounced flickering and shaking artifacts, even though the temporal gap between keyframes is not larger. In contrast, the videos produced by our method maintain consistent visual quality.
+      </h3><br> 
+      <div class="row">
+          <video id="main" class="video-margin" autoplay muted loop playsinline width="100%">
+            <source src="videos/DL3DV_30fps_600frames/DL3DV_30fps_600frames_comparison.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      <h3 class="">
+          More examples can be found at the end of the page.      
+      </h3><br> 
+      </div>
+    </div>
+
+  
+<br><br>
+  <div class="container is-max-desktop">
+    <div class="rows is-centered">
+      <div class="row">
+        <h3 class="title is-4 has-text-centered">Comparison with Different Baselines on DL3DV <br> (20s @ 5 fps, 100 frames)</h3>
+        <h3 class="content has-text-justified">
+          <p>
+          </p>
+        </h3>
+      </div>
+      <h3 class="">
+            Here we present qualitative comparisons between our method and several baselines. The HG and Voyager models are video generation methods, while FILM and RIFE are 2D frame interpolation methods. The Voyager model fails to generate 20-second videos as it relies on the depth maps estimated from the input image. The 2D interpolation methods are unable to follow the specified camera trajectories for intermediate frames and consequently exhibit significant morphing artifacts.
+      </h3><br> 
+      <div class="row">
+          <video id="main" class="video-margin" autoplay muted loop playsinline width="100%">
+            <source src="videos/DL3DV_5fps/DL3DV_5fps_comparison.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+
+<br><br>
+  <div class="container is-max-desktop">
+    <div class="rows is-centered">
+      <div class="row">
+        <h3 class="title is-4 has-text-centered">Same Input, Different Scenes</h3>
+        <h3 class="content has-text-justified">
+          <p>
+          </p>
+        </h3>
+      </div>
+      <h3 class="">
+            Here we show that our model is capable of generating diverse scenes from the same input while maintaining high visual quality.
+      </h3><br> 
+      <div class="row">
+          <video id="main" class="video-margin" autoplay muted loop playsinline width="100%">
+            <source src="videos/Multiple_same/multiple_same_grid.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+
+
+      </div>
+    </div>
+  
+  <br><br>
+  <div class="container is-max-desktop">
+    <div class="rows is-centered">
+      <div class="row">
+        <h3 class="title is-4 has-text-centered">Generate Videos Following Different Camera Trajectories</h3>
+        <h3 class="content has-text-justified">
+          <p>
+          </p>
+        </h3>
+
+      </div>
+        <h3 class="">
+            Here we demonstrate that once the 3D Gaussian representation and an initial video of a scene have been generated for a given camera trajectory, videos of the same scene along alternative trajectories can be rendered in just a few seconds. This saves the need to regenerate keyframes and the 3D Gaussian representation. he baseline model, however, requires rerunning the entire generation process, which can take several hundred seconds.
+      </h3><br> 
+      <div class="row">
+          <video id="main" class="video-margin" autoplay muted loop playsinline width="100%">
+            <source src="videos/OOD_trajectory/ood_trajectory_horizontal.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+
+
+      </div>
+    </div>
+  
+
+<br><br>
+  <div class="container is-max-desktop">
+    <div class="rows is-centered">
+      <div class="row">
+        <h2 class="title is-3 has-text-centered"><u>Ablation Studies</u></h2><br>
+        <h3 class="title is-4 has-text-centered">Effect of Different Keyframe Numbers on the Videos Generated</h3>
+        <h3 class="content has-text-justified">
+          <p>
+          </p>
+        </h3>
+      </div>
+      <h3 class="">
+            Using too few keyframes results in underdefined scenes and visible holes in the generated videos, while using too many keyframes wastes computation without substantially improving visual quality. An optimal number of keyframes strikes a balance between scene detail and computational efficiency. The results in the "Ours" column are generated using the keyframe counts predicted by our keyframe selection model.
+      </h3><br> 
+      <div class="row">
+          <video id="main" class="video-margin" autoplay muted loop playsinline width="100%">
+            <source src="videos/Keyframe/grid_video.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+
+
+      </div>
+    </div>
+
+<br><br>
+  <div class="container is-max-desktop">
+    <div class="rows is-centered">
+      <div class="row">
+        <h3 class="title is-4 has-text-centered">Effect of Temporal Chunking on the Video Generated</h3>
+        <h3 class="content has-text-justified">
+          <p>
+          </p>
+        </h3>
+
+      </div>
+      <h3 class="">
+            Temporal chunking improves consistency within each chunk and, as a result, enhances video sharpness.
+      </h3><br> 
+      <div class="row">
+          <video id="main" class="video-margin" autoplay muted loop playsinline width="100%">
+            <source src="videos/Chunking/horizontal_comparison.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+
+
+      </div>
+    </div>
+  
+    <br><br>
+  <div class="container is-max-desktop">
+    <div class="rows is-centered">
+      <div class="row">
+        <h2 class="title is-3 has-text-centered"><u>More Qualitative Results</u></h2><br>
+        <!-- <h3 class="title is-4 has-text-centered">On RE10K Dataset (20s @ 5 fps) and DL3DV Dataset (20s @ 30 fps)</h3> -->
+        <h3 class="content has-text-justified">
+          <p>
+          </p>
+        </h3>
+      </div>
+      <div class="row">
+          <video id="main" class="video-margin" autoplay muted loop playsinline width="100%">
+            <source src="videos/RE10K/RE10K_comparison_all_the_rest.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      <div class="row">
+          <video id="main" class="video-margin" autoplay muted loop playsinline width="100%">
+            <source src="videos/DL3DV_30fps_600frames/DL3DV_30fps_600frames_comparison_all_the_rest.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    
+
+</section>
+
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              Website source based on <a href="https://github.com/nerfies/nerfies.github.io">this source code</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
