@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
     //
     // See https://www.11ty.dev/docs/copy/
     eleventyConfig.addPassthroughCopy("assets/**");
+    eleventyConfig.addPassthroughCopy("projects/**");
     eleventyConfig.addPassthroughCopy("background.js");
 
 
@@ -27,7 +28,7 @@ module.exports = function(eleventyConfig) {
         // pathPrefix is used by 11ty's url filter - see
         // https://www.11ty.dev/docs/filters/url/ for where this is useful. It's
         // included here mainly so you know how to change it if you need to.
-        pathPrefix: "/",
+        pathPrefix: "/ayushtewari.github.io/",
         dir: {
             includes: "_templates",
             output: "_site",
