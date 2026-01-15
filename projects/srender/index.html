@@ -1,3 +1,4 @@
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -15,6 +16,8 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -58,9 +61,20 @@
               <div class="is-size-5 publication-authors">
                 <span class="author-block">University of Cambridge</span>
               </div>
-              <!--div class="is-size-5 paper-link">
-                <span class="author-block"><a href="./static/paper.pdf">[Paper PDF]</a></span>
-              </div-->
+              <div class="is-size-5 paper-link">
+                <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2601.09697"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+              </div>
+              
           </div>
         </div>
       </div>
@@ -100,7 +114,7 @@
     <div class="row">
       <h2 class="title is-3 has-text-centered"><u>Qualitative Results</u></h2><br>
 
-      <h3 class="title is-4 has-text-centered">Results on the RE10K Dataset (20s @ 10 fps, 200 frames)</h3>
+      <h3 class="title is-4 has-text-centered">On the RE10K Dataset (20s @ 10 fps, 200 frames)</h3>
       <h3 class="content has-text-justified">
         <p>
         </p>
@@ -127,7 +141,7 @@
   <div class="container is-max-desktop">
     <div class="rows is-centered">
       <div class="row">
-        <h3 class="title is-4 has-text-centered">Results on the DL3DV Dataset (20s @ 30 fps, 600 frames)</h3>
+        <h3 class="title is-4 has-text-centered">On the DL3DV Dataset (20s @ 30 fps, 600 frames)</h3>
         <h3 class="content has-text-justified">
           <p>
           </p>
@@ -154,7 +168,7 @@
   <div class="container is-max-desktop">
     <div class="rows is-centered">
       <div class="row">
-        <h3 class="title is-4 has-text-centered">Comparison with Different Baselines on DL3DV <br> (20s @ 5 fps, 100 frames)</h3>
+        <h3 class="title is-4 has-text-centered">On the DL3DV Dataset with Different Baselines <br> (20s @ 5 fps, 100 frames)</h3>
         <h3 class="content has-text-justified">
           <p>
           </p>
@@ -305,7 +319,7 @@
 
     
 
-</section>
+</section>  
 
 <nav class="navbar is-white" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
@@ -316,6 +330,23 @@
     </a>
   </div>
 </nav>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{chen2026efficientcameracontrolledvideogeneration,
+      title={Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering}, 
+      author={Jieying Chen and Jeffrey Hu and Joan Lasenby and Ayush Tewari},
+      year={2026},
+      eprint={2601.09697},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.09697}, 
+}</code></pre>
+    </div>
+  </section>
 
 
 <footer class="footer">
