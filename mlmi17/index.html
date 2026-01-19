@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html data0-theme="dark">
+  <head>
+    <title>
+    MLMI 17: Advanced Computer Vision - Ayush Tewari
+</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="/assets/tufte/tufte.min.css"/>
+    <script>
+        (function(){
+        try {
+            var t = localStorage.getItem('theme')
+            || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.dataset.theme = t; // or document.body if that’s what your CSS targets
+        } catch(e){}
+        })();
+    </script>
+    <style>
+      html {
+        font-size: 90%; /* Adjust this percentage to zoom in or out */
+      }
+      /* --- Base Layout & Tufte CSS Overrides --- */
+      .marginnote img {
+          width: 100%;
+}
+      .marginnote {
+        margin-right: 25%;
+        width: 15%;
+        box-sizing: border-box;
+      }
+      figure.marginnote img {
+        /* Try a smaller value here for a more subtle effect */
+        --fade-size: 1%;
+        /* The rest of the code remains the same */
+        -webkit-mask-image: 
+            linear-gradient(to right, transparent, black var(--fade-size), black calc(0% - var(--fade-size)), transparent),
+            linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+            -webkit-mask-composite: source-in;
+        
+        mask-image: 
+            linear-gradient(to right, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent),
+            linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+            mask-composite: intersect;
+       }
+      .publication-entry::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      #publications,
+      #talks {
+        margin-top: 4rem;
+        }
+      .marginnote img,
+      .marginnote video {
+        width: 100%;
+        }
+      .publication-entry {
+        display: flex;
+        flex-direction: row;
+        /* Changed from column to row */
+        align-items: center;
+        /* Vertically centers the items */
+        gap: 25px;
+        /* Adds space between the image and text */
+      }
+      #publications .marginnote {
+        /* This margin will ONLY apply to publication teasers */
+        margin-right: 0%;
+        /* Example: a smaller margin */
+      }
+
+      /* --- Add this new rule for the text block --- */
+      .pub-details {
+        flex: 1;
+        /* Allows the text block to fill the available space */
+        max-width: 125ch;
+        /* Caps the width of the text block */
+      }
+
+      .phd-info {
+        flex: 1;
+        /* Allows the text block to fill the available space */
+        max-width: 125ch;
+        margin-left: 5%;
+        margin-right: 0%;
+        box-sizing: border-box;
+        padding: 0 1rem;
+     }
+     .phd-link {
+        // font-size: 1.2em;
+        /* Change this value as needed */
+        border-bottom: 1px solid;
+        padding-bottom: 2px;
+     }
+    body {
+        color: #e2e2e2;
+        background-color: #0b0c10; /* Add this line */
+        max-width: 180ch;
+    }
+
+    .background-link {
+        
+        color: #ff9d7d;
+    }
+
+      h1, h2, h3 {
+        color: #ffffff;
+    }
+      hr, blockquote {
+        border-color: #444;
+    }
+
+      #group {
+        margin-top: 0rem;
+    }
+
+    .group-container {
+        display: grid;
+        /* Each column will be at least 170px, but can grow to fill space */
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+    }
+    #group .student-entry {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* This left-aligns the content */
+        gap: 2px;
+    }
+    /* This rule ensures the photo is not distorted */
+    .student-photo {
+        height: 160px;
+        width: 140px;
+        object-fit: cover;
+    /* Add the fade effect here */
+    --fade-size: 2%; /* You can adjust this value, e.g., 2% for a stronger fade */
+    -webkit-mask-image: 
+        linear-gradient(to right, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent),
+        linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+    -webkit-mask-composite: source-in; /* For Safari */
+    
+    mask-image: 
+        linear-gradient(to right, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent),
+        linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
+    mask-composite: intersect; /* For other browsers */
+    }
+
+    body {
+        /* Default to dark mode background */
+        background-color: #0b0c10;
+        /* Add a smooth transition for theme changes */
+        transition: background-color 0.4s ease-in-out;
+    }
+
+    body.light-mode {
+        /* Light mode background */
+        background-color: #f7f7f8;
+    }
+
+    #background-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        background-color: var(--bg);
+
+    }
+
+    /* --- Robust Link Styling Override --- */
+    /* This is a more specific rule to override Tufte CSS and fix the "mushed text" issue.*/
+    .content-layer a {
+        text-decoration: none;
+        background: none !important;         /* CRITICAL: Disables Tufte's background/underline trick */
+        text-shadow: none !important;
+        /* CRITICAL: Disables Tufte's shadow effect */
+        padding-bottom: 2px;
+        transition: color 0.2s;
+    }
+
+      /* --- Link colors for DARK mode (Default) --- */
+    .content-layer a {
+        color: #ff9d7d;
+        /* A pleasant, readable light orange */
+    }
+
+      /* --- Link colors for LIGHT mode --- */
+    .light-mode .content-layer a {
+        color: #0056b3; /* A standard, accessible blue */
+    }
+
+    .phd-button {
+        /* Basic Button Styling */
+        display: inline-block;
+        padding: 12px 24px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        text-decoration: none !important;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-align: center;
+        /* Color and Hover Effects */
+        background-color: rgba(229, 112, 69, 0.5);
+        color: #ffffff;
+        border: 2px solid rgba(229, 112, 69, 0.5);
+        transition: all 0.3s ease;
+    }
+    html[data-theme="dark"] body {
+      background-color: #0b0c10; /* your dark bg color */
+    }
+
+    html[data-theme="light"] body {
+      background-color: #f7f7f8; /* your light bg color */
+    }
+
+            /* --- Theme Toggle Button --- */
+    #theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 100; /* Ensure it's on top of other content */
+        background-color: #444;
+        color: #fff;
+        border: 1px solid #666;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+      #theme-toggle:hover {
+        background-color: #555;
+    }
+
+    /* --- Light Mode Styles --- */
+    body.light-mode {
+        background-color: #f5f5f5;
+        color: #333333;
+    }
+
+    body.light-mode h1,
+    body.light-mode h2,
+    body.light-mode h3 {
+        color: #000000;
+    }
+      
+    body.light-mode .background-link {
+        color: #d95300 !important;
+    }
+
+    body.light-mode hr, 
+    body.light-mode blockquote {
+        border-color: #dddddd;
+    }
+
+    body.light-mode .phd-button {
+        background-color: #007bff;
+        color: #ffffff;
+        border-color: #007bff;
+    }
+
+    :where(h1,h2,h3,h4,h5,h6) {
+        text-shadow: none !important;
+        -webkit-text-stroke: 0 !important;
+        filter: none !important;
+        color: var(--text);
+    }
+
+    /* 2) Prevent double underlines when a heading is a link */
+    :where(h1,h2,h3,h4,h5,h6) a {
+        color: inherit;
+        text-decoration: none;         /* kill the link underline inside headings */
+    }
+
+    /* If you want an underline style for headings, do one consistent line: */
+    :where(h1,h2,h3) {
+        border-bottom: 2px solid var(--border);
+        padding-bottom: .15rem;
+    }
+
+    /* 3) Safety reset in case a global text-shadow slipped in */
+    :where(body, body *) {
+        text-shadow: none;
+    }
+
+        /* Optional: nicer link underlines elsewhere */
+    a {
+        text-underline-offset: 0.05em;
+        /* very close */
+    }
+    html {
+        background-color: var(--bg);      /* fallback while the tile loads */
+        background-attachment: scroll;    /* explicit: background moves with content */
+        min-height: 100%;
+    }
+
+    /* Small screens: pull the photo into the normal flow, centered, readable */
+    @media (max-width: 768px) {
+        body {
+            width: 80%;
+            padding: 1rem;
+        }
+        .marginnote, .sidenote {
+            float: none;
+            display: block;
+            margin: 2rem 0 0;                  /* Aligns to the left with vertical spacing */
+            width: 50% !important;           /* Force override of the inline 17% style */
+            max-width: 200px;                /* Set a reasonable maximum size */
+        }
+        .publication-entry {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        /* === PhD Student Group Mobile Layout === */
+        .group-container {
+            display: block; /* [cite: 82] */ /* Ignore the grid layout on mobile */
+            margin-left: 0; /* [cite: 83] */ /* Reset desktop margin */
+        }
+
+        /* CORRECTED: Targets the actual class used for student entries */
+        #group .publication-entry {
+            display: flex; /*  */ /* Use flexbox for robust alignment */
+            flex-direction: row; /* Ensures items are side-by-side */
+            align-items: center; /* [cite: 85] */ /* Vertically center the image and text */
+            text-align: left; /* [cite: 86] */ /* Force text to align left */
+            margin-bottom: 1.5rem; /* [cite: 87] */ /* Keep spacing between students */
+            gap: 1rem; /* [cite: 88] */ /* Add a gap between the photo and the name */
+        }
+
+        /* CORRECTED: Targets the actual class used for student photos */
+        #group .student-photo {
+            width: 90px !important; /* [cite: 89] */ /* Force a smaller, fixed size */
+            height: 90px !important; /* [cite: 90] */
+            flex-shrink: 0; /* [cite: 91] */ /* Prevent the image from shrinking */
+            object-fit: cover; /* [cite: 47] */ /* Prevents image from being distorted */
+        }
+
+    }
+/* --- End of Styles --- */
+    </style>
+  </head>
+
+  <body>
+    <button id="theme-toggle" title="Toggle light/dark mode">☀️</button>
+    <div id="background-container"></div>
+    
+    <main class="content-layer">
+        
+<style>
+    /* 1. FORCE CENTERING: Override base layout asymmetric margins */
+    body {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 180ch !important; /* Matches base.njk but centers it [cite: 48] */
+        display: block;
+    }
+
+    .phd-info {
+        max-width: 100% !important; 
+        margin-left: auto !important;  /* Overrides margin-left: 5% from base [cite: 44] */
+        margin-right: auto !important; /* Overrides margin-right: 0% from base [cite: 44] */
+        padding: 0 5% !important;      /* Balanced horizontal padding */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 2. TEXT WIDTH: Ensure Aims covers the full available centered width */
+    #aims-section, #aims-section p {
+        max-width: 100% !important;
+        width: 100%;
+    }
+
+    /* 3. SYLLABUS TABLE STYLING */
+    .syllabus-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+
+    .syllabus-table th, .syllabus-table td {
+        text-align: left;
+        padding: 18px 15px;
+        border-bottom: 1px solid #444;
+        vertical-align: top;
+    }
+
+    /* Adjust borders for Light Mode [cite: 5] */
+    .light-mode .syllabus-table th, 
+    .light-mode .syllabus-table td {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .syllabus-table th {
+        font-family: "Etbb", serif;
+        font-variant: small-caps;
+        font-size: 1.3rem;
+        border-bottom: 2px solid var(--text-color, #eee);
+    }
+
+    .section-header td {
+        background-color: rgba(128, 128, 128, 0.08);
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.95rem;
+        padding: 12px 15px;
+    }
+
+    .slide-link {
+        font-family: monospace;
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+</style>
+
+<article class="">
+    <h1>MLMI 17: Advanced Computer Vision</h1>
+    
+    <section>
+        <p>
+            <strong>Term:</strong> Lent 2026<br>
+            <strong>Time:</strong> Thursdays, 12-1pm<br>
+            <strong>Format:</strong> In-person Lectures
+        </p>
+    </section>
+
+    <section id="group">
+        <h2>Module Leaders</h2>
+        <div class="group-container">
+            <div class="student-entry"> 
+                <figure style="margin: 0;">
+                    <img class="student-photo" src="/assets/elliott.jpg" alt="Photo of Elliott Wu"/>
+                </figure>
+                <div class="pub-details">
+                    <p style="margin: 0; font-size: 1.2rem;">
+                        <b style="font-size: 1.4rem;"><a href="https://elliottwu.com/" target="_blank">Elliott Wu</a></b><br/>
+                        <i>Assistant Professor</i>
+                    </p>
+                </div>
+            </div>
+
+            <div class="student-entry"> 
+                <figure style="margin: 0;">
+                    <img class="student-photo" src="/assets/photo.jpg" alt="Photo of Ayush Tewari"/>
+                </figure>
+                <div class="pub-details">
+                    <p style="margin: 0; font-size: 1.2rem;">
+                        <b style="font-size: 1.4rem;"><a href="/">Ayush Tewari</a></b><br/>
+                        <i>Assistant Professor</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aims-section">
+        <h2>Aims</h2>
+        <p>
+            This course explores recent advances in computer vision, focusing on the foundational concepts that drive modern research. The aim is to equip students with both the theoretical grounding and practical intuition needed to understand cutting-edge research and begin contributing to novel research projects in the field.
+        </p>
+    </section>
+
+    <section>
+        <h2>Syllabus</h2>
+        <table class="syllabus-table">
+            <thead>
+                <tr>
+                    <th style="width: 28%;">Session Title</th>
+                    <th style="width: 52%;">Reading Material & Topics</th>
+                    <th style="width: 20%;">Slides</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="section-header">
+                    <td colspan="3">Part I: Representation Learning and Generative Models (Ayush Tewari)</td>
+                </tr>
+                <tr>
+                    <td><strong>Overview of Modern Computer Vision</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+                <tr>
+                    <td><strong>Unsupervised and Self-supervised Learning</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+                <tr>
+                    <td><strong>Generative Models in Computer Vision</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+
+                <tr class="section-header">
+                    <td colspan="3">Part II: 3D Vision & Foundation Models (Elliott Wu)</td>
+                </tr>
+                <tr>
+                    <td><strong>3D Computer Vision</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+                <tr>
+                    <td><strong>Vision Foundation Models</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+                <tr>
+                    <td><strong>Applications of Computer Vision</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</article>
+
+<script>
+    (function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        const applyTheme = (theme) => {
+            if (theme === 'light') {
+                body.classList.add('light-mode');
+                document.documentElement.dataset.theme = 'light'; [cite: 114]
+                if (themeToggle) themeToggle.textContent = '🌙'; [cite: 115]
+            } else {
+                body.classList.remove('light-mode');
+                document.documentElement.dataset.theme = 'dark'; [cite: 116]
+                if (themeToggle) themeToggle.textContent = '☀️'; [cite: 117]
+            }
+        };
+
+        // DEFAULT TO LIGHT: Check storage, otherwise default to 'light' 
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(savedTheme);
+    })();
+</script>
+
+    </main>
+    <!--
+    <script src="/background.js" defer></script>-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Logic to color main links
+            const container = document.querySelector('.main-links');
+            if (container) {
+                const links = container.querySelectorAll('a');
+                links.forEach(link => {
+                    link.classList.add('background-link');
+           
+     });
+            }
+
+            // --- Theme Toggling Logic ---
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Function to apply the chosen theme
+            const applyTheme = (theme) => {
+                if (theme === 'light') {
+                    body.classList.add('light-mode');
+                    document.documentElement.dataset.theme = 'light'; // [CORRECTED]
+                    themeToggle.textContent = '🌙';
+                } else {
+                    body.classList.remove('light-mode');
+                    document.documentElement.dataset.theme = 'dark';  // [CORRECTED]
+                    themeToggle.textContent = '☀️';
+                }
+                // Redraw the canvas background with the new theme colors
+                if (window.redrawBackground) {
+                    window.redrawBackground();
+                }
+            };// Event listener for the toggle button
+            themeToggle.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark' : 'light';
+                localStorage.setItem('theme', newTheme);
+                applyTheme(newTheme);
+            });
+// Check for saved theme in localStorage on page load
+            const savedTheme = localStorage.getItem('theme') ||
+'dark'; // Default to dark
+            applyTheme(savedTheme);
+        });
+    </script>
+</body>
+</html>
