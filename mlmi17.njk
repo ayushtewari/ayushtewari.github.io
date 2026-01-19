@@ -1,0 +1,199 @@
+{% extends "base.njk" %}
+
+{% block title %}
+    MLMI 17: Advanced Computer Vision - Ayush Tewari
+{% endblock %}
+
+{% block content %}
+<style>
+    /* 1. FORCE CENTERING: Override base layout asymmetric margins */
+    body {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 180ch !important; /* Matches base.njk but centers it [cite: 48] */
+        display: block;
+    }
+
+    .phd-info {
+        max-width: 100% !important; 
+        margin-left: auto !important;  /* Overrides margin-left: 5% from base [cite: 44] */
+        margin-right: auto !important; /* Overrides margin-right: 0% from base [cite: 44] */
+        padding: 0 5% !important;      /* Balanced horizontal padding */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 2. TEXT WIDTH: Ensure Aims covers the full available centered width */
+    #aims-section, #aims-section p {
+        max-width: 100% !important;
+        width: 100%;
+    }
+
+    /* 3. SYLLABUS TABLE STYLING */
+    .syllabus-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+
+    .syllabus-table th, .syllabus-table td {
+        text-align: left;
+        padding: 18px 15px;
+        border-bottom: 1px solid #444;
+        vertical-align: top;
+    }
+
+    /* Adjust borders for Light Mode [cite: 5] */
+    .light-mode .syllabus-table th, 
+    .light-mode .syllabus-table td {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .syllabus-table th {
+        font-family: "Etbb", serif;
+        font-variant: small-caps;
+        font-size: 1.3rem;
+        border-bottom: 2px solid var(--text-color, #eee);
+    }
+
+    .section-header td {
+        background-color: rgba(128, 128, 128, 0.08);
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.95rem;
+        padding: 12px 15px;
+    }
+
+    .slide-link {
+        font-family: monospace;
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+</style>
+
+<article class="">
+    <h1>MLMI 17: Advanced Computer Vision</h1>
+    
+    <section>
+        <p>
+            <strong>Term:</strong> Lent 2026<br>
+            <strong>Time:</strong> Thursdays, 12-1pm<br>
+            <strong>Format:</strong> In-person Lectures
+        </p>
+    </section>
+
+    <section id="group">
+        <h2>Module Leaders</h2>
+        <div class="group-container">
+            <div class="student-entry"> 
+                <figure style="margin: 0;">
+                    <img class="student-photo" src="{{ '/assets/elliott.jpg' | url }}" alt="Photo of Elliott Wu"/>
+                </figure>
+                <div class="pub-details">
+                    <p style="margin: 0; font-size: 1.2rem;">
+                        <b style="font-size: 1.4rem;"><a href="https://elliottwu.com/" target="_blank">Elliott Wu</a></b><br/>
+                        <i>Assistant Professor</i>
+                    </p>
+                </div>
+            </div>
+
+            <div class="student-entry"> 
+                <figure style="margin: 0;">
+                    <img class="student-photo" src="{{ '/assets/photo.jpg' | url }}" alt="Photo of Ayush Tewari"/>
+                </figure>
+                <div class="pub-details">
+                    <p style="margin: 0; font-size: 1.2rem;">
+                        <b style="font-size: 1.4rem;"><a href="/">Ayush Tewari</a></b><br/>
+                        <i>Assistant Professor</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aims-section">
+        <h2>Aims</h2>
+        <p>
+            This course explores recent advances in computer vision, focusing on the foundational concepts that drive modern research. The aim is to equip students with both the theoretical grounding and practical intuition needed to understand cutting-edge research and begin contributing to novel research projects in the field.
+        </p>
+    </section>
+
+    <section>
+        <h2>Syllabus</h2>
+        <table class="syllabus-table">
+            <thead>
+                <tr>
+                    <th style="width: 28%;">Session Title</th>
+                    <th style="width: 52%;">Reading Material & Topics</th>
+                    <th style="width: 20%;">Slides</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="section-header">
+                    <td colspan="3">Part I: Representation Learning and Generative Models (Ayush Tewari)</td>
+                </tr>
+                <tr>
+                    <td><strong>Overview of Modern Computer Vision</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+                <tr>
+                    <td><strong>Unsupervised and Self-supervised Learning</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+                <tr>
+                    <td><strong>Generative Models in Computer Vision</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+
+                <tr class="section-header">
+                    <td colspan="3">Part II: 3D Vision & Foundation Models (Elliott Wu)</td>
+                </tr>
+                <tr>
+                    <td><strong>3D Computer Vision</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+                <tr>
+                    <td><strong>Vision Foundation Models</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+                <tr>
+                    <td><strong>Applications of Computer Vision</strong></td>
+                    <td>[TBD]</td>
+                    <td class="slide-link">[TBD]</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</article>
+
+<script>
+    (function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        const applyTheme = (theme) => {
+            if (theme === 'light') {
+                body.classList.add('light-mode');
+                document.documentElement.dataset.theme = 'light'; [cite: 114]
+                if (themeToggle) themeToggle.textContent = '🌙'; [cite: 115]
+            } else {
+                body.classList.remove('light-mode');
+                document.documentElement.dataset.theme = 'dark'; [cite: 116]
+                if (themeToggle) themeToggle.textContent = '☀️'; [cite: 117]
+            }
+        };
+
+        // DEFAULT TO LIGHT: Check storage, otherwise default to 'light' 
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(savedTheme);
+    })();
+</script>
+{% endblock %}
