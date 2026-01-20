@@ -217,8 +217,8 @@ module.exports = {
             title: "Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering",
             teaser: "projects/srender/videos/teaser.mp4",
             authors: authorList([JieyingChen, JeffreyHu, JoanLasenby, AyushTewari]),
-            conference: "arXiv, 2025",
-            data: ["[project page]".link("projects/srender/")].join(" ")
+            conference: "arXiv, 2026",
+            data: ["[project page]".link("projects/srender/"), "[paper]".link("https://arxiv.org/abs/2601.09697")].join(" ")
         },
         {
             title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
