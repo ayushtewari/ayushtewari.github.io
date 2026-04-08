@@ -41,6 +41,7 @@ const HyeongwooKim = "Hyeongwoo Kim".link("http://www.mpi-inf.mpg.de/~hkim/");
 const IkhsanulHabibie = "Ikhsanul Habibie".link("https://www.mpi-inf.mpg.de/~ihabibie/");
 const JasonSaragih = "Jason Saragih".link("http://jsaragih.org/Home_Page.html");
 const JeffreyHu = "Jeffrey Hu".link("https://jefequien.github.io/");
+const JianchunChen = "Jianchun Chen".link("https://people.mpi-inf.mpg.de/~jchen/");
 const JieyingChen = "Jieying Chen".link("https://www.linkedin.com/in/jieying-chen-5bb4381a1/");
 const JoanLasenby = "Joan Lasenby".link("https://www.eng.cam.ac.uk/profiles/jl221");
 const JoshTenenbaum = "Joshua B. Tenenbaum".link("http://web.mit.edu/cocosci/josh.html");
@@ -214,17 +215,24 @@ module.exports = {
     ],
     publications: [
         {
+            title: "Faster 3D Gaussian Splatting Convergence via Structure-Aware Densification",
+            teaser: "assets/fastergs.mp4",
+            authors: authorList([LinjieLyu,AyushTewari,JianchunChen,ThomasLeimkuehler,ChristianTheobalt]),
+            conference: SIGGRAPH + " 2026",
+            data: ["[project page]".link(""), "[paper]".link("")].join(" ")
+        },
+        {
             title: "Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering",
             teaser: "projects/srender/videos/teaser.mp4",
             authors: authorList([JieyingChen, JeffreyHu, JoanLasenby, AyushTewari]),
-            conference: "arXiv, 2026",
+            conference: "arXiv 2026",
             data: ["[project page]".link("projects/srender/"), "[paper]".link("https://arxiv.org/abs/2601.09697")].join(" ")
         },
         {
             title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
             teaser: "assets/VDAWorld4.mp4",
             authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
-            conference: "arXiv, 2025",
+            conference: "arXiv 2025",
             data: ["[project page]".link("https://felixomahony.github.io/vdaworld/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061")].join(" ")
         },
         {
