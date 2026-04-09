@@ -196,22 +196,28 @@ module.exports = {
 // After
         {
             name: "Felix O'Mahony",
-            role: "with Roberto Cipolla",
+            // role: "with Roberto Cipolla",
             photo: "assets/students/felix_omahony.jpeg",
             url: "https://felixomahony.github.io/"
         },
         {
             name: "Jieying Chen",
-            role: "with Joan Lasenby",
+            // role: "with Joan Lasenby",
             photo: "assets/students/jieying_chen.jpg",
             url: "https://www.linkedin.com/in/jieying-chen-5bb4381a1/"
         },
         {
             name: "Jeffrey Hu",
-            role: "",
+            // role: "",
             photo: "assets/students/jeffrey_hu.jpg",
             url: "https://jefequien.github.io/"
         },
+        {
+            name: "Ziyang Fu",
+            // role: "at MPI with Christian Theobalt",
+            photo: "assets/students/ziyang_fu.jpeg",
+            url: "https://people.mpi-inf.mpg.de/~ziyangfu/"
+        }
     ],
     publications: [
         {
