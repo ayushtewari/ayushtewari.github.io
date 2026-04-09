@@ -120,10 +120,10 @@
     .group-container {
         display: grid;
         /* Each column will be at least 170px, but can grow to fill space */
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
     }
     #group .student-entry {
-        width: 280px;
+        width: 250px;
         display: flex;
         flex-direction: column;
         align-items: flex-start; /* This left-aligns the content */
@@ -324,12 +324,12 @@
         }
 
         /* CORRECTED: Targets the actual class used for student entries */
-        #group .publication-entry {
+        #group .student-entry {
             display: flex; /*  */ /* Use flexbox for robust alignment */
             flex-direction: row; /* Ensures items are side-by-side */
             align-items: center; /* [cite: 85] */ /* Vertically center the image and text */
             text-align: left; /* [cite: 86] */ /* Force text to align left */
-            margin-bottom: 1.5rem; /* [cite: 87] */ /* Keep spacing between students */
+            margin-bottom: 1.0rem; /* [cite: 87] */ /* Reduced spacing between students */
             gap: 1rem; /* [cite: 88] */ /* Add a gap between the photo and the name */
         }
 
