@@ -225,7 +225,7 @@ module.exports = {
             teaser: "assets/fastergs.mp4",
             authors: authorList([LinjieLyu,AyushTewari,JianchunChen,ThomasLeimkuehler,ChristianTheobalt]),
             conference: SIGGRAPH + " 2026",
-            data: ["[project page]".link(""), "[paper]".link("")].join(" ")
+            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/SAD-GS/"), "[paper]".link("https://arxiv.org/abs/2604.28016")].join(" ")
         },
         {
             title: "Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering",
