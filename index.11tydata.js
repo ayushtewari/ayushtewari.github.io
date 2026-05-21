@@ -227,20 +227,20 @@ module.exports = {
             conference: SIGGRAPH + " 2026",
             data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/SAD-GS/"), "[paper]".link("https://arxiv.org/abs/2604.28016")].join(" ")
         },
-        {
-            title: "Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering",
-            teaser: "projects/srender/videos/teaser.mp4",
-            authors: authorList([JieyingChen, JeffreyHu, JoanLasenby, AyushTewari]),
-            conference: "arXiv 2026",
-            data: ["[project page]".link("projects/srender/"), "[paper]".link("https://arxiv.org/abs/2601.09697")].join(" ")
-        },
-        {
-            title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
-            teaser: "assets/VDAWorld4.mp4",
-            authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
-            conference: "arXiv 2025",
-            data: ["[project page]".link("https://felixomahony.github.io/vdaworld/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061")].join(" ")
-        },
+        // {
+        //     title: "Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering",
+        //     teaser: "projects/srender/videos/teaser.mp4",
+        //     authors: authorList([JieyingChen, JeffreyHu, JoanLasenby, AyushTewari]),
+        //     conference: "arXiv 2026",
+        //     data: ["[project page]".link("projects/srender/"), "[paper]".link("https://arxiv.org/abs/2601.09697")].join(" ")
+        // },
+        // {
+        //     title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
+        //     teaser: "assets/VDAWorld4.mp4",
+        //     authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
+        //     conference: "arXiv 2025",
+        //     data: ["[project page]".link("https://felixomahony.github.io/vdaworld/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061")].join(" ")
+        // },
         {
             title: "Understanding Multi-view Transformers",
             teaser: "assets/understanding25_2.png",
