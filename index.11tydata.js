@@ -10,13 +10,16 @@ const AbhimitraMeka = "Abhimitra Meka".link("https://www.meka.page/");
 const AdamFinkelstein = "Adam Finkelstein".link("https://www.cs.princeton.edu/~af/");
 const AdamKortylewski = "Adam Kortylewski".link("https://adamkortylewski.com/");
 const AdrienGaidon = "Adrien Gaidon".link("https://adriengaidon.com/");
+const AlanYuille = "Alan Yuille".link("https://www.cs.jhu.edu/~ayuille/");
 const AnneHarrington = "Anne Harrington".link("https://scholar.google.com/citations?user=7M9eSFMAAAAJ&hl=en");
+const AydanHuang = "Aydan Huang".link("https://www.linkedin.com/in/aydan-huang-hyn26533554432/");
 const AutomnePetitjean = "Automne Petitjean".link("");
 const BenMildenhall = "Ben Mildenhall".link("https://bmild.github.io/");
 const BerndBickel = "Bernd Bickel".link("http://berndbickel.com/");
 const BerntSchiele = "Bernt Schiele".link("https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/");
 const BernhardEgger = "Bernhard Egger".link("https://eggerbernhard.ch/");
 const CameronSmith = "Cameron Smith".link("https://cameronosmith.github.io/");
+const ChangxiZheng = "Changxi Zheng".link("http://www.cs.columbia.edu/~cxz/");
 const ChristianRichardt = "Christian Richardt".link("https://richardt.name/");
 const ChristianTheobalt = "Christian Theobalt".link("https://people.mpi-inf.mpg.de/~theobalt/");
 const ChristophLassner = "Christoph Lassner".link("https://christophlassner.de/");
@@ -37,18 +40,23 @@ const GordonWetzstein = "Gordon Wetzstein".link("https://stanford.edu/~gordonwz/
 const GuillaumeCordonnier = "Guillaume Cordonnier".link("https://www-sop.inria.fr/members/Guillaume.Cordonnier/");
 const HansPeterPfister = "Hanspeter Pfister".link("https://vcg.seas.harvard.edu/people/hanspeter-pfister");
 const HansPeterSeidel = "Hans-Peter Seidel".link("https://people.mpi-inf.mpg.de/~hpseidel/english.html");
+const HaojunShi = "Haojun Shi".link("https://www.linkedin.com/in/haojun-shi-746b3328b/");
+const HonglinChen = "Honglin Chen".link("https://www.cs.columbia.edu/~honglinchen/");
 const HyeongwooKim = "Hyeongwoo Kim".link("http://www.mpi-inf.mpg.de/~hkim/");
 const IkhsanulHabibie = "Ikhsanul Habibie".link("https://www.mpi-inf.mpg.de/~ihabibie/");
 const JasonSaragih = "Jason Saragih".link("http://jsaragih.org/Home_Page.html");
 const JeffreyHu = "Jeffrey Hu".link("https://jefequien.github.io/");
 const JianchunChen = "Jianchun Chen".link("https://people.mpi-inf.mpg.de/~jchen/");
+const JianwenXie = "Jianwen Xie".link("https://www.stat.ucla.edu/~jxie/");
 const JieyingChen = "Jieying Chen".link("https://www.linkedin.com/in/jieying-chen-5bb4381a1/");
+const JienengChen = "Jieneng Chen".link("https://beckschen.github.io/");
 const JoanLasenby = "Joan Lasenby".link("https://www.eng.cam.ac.uk/profiles/jl221");
 const JoshTenenbaum = "Joshua B. Tenenbaum".link("http://web.mit.edu/cocosci/josh.html");
 const JonBarron = "Jonathan T. Barron".link("https://jonbarron.info/");
 const JulienGaubil = "Julien Gaubil".link("https://www.jgaubil.com/");
 const JunYanZhu = "Jun-Yan Zhu".link("https://www.cs.cmu.edu/~junyanz/");
 const JustusThies = "Justus Thies".link("https://justusthies.github.io/");
+const KarranPandey = "Karran Pandey".link("https://karranpandey.github.io/");
 const KartikTeotia = "Kartik Teotia".link("");
 const KalyanSunkavalli = "Kalyan Sunkavalli".link("http://www.kalyans.org/");
 const KrishnaMurthy = "Krishna Murthy Jatavallabhula".link("https://krrish94.github.io/");
@@ -58,12 +66,15 @@ const MarioFritz = "Mario Fritz".link("https://cispa.saarland/group/fritz/");
 const MallikarjunBR = "Mallikarjun B R".link("http://people.mpi-inf.mpg.de/~mbr");
 const ManeeshAgrawala = "Maneesh Agrawala".link("http://graphics.stanford.edu/~maneesh/");
 const MarcPollefeys = "Marc Pollefeys".link("https://people.inf.ethz.ch/marc.pollefeys/");
+const MatheusGadelha = "Matheus Gadelha".link("http://mgadelha.me/");
 const MatthiasNiessner = "Matthias Niessner".link("http://www.niessnerlab.org/members/matthias_niessner/profile.html");
 const MichaelZollhoefer = "Michael Zollhoefer".link("https://zollhoefer.com/");
 const MichalStary = "Michal Stary".link("https://michal-stary.github.io/");
 const MohamedElgharib = "Mohamed Elgharib".link("https://people.mpi-inf.mpg.de/~elgharib/");
 const MohitMendiratta = "Mohit Mendiratta".link("http://people.mpi-inf.mpg.de/~mmendira/");
+const NanruDai = "Nanru Dai".link("https://www.linkedin.com/in/nanru-dai-8b33a9261/");
 const NancyKanwisher = "Nancy Kanwisher".link("https://mcgovern.mit.edu/profile/nancy-kanwisher/");
+const NiloyMitra = "Niloy Mitra".link("http://www0.cs.ucl.ac.uk/staff/n.mitra/");
 const LinjieLyu = "Linjie Lyu".link("http://people.mpi-inf.mpg.de/~llyu/");
 const LingjieLiu = "Lingjie Liu".link("https://lingjie0206.github.io/");
 const LouisChevallier = "Louis Chevallier".link("https://scholar.google.fr/citations?user=hC_BTU8AAAAJ&hl=en");
@@ -71,6 +82,7 @@ const MarkHamilton = "Mark Hamilton".link("https://mhamilton.net/");
 const OhadFried = "Ohad Fried".link("https://www.ohadf.com/");
 const PabloGarrido = "Pablo Garrido".link("https://www.linkedin.com/in/pablo-garrido-485472169/");
 const PatrickPerez = "Patrick Perez".link("https://ptrckprz.github.io/");
+const PaulGuerrero = "Paul Guerrero".link("https://paulguerrero.net/");
 const PrafullSharma = "Prafull Sharma".link("https://prafullsharma.net/");
 const PramodRao = "Pramod Rao".link("https://people.mpi-inf.mpg.de/~prao/")
 const PratulSrinivasan = "Pratul Srinivasan".link("https://pratulsrinivasan.github.io/");
@@ -80,6 +92,7 @@ const RaresAmbrus = "Rares Ambrus".link("https://scholar.google.se/citations?use
 const RicardoMartinBrualla = "Ricardo Martin-Brualla".link("http://ricardomartinbrualla.com/");
 const RobertoCipolla = "Roberto Cipolla".link("https://mi.eng.cam.ac.uk/~cipolla");
 const RohitPandey = "Rohit Pandey".link("https://research.google/people/106687/");
+const RundiWu = "Rundi Wu".link("https://www.cs.columbia.edu/~rundi/");
 const RuthRosenholtz = "Ruth Rosenholtz".link("http://persci.mit.edu/people/rosenholtz");
 const SeanFanello = "Sean Fanello".link("http://www.seanfanello.it/");
 const SemonRezchikov = "Semon Rezchikov".link("https://www.rezchikov.me/");
@@ -89,12 +102,14 @@ const SimonStent = "Simon Stent".link("https://scholar.google.com/citations?user
 const StephenLombardi = "Stepehen Lombardi".link("https://stephenlombardi.github.io/");
 const StefanieWuhrer = "Stefanie Wuhrer".link("http://morpheo.inrialpes.fr/~wuhrer/");
 const SamiRomdhani = "Sami Romdhani".link("https://www.linkedin.com/in/sami-romdhani-09775827/");
+const SuyuYe = "Suyu Ye".link("https://www.linkedin.com/in/suyu-ye/");
 const TaeHyunOh = "Tae-Hyun Oh".link("https://scholar.google.com/citations?user=dMCBjeIAAAAJ&hl=en");
 const TarunYenamandra = "Tarun Yenamandra".link("https://vision.in.tum.de/members/yenamand");
 const ThaboBeeler = "Thabo Beeler".link("https://thabobeeler.com/");
 const ThomasVetter = "Thomas Vetter".link("https://gravis.dmi.unibas.ch/");
 const ThomasLeimkuehler = "Thomas Leimkuehler".link("https://people.mpi-inf.mpg.de/~tleimkue/");
 const ThomasIConnell = "Thomas P. O’Connell".link("https://scholar.google.com/citations?user=lNQeAXEAAAAJ&hl=en&oi=ao");
+const TianminShu = "Tianmin Shu".link("https://www.tshu.io/");
 const TianweiYin = "Tianwei Yin".link("https://tianweiy.github.io/");
 const TimoBolkart = "Timo Bolkart".link("https://ps.is.mpg.de/person/tbolkart");
 const TimWeyrich = "Tim Weyrich".link("http://reality.cs.ucl.ac.uk/weyrich.html");
@@ -110,11 +125,16 @@ const WillSmith = "Will Smith".link("https://www-users.cs.york.ac.uk/wsmith/");
 const WojciechMatusik = "Wojciech Matusik".link("https://cdfg.csail.mit.edu/wojciech");
 const XingangPan = "Xingang Pan".link("https://xingangpan.github.io//");
 const YifanWang = "Yifan Wang".link("https://yifita.github.io/");
+const YifanYin = "Yifan Yin".link("https://yifanyin11.github.io/");
 const YilunDu = "Yilun Du".link("https://yilundu.github.io/");
+const YannickHoldGeoffroy = "Yannick Hold-Geoffroy".link("https://yannickhold.com/");
 const YohanPoirierGinter = "Yohan Poirier-Ginter".link("https://scholar.google.com/citations?user=nwjjHYcAAAAJ&hl=en");
 const YoniFriedman = "Yoni Friedman".link("https://www.yonifriedman.com/");
 const YuxiaoZhou = "Yuxiao Zhou".link("https://calciferzh.github.io/");
 const ZeyuJin = "Zeyu Jin".link("https://research.adobe.com/person/zeyu-jin/");
+const ZehanZheng = "Zehan Zheng".link("https://dyfcalid.github.io/");
+const ZehaoWen = "Zehao Wen".link("https://zehaowen.com/");
+const ZheyuanZhang = "Zheyuan Zhang".link("https://zheyuanzhang.me/");
 const etal = "et. al"
 
 /////Conferences
@@ -220,6 +240,27 @@ module.exports = {
         }
     ],
     publications: [
+        // {
+        //     title: "3D-Belief: Embodied Belief Inference via Generative 3D World Modeling",
+        //     teaser: "assets/3dbelief1.mp4",
+        //     authors: authorListEqual([YifanYin, ZehaoWen, SuyuYe, JienengChen, ZehanZheng, NanruDai, HaojunShi, AydanHuang, ZheyuanZhang, AlanYuille, JianwenXie, AyushTewari, TianminShu], 2),
+        //     conference: "arXiv 2026",
+        //     data: ["[project page]".link("https://3d-belief.github.io/"), "[paper]".link("https://arxiv.org/abs/2605.11367")].join(" ")
+        // },
+        {
+            title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
+            teaser: "assets/VDAWorld4.mp4",
+            authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
+            conference: SIGGRAPHASIA + " 2026",
+            data: ["[project page]".link("https://felixomahony.github.io/vdaworld/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061")].join(" ")
+        }, 
+        {
+            title: "ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes",
+            teaser: "assets/vips.png",   
+            authors: authorList([HonglinChen, KarranPandey, RundiWu, MatheusGadelha, YannickHoldGeoffroy, AyushTewari, NiloyMitra, ChangxiZheng, PaulGuerrero]),
+            conference: SIGGRAPHASIA + " 2026",
+            data: ["[project page]".link("https://honglin-c.github.io/vips/"), "[paper]".link("https://arxiv.org/abs/2604.17623")].join(" ")
+        },
         {
             title: "Faster 3D Gaussian Splatting Convergence via Structure-Aware Densification",
             teaser: "assets/fastergs.mp4",
@@ -227,20 +268,13 @@ module.exports = {
             conference: SIGGRAPH + " 2026",
             data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/SAD-GS/"), "[paper]".link("https://arxiv.org/abs/2604.28016")].join(" ")
         },
-        // {
-        //     title: "Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering",
-        //     teaser: "projects/srender/videos/teaser.mp4",
-        //     authors: authorList([JieyingChen, JeffreyHu, JoanLasenby, AyushTewari]),
-        //     conference: "arXiv 2026",
-        //     data: ["[project page]".link("projects/srender/"), "[paper]".link("https://arxiv.org/abs/2601.09697")].join(" ")
-        // },
-        // {
-        //     title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
-        //     teaser: "assets/VDAWorld4.mp4",
-        //     authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
-        //     conference: "arXiv 2025",
-        //     data: ["[project page]".link("https://felixomahony.github.io/vdaworld/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061")].join(" ")
-        // },
+        {
+            title: "Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering",
+            teaser: "projects/srender/videos/teaser.mp4",
+            authors: authorList([JieyingChen, JeffreyHu, JoanLasenby, AyushTewari]),
+            conference: "arXiv 2026",
+            data: ["[project page]".link("projects/srender/"), "[paper]".link("https://arxiv.org/abs/2601.09697")].join(" ")
+        },
         {
             title: "Understanding Multi-view Transformers",
             teaser: "assets/understanding25_2.png",
