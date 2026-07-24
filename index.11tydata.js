@@ -23,6 +23,7 @@ const ChangxiZheng = "Changxi Zheng".link("http://www.cs.columbia.edu/~cxz/");
 const ChristianRichardt = "Christian Richardt".link("https://richardt.name/");
 const ChristianTheobalt = "Christian Theobalt".link("https://people.mpi-inf.mpg.de/~theobalt/");
 const ChristophLassner = "Christoph Lassner".link("https://christophlassner.de/");
+const DanqingShi = "Danqing Shi".link("https://sdq.github.io/");
 const DanBGoldman = "Dan B Goldman".link("https://www.danbgoldman.com/home/");
 const DanielCremers = "Daniel Cremers".link("https://vision.in.tum.de/members/cremers");
 const DavidCharatan = "David Charatan".link("https://davidcharatan.com/#/");
@@ -58,9 +59,11 @@ const JunYanZhu = "Jun-Yan Zhu".link("https://www.cs.cmu.edu/~junyanz/");
 const JustusThies = "Justus Thies".link("https://justusthies.github.io/");
 const KarranPandey = "Karran Pandey".link("https://karranpandey.github.io/");
 const KartikTeotia = "Kartik Teotia".link("");
+const KatherineMCollins = "Katherine M. Collins".link("https://collinskatie.github.io/");
 const KalyanSunkavalli = "Kalyan Sunkavalli".link("http://www.kalyans.org/");
 const KrishnaMurthy = "Krishna Murthy Jatavallabhula".link("https://krrish94.github.io/");
 const KyleGenova = "Kyle Genova".link("https://www.kylegenova.com/");
+const LanJiang = "Lan Jiang".link("https://uk.linkedin.com/in/lanjiang11");
 const MarcHabermann = "Marc Habermann".link("http://people.mpi-inf.mpg.de/~mhaberma/");
 const MarioFritz = "Mario Fritz".link("https://cispa.saarland/group/fritz/");
 const MallikarjunBR = "Mallikarjun B R".link("http://people.mpi-inf.mpg.de/~mbr");
@@ -70,6 +73,7 @@ const MatheusGadelha = "Matheus Gadelha".link("http://mgadelha.me/");
 const MatthiasNiessner = "Matthias Niessner".link("http://www.niessnerlab.org/members/matthias_niessner/profile.html");
 const MichaelZollhoefer = "Michael Zollhoefer".link("https://zollhoefer.com/");
 const MichalStary = "Michal Stary".link("https://michal-stary.github.io/");
+const MiriZilka = "Miri Zilka".link("https://www.eng.cam.ac.uk/profiles/mz477");
 const MohamedElgharib = "Mohamed Elgharib".link("https://people.mpi-inf.mpg.de/~elgharib/");
 const MohitMendiratta = "Mohit Mendiratta".link("http://people.mpi-inf.mpg.de/~mmendira/");
 const NanruDai = "Nanru Dai".link("https://www.linkedin.com/in/nanru-dai-8b33a9261/");
@@ -97,6 +101,7 @@ const RuthRosenholtz = "Ruth Rosenholtz".link("http://persci.mit.edu/people/rose
 const SeanFanello = "Sean Fanello".link("http://www.seanfanello.it/");
 const SemonRezchikov = "Semon Rezchikov".link("https://www.rezchikov.me/");
 const SergeyZakharov = "Sergey Zakharov".link("https://zakharos.github.io/");
+const ShangzheWu = "Shangzhe Wu".link("https://www.elliottwu.com/");
 const ShunsukeSaito = "Shunsuke Saito".link("https://shunsukesaito.github.io/")
 const SimonStent = "Simon Stent".link("https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en");
 const StephenLombardi = "Stepehen Lombardi".link("https://stephenlombardi.github.io/");
@@ -274,6 +279,13 @@ module.exports = {
             authors: authorList([JieyingChen, JeffreyHu, JoanLasenby, AyushTewari]),
             conference: "arXiv 2026",
             data: ["[project page]".link("projects/srender/"), "[paper]".link("https://arxiv.org/abs/2601.09697")].join(" ")
+        },
+        {
+            title: "Perceived authenticity drives gaze behavior when watching AI-generated videos of physical scenes",
+            teaser: "assets/perceived.png",
+            authors: authorList([DanqingShi, LanJiang, KatherineMCollins, ShangzheWu, AyushTewari, MiriZilka]),
+            conference: "Scientific Reports 2026",
+            data: ["[paper]".link("https://www.nature.com/articles/s41598-026-55437-5")].join(" ")
         },
         {
             title: "Understanding Multi-view Transformers",
