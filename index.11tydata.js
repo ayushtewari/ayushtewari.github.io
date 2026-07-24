@@ -245,13 +245,13 @@ module.exports = {
         }
     ],
     publications: [
-        // {
-        //     title: "3D-Belief: Embodied Belief Inference via Generative 3D World Modeling",
-        //     teaser: "assets/3dbelief1.mp4",
-        //     authors: authorListEqual([YifanYin, ZehaoWen, SuyuYe, JienengChen, ZehanZheng, NanruDai, HaojunShi, AydanHuang, ZheyuanZhang, AlanYuille, JianwenXie, AyushTewari, TianminShu], 2),
-        //     conference: "arXiv 2026",
-        //     data: ["[project page]".link("https://3d-belief.github.io/"), "[paper]".link("https://arxiv.org/abs/2605.11367")].join(" ")
-        // },
+        {
+            title: "3D-Belief: Embodied Belief Inference via Generative 3D World Modeling",
+            teaser: "assets/3dbelief1.mp4",
+            authors: authorListEqual([YifanYin, ZehaoWen, SuyuYe, JienengChen, ZehanZheng, NanruDai, HaojunShi, AydanHuang, ZheyuanZhang, AlanYuille, JianwenXie, AyushTewari, TianminShu], 2),
+            conference: "arXiv 2026",
+            data: ["[project page]".link("https://3d-belief.github.io/"), "[paper]".link("https://arxiv.org/abs/2605.11367")].join(" ")
+        },
         {
             title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
             teaser: "assets/VDAWorld4.mp4",
