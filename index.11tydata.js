@@ -261,7 +261,7 @@ module.exports = {
         }, 
         {
             title: "ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes",
-            teaser: "assets/vips.png",   
+            teaser: "assets/vips.gif",   
             authors: authorList([HonglinChen, KarranPandey, RundiWu, MatheusGadelha, YannickHoldGeoffroy, AyushTewari, NiloyMitra, ChangxiZheng, PaulGuerrero]),
             conference: SIGGRAPHASIA + " 2026",
             data: ["[project page]".link("https://honglin-c.github.io/vips/"), "[paper]".link("https://arxiv.org/abs/2604.17623")].join(" ")
