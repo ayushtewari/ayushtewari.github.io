@@ -257,7 +257,7 @@ module.exports = {
             teaser: "assets/VDAWorld4.mp4",
             authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
             conference: SIGGRAPHASIA + " 2026",
-            data: ["[project page]".link("https://felixomahony.github.io/vdaworld/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061")].join(" ")
+            data: ["[project page]".link("https://felixomahony.github.io/vdaworld_2/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061")].join(" ")
         }, 
         {
             title: "ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes",
