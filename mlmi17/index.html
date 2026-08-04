@@ -11,8 +11,7 @@
     <script>
         (function(){
         try {
-            var t = localStorage.getItem('theme')
-            || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            var t = localStorage.getItem('theme') || 'light';
             document.documentElement.dataset.theme = t; // or document.body if that’s what your CSS targets
         } catch(e){}
         })();
@@ -148,7 +147,7 @@
     }
 
     body {
-        /* Default to dark mode background */
+        /* Dark-mode fallback before a theme is applied */
         background-color: #0b0c10;
         /* Add a smooth transition for theme changes */
         transition: background-color 0.4s ease-in-out;
@@ -214,6 +213,17 @@
 
     html[data-theme="light"] body {
       background-color: #f7f7f8; /* your light bg color */
+      color: #333333;
+    }
+
+    html[data-theme="light"] h1,
+    html[data-theme="light"] h2,
+    html[data-theme="light"] h3 {
+      color: #000000;
+    }
+
+    html[data-theme="light"] .content-layer a {
+      color: #0056b3;
     }
 
             /* --- Theme Toggle Button --- */
@@ -609,8 +619,7 @@
                 applyTheme(newTheme);
             });
 // Check for saved theme in localStorage on page load
-            const savedTheme = localStorage.getItem('theme') ||
-'dark'; // Default to dark
+            const savedTheme = localStorage.getItem('theme') || 'light';
             applyTheme(savedTheme);
         });
     </script>
