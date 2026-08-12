@@ -4,7 +4,8 @@
     "description": "",
     "scripts": {
         "build": "npx @11ty/eleventy",
-        "serve": "npx @11ty/eleventy --serve"
+        "serve": "npx @11ty/eleventy --serve",
+        "optimize-thumbnails": "zsh scripts/optimize-thumbnails.sh"
     },
     "license": "MIT",
     "author": "",

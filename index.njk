@@ -61,12 +61,12 @@
         <div class="publication-entry">
             {% if pub.teaser %}
             <figure class="marginnote">
-                {%- if 'mp4' in pub.teaser %}
-                <video autoplay loop muted playsinline style="width: 100%;">
-                    <source src="{{ pub.teaser }}" type="video/mp4" />
+                {%- if pub.teaser | isAnimatedTeaser %}
+                <video class="publication-video" loop muted playsinline preload="none" poster="{{ pub.teaser | teaserPoster }}" aria-label="Teaser for {{ pub.title }}">
+                    <source data-src="{{ pub.teaser | teaserVideo }}" type="video/mp4" />
                 </video>
                 {%- else -%}
-                <img src="{{ pub.teaser }}" alt="Teaser for {{ pub.title }}"/>
+                <img src="{{ pub.teaser | teaserPoster }}" alt="Teaser for {{ pub.title }}" loading="lazy" decoding="async"/>
                 {%- endif -%}
             </figure>
             {% endif %}

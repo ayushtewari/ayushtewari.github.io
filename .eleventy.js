@@ -1,5 +1,13 @@
 const eleventySass = require("@grimlink/eleventy-plugin-sass");
 const sass = require("sass");
+const path = require("path");
+
+const animatedExtensions = new Set([".gif", ".mp4", ".mov", ".webm"]);
+
+function optimizedTeaserPath(source, extension) {
+    const parsed = path.posix.parse(source);
+    return `assets/thumbnails/${parsed.name}${extension}`;
+}
 
 module.exports = function(eleventyConfig) {
     // set up Sass for compiling from *.scss to *.css
@@ -20,6 +28,12 @@ module.exports = function(eleventyConfig) {
     // you're supposed to add a CNAME file with your custom domain. You can add
     // that to the root of your repository and this will set it up correctly.
     eleventyConfig.addPassthroughCopy("CNAME");
+
+    eleventyConfig.addFilter("isAnimatedTeaser", source =>
+        animatedExtensions.has(path.posix.extname(source).toLowerCase())
+    );
+    eleventyConfig.addFilter("teaserVideo", source => optimizedTeaserPath(source, ".mp4"));
+    eleventyConfig.addFilter("teaserPoster", source => optimizedTeaserPath(source, ".webp"));
 
     return {
         // Your website might be hosted not at a root domain like
