@@ -242,7 +242,13 @@ module.exports = {
             // role: "at MPI with Christian Theobalt",
             photo: "assets/students/ziyang_fu.jpeg",
             url: "https://people.mpi-inf.mpg.de/~ziyangfu/"
-        }
+        },
+        // {
+        //     name: "Parham Rezaei",
+        //     role: "(incoming)",
+        //     photo: "assets/students/parham_rezaei.png",
+        //     url: "https://rezaei-parham.github.io/"
+        // }
     ],
     publications: [
         {
@@ -263,7 +269,7 @@ module.exports = {
             title: "ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes",
             teaser: "assets/vips.gif",   
             authors: authorList([HonglinChen, KarranPandey, RundiWu, MatheusGadelha, YannickHoldGeoffroy, AyushTewari, NiloyMitra, ChangxiZheng, PaulGuerrero]),
-            conference: SIGGRAPHASIA + " 2026",
+            conference: SIGGRAPHASIA + " (ACM Transactions on Graphics) 2026",
             data: ["[project page]".link("https://honglin-c.github.io/vips/"), "[paper]".link("https://arxiv.org/abs/2604.17623")].join(" ")
         },
         {
