@@ -29,7 +29,56 @@
         width: 15%;
         box-sizing: border-box;
       }
-      figure.marginnote img {
+      .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        width: 100%;
+        margin: 2rem 0 0.25rem;
+        padding-bottom: 0;
+      }
+      .profile-header .profile-photo {
+        flex: 0 0 17%;
+        width: 17%;
+        max-width: none;
+        margin: 0;
+      }
+      .profile-summary {
+        flex: 1;
+        min-width: 0;
+      }
+      .profile-summary h1 {
+        margin-top: 0;
+      }
+      .profile-summary .subtitle {
+        font-size: 1.5rem;
+      }
+      .profile-role,
+      .profile-summary .subtitle,
+      .profile-links {
+        width: auto;
+      }
+      .profile-role {
+        font-size: 1.4rem;
+        line-height: 1.5;
+      }
+      .intro-copy {
+        width: 100%;
+        max-width: 130ch;
+      }
+      .intro-copy p {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+      .intro-section {
+        padding-top: 0;
+        padding-bottom: 0.25rem;
+      }
+      .intro-section h2 {
+        margin-top: 0;
+      }
+      figure.marginnote img,
+      figure.profile-photo img {
         /* Try a smaller value here for a more subtle effect */
         --fade-size: 1%;
         /* The rest of the code remains the same */
@@ -48,10 +97,9 @@
         display: table;
         clear: both;
       }
-      #publications,
       #talks {
-        margin-top: 4rem;
-        }
+        margin-top: 2rem;
+      }
       .marginnote img,
       .marginnote video {
         width: 100%;
@@ -113,25 +161,49 @@
     }
 
       #group {
-        margin-top: 0rem;
+        margin-top: 0.75rem;
+        padding-top: 0.25rem;
+    }
+      #group h2 {
+        margin-top: 1rem;
+    }
+      #publications {
+        margin-top: 1.5rem;
+        padding-top: 0.25rem;
+    }
+      #publications h2 {
+        margin-top: 1rem;
     }
 
     .group-container {
         display: grid;
-        /* Each column will be at least 170px, but can grow to fill space */
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+        grid-template-columns: repeat(auto-fit, 120px);
+        column-gap: 2rem;
+        row-gap: 1.25rem;
+        justify-content: start;
     }
     #group .student-entry {
-        width: 250px;
+        width: 122px;
         display: flex;
         flex-direction: column;
         align-items: flex-start; /* This left-aligns the content */
         gap: 2px;
     }
+    #group .student-entry figure {
+        width: 120px;
+        max-width: none;
+    }
+    .student-role {
+        display: block;
+        margin-top: 0.1rem;
+        font-size: 1.15rem;
+        font-style: normal;
+        line-height: 1.2;
+    }
     /* This rule ensures the photo is not distorted */
     .student-photo {
-        height: 160px;
-        width: 140px;
+        height: 140px;
+        width: 120px;
         object-fit: cover;
     /* Add the fade effect here */
     --fade-size: 2%; /* You can adjust this value, e.g., 2% for a stronger fade */
@@ -145,7 +217,6 @@
         linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
     mask-composite: intersect; /* For other browsers */
     }
-
     body {
         /* Dark-mode fallback before a theme is applied */
         background-color: #0b0c10;
@@ -322,6 +393,18 @@
             width: 50% !important;           /* Force override of the inline 17% style */
             max-width: 200px;                /* Set a reasonable maximum size */
         }
+        .profile-header {
+            display: block;
+            margin: 1rem 0 3rem;
+        }
+        .profile-header .profile-photo {
+            margin: 0 0 2rem;
+            width: 50% !important;
+            max-width: 200px;
+        }
+        .intro-copy {
+            width: 100%;
+        }
         .publication-entry {
             display: flex;
             flex-direction: column;
@@ -337,10 +420,15 @@
         #group .student-entry {
             display: flex; /*  */ /* Use flexbox for robust alignment */
             flex-direction: row; /* Ensures items are side-by-side */
+            width: 100%;
             align-items: center; /* [cite: 85] */ /* Vertically center the image and text */
             text-align: left; /* [cite: 86] */ /* Force text to align left */
             margin-bottom: 1.0rem; /* [cite: 87] */ /* Reduced spacing between students */
             gap: 1rem; /* [cite: 88] */ /* Add a gap between the photo and the name */
+        }
+        #group .student-entry figure {
+            width: 90px;
+            flex: 0 0 90px;
         }
 
         /* CORRECTED: Targets the actual class used for student photos */
