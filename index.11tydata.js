@@ -256,14 +256,14 @@ module.exports = {
             teaser: "assets/3dbelief1.mp4",
             authors: authorListEqual([YifanYin, ZehaoWen, SuyuYe, JienengChen, ZehanZheng, NanruDai, HaojunShi, AydanHuang, ZheyuanZhang, AlanYuille, JianwenXie, AyushTewari, TianminShu], 2),
             conference: "arXiv 2026",
-            data: ["[project page]".link("https://3d-belief.github.io/"), "[paper]".link("https://arxiv.org/abs/2605.11367")].join(" ")
+            data: ["[project page]".link("https://3d-belief.github.io/"), "[paper]".link("https://arxiv.org/abs/2605.11367"), "[code]".link("https://github.com/3D-Belief/3d-belief")].join(" ")
         },
         {
             title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
             teaser: "assets/VDAWorld4.mp4",
             authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
             conference: SIGGRAPHASIA + " 2026",
-            data: ["[project page]".link("https://felixomahony.github.io/vdaworld_2/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061")].join(" ")
+            data: ["[project page]".link("https://felixomahony.github.io/vdaworld_2/"), "[paper]".link("https://www.arxiv.org/abs/2512.11061"), "[code]".link("https://github.com/ayushtewari/VDAWorld"), "[HSPBench]".link("https://github.com/felixomahony/HSPBench"), "[ConwayBench]".link("https://github.com/felixomahony/ConwayBench")].join(" ")
         }, 
         {
             title: "ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes",
@@ -277,7 +277,7 @@ module.exports = {
             teaser: "assets/fastergs.mp4",
             authors: authorList([LinjieLyu,AyushTewari,JianchunChen,ThomasLeimkuehler,ChristianTheobalt]),
             conference: SIGGRAPH + " 2026",
-            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/SAD-GS/"), "[paper]".link("https://arxiv.org/abs/2604.28016")].join(" ")
+            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/SAD-GS/"), "[paper]".link("https://arxiv.org/abs/2604.28016"), "[code]".link("https://github.com/LinjieLyu/SADGS")].join(" ")
         },
         {
             title: "Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering",
@@ -312,14 +312,14 @@ module.exports = {
             teaser: "assets/flowmap.mp4",
             authors: authorListEqual([CameronSmith, DavidCharatan, AyushTewari, VincentSitzmann], 2),
             conference: ThreeDV + " 2025",
-            data: ["[project page]".link("https://cameronosmith.github.io/flowmap//"), "[paper]".link("https://arxiv.org/abs/2404.15259")].join(" ")
+            data: ["[project page]".link("https://cameronosmith.github.io/flowmap//"), "[paper]".link("https://arxiv.org/abs/2404.15259"), "[code]".link("https://github.com/dcharatan/flowmap")].join(" ")
         },
         {
             title: "Manifold Sampling for Differentiable Uncertainty in Radiance Fields",
             teaser: "assets/Manifoldsigasia25.jpeg",
             authors: authorList([LinjieLyu, AyushTewari, MarcHabermann, ShunsukeSaito, MichaelZollhoefer, ThomasLeimkuehler, ChristianTheobalt]),
             conference: SIGGRAPHASIA + " 2024",
-            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/papers/main_paper.pdf")].join(" ")
+            data: ["[project page]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/"), "[paper]".link("https://vcai.mpi-inf.mpg.de/projects/2024-ManifoldUncertainty/papers/main_paper.pdf"), "[code]".link("https://github.com/LinjieLyu/Manifold")].join(" ")
         },
 
         {
@@ -334,7 +334,7 @@ module.exports = {
             teaser: "assets/cocoperiph.png",
             authors: authorListEqual([AnneHarrington, VasshaDutell, MarkHamilton, AyushTewari, SimonStent, WilliamTFreeman, RuthRosenholtz]),
             conference: ICLR + " 2024",
-            data: ["[project page]".link("https://github.com/RosenholtzLab/COCOPeriph"), "[paper]".link("https://openreview.net/forum?id=MiRPBbQNHv")].join(" ")
+            data: ["[paper]".link("https://openreview.net/forum?id=MiRPBbQNHv"), "[code]".link("https://github.com/RosenholtzLab/COCOPeriph")].join(" ")
         },
         {
             title: " Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision",
