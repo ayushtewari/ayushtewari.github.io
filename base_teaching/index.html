@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light">
+<html data-theme="dark">
   <head>
     <title></title>
     <meta charset="utf-8"/>
@@ -9,7 +9,7 @@
     <script>
         (function(){
         try {
-            var t = localStorage.getItem('theme') || 'light';
+            var t = localStorage.getItem('theme') || 'dark';
             document.documentElement.dataset.theme = t; // or document.body if that’s what your CSS targets
         } catch(e){}
         })();
@@ -401,7 +401,7 @@
                 applyTheme(newTheme);
             });
 // Check for saved theme in localStorage on page load
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             applyTheme(savedTheme);
         });
     </script>

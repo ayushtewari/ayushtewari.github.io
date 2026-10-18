@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light">
+<html data-theme="dark">
   <head>
     <title>
     Information for Prospective PhD students
@@ -11,7 +11,8 @@
     <script>
         (function(){
         try {
-            var t = localStorage.getItem('theme') || 'light';
+            var t = localStorage.getItem('theme') ||
+                (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
             document.documentElement.dataset.theme = t; // or document.body if that’s what your CSS targets
         } catch(e){}
         })();
@@ -19,6 +20,22 @@
     <style>
       html {
         font-size: 81%; /* 90% of the previous type scale */
+        --bg: #101010;
+        --text: #bdbdbd;
+        --heading-color: #d4d4d4;
+        --link-color: #bdbdbd;
+        --link-underline: #707070;
+        --thumb-border: #707070;
+        --thumb-background: #d0d0d0;
+      }
+      html[data-theme="light"] {
+        --bg: #fafafa;
+        --text: #414141;
+        --heading-color: #303030;
+        --link-color: #414141;
+        --link-underline: #929292;
+        --thumb-border: #d0d0d0;
+        --thumb-background: #ffffff;
       }
       /* --- Base Layout & Tufte CSS Overrides --- */
       .marginnote img {
@@ -38,10 +55,15 @@
         padding-bottom: 0;
       }
       .profile-header .profile-photo {
-        flex: 0 0 17%;
-        width: 17%;
+        flex: 0 0 30%;
+        width: 30%;
         max-width: none;
         margin: 0;
+      }
+      .profile-header .profile-photo img {
+        display: block;
+        width: 100%;
+        height: auto;
       }
       .profile-summary {
         flex: 1;
@@ -57,6 +79,9 @@
       .profile-summary .subtitle,
       .profile-links {
         width: auto;
+      }
+      .profile-links {
+        margin-bottom: 0;
       }
       .profile-role {
         font-size: 1.4rem;
@@ -78,6 +103,7 @@
         margin-top: 0;
       }
       figure.marginnote img,
+      figure.publication-thumb img,
       figure.profile-photo img {
         /* Try a smaller value here for a more subtle effect */
         --fade-size: 1%;
@@ -92,39 +118,106 @@
             linear-gradient(to bottom, transparent, black var(--fade-size), black calc(100% - var(--fade-size)), transparent);
             mask-composite: intersect;
        }
-      .publication-entry::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
       #talks {
         margin-top: 2rem;
       }
-      .marginnote img,
-      .marginnote video {
-        width: 100%;
-        }
-      .publication-entry {
-        display: flex;
-        flex-direction: row;
-        /* Changed from column to row */
+      #publications .publication-entry {
+        display: grid;
+        grid-template-columns: 15% minmax(0, 1fr);
         align-items: center;
-        /* Vertically centers the items */
-        gap: 25px;
-        /* Adds space between the image and text */
+        gap: 1.5rem;
+        padding: 0.85rem 0;
       }
-      #publications .marginnote {
-        /* This margin will ONLY apply to publication teasers */
-        margin-right: 0%;
-        /* Example: a smaller margin */
+      #publications .publication-entry:first-of-type {
+        padding-top: 0;
       }
-
-      /* --- Add this new rule for the text block --- */
+      #publications .publication-thumb {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid var(--thumb-border);
+        border-radius: 3px;
+        background: var(--thumb-background);
+        box-sizing: border-box;
+      }
+      #publications .publication-thumb img,
+      #publications .publication-thumb video {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
       .pub-details {
         flex: 1;
-        /* Allows the text block to fill the available space */
         max-width: 125ch;
-        /* Caps the width of the text block */
+      }
+      #publications .pub-details {
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+      #publications .pub-title {
+        margin: 0 0 0.35rem;
+        padding: 0;
+        border: 0;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      #publications .pub-authors,
+      #publications .pub-venue {
+        width: 100%;
+        padding: 0;
+        font-size: 1.22rem;
+        line-height: 1.4;
+      }
+      #publications .pub-authors {
+        margin: 0 0 0.15rem;
+        font-size: 1.32rem;
+      }
+      #publications .pub-authors .self-author {
+        font-weight: 700;
+        color: var(--heading-color);
+      }
+      /* Calmer author lists: underline only on hover/focus */
+      #publications .pub-authors a {
+        text-decoration-color: transparent;
+      }
+      #publications .pub-authors a[href]:hover,
+      #publications .pub-authors a[href]:focus-visible {
+        text-decoration-color: currentColor;
+      }
+      .site-footer {
+        margin: 3rem 0 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--link-underline);
+        font-size: 1.05rem;
+        opacity: 0.75;
+      }
+      .back-link {
+        margin: 0 0 1.5rem;
+        font-size: 1.2rem;
+      }
+      .site-footer p {
+        margin: 0;
+        width: auto;
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+      #publications .pub-venue {
+        margin: 0 0 0.45rem;
+        opacity: 1;
+      }
+      #publications .pub-venue font[color="red"] {
+        color: var(--heading-color);
+        font-weight: 700;
+      }
+      #publications .pub-links {
+        font-size: 1.26rem;
+        line-height: 1.4;
+      }
+      #publications .pub-links a {
+        display: inline-block;
       }
 
       .phd-info {
@@ -139,22 +232,21 @@
      .phd-link {
         // font-size: 1.2em;
         /* Change this value as needed */
-        border-bottom: 1px solid;
+        border-bottom: none;
         padding-bottom: 2px;
      }
     body {
-        color: #e2e2e2;
-        background-color: #0b0c10; /* Add this line */
+        color: var(--text);
+        background-color: var(--bg);
         max-width: 180ch;
     }
 
     .background-link {
-        
-        color: #ff9d7d;
+        color: var(--link-color);
     }
 
       h1, h2, h3 {
-        color: #ffffff;
+        color: var(--heading-color);
     }
       hr, blockquote {
         border-color: #444;
@@ -190,7 +282,7 @@
         gap: 2px;
     }
     #group .student-entry figure {
-        width: 120px;
+        width: 108px;
         max-width: none;
     }
     .student-role {
@@ -202,8 +294,8 @@
     }
     /* This rule ensures the photo is not distorted */
     .student-photo {
-        height: 140px;
-        width: 120px;
+        height: 126px;
+        width: 108px;
         object-fit: cover;
     /* Add the fade effect here */
     --fade-size: 2%; /* You can adjust this value, e.g., 2% for a stronger fade */
@@ -219,14 +311,14 @@
     }
     body {
         /* Dark-mode fallback before a theme is applied */
-        background-color: #0b0c10;
+        background-color: var(--bg);
         /* Add a smooth transition for theme changes */
         transition: background-color 0.4s ease-in-out;
     }
 
     body.light-mode {
         /* Light mode background */
-        background-color: #f7f7f8;
+        background-color: var(--bg);
     }
 
     #background-container {
@@ -243,23 +335,34 @@
     /* --- Robust Link Styling Override --- */
     /* This is a more specific rule to override Tufte CSS and fix the "mushed text" issue.*/
     .content-layer a {
-        text-decoration: none;
+        font-weight: 400;
+        text-decoration: underline;
+        text-decoration-color: var(--link-underline);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.16em;
         background: none !important;         /* CRITICAL: Disables Tufte's background/underline trick */
         text-shadow: none !important;
         /* CRITICAL: Disables Tufte's shadow effect */
         padding-bottom: 2px;
-        transition: color 0.2s;
+        transition: color 0.2s, text-decoration-color 0.2s;
+    }
+    .content-layer a[href]:hover,
+    .content-layer a[href]:focus-visible {
+        text-decoration-color: currentColor;
+    }
+    .content-layer a[href]:focus-visible {
+        outline: 1px solid currentColor;
+        outline-offset: 3px;
     }
 
       /* --- Link colors for DARK mode (Default) --- */
     .content-layer a {
-        color: #ff9d7d;
-        /* A pleasant, readable light orange */
+        color: var(--link-color);
     }
 
       /* --- Link colors for LIGHT mode --- */
     .light-mode .content-layer a {
-        color: #0056b3; /* A standard, accessible blue */
+        color: var(--link-color);
     }
 
     .phd-button {
@@ -273,28 +376,43 @@
         font-size: 1.1em;
         text-align: center;
         /* Color and Hover Effects */
-        background-color: rgba(229, 112, 69, 0.5);
+        background-color: #444444;
         color: #ffffff;
-        border: 2px solid rgba(229, 112, 69, 0.5);
+        border: 2px solid #707070;
         transition: all 0.3s ease;
     }
     html[data-theme="dark"] body {
-      background-color: #0b0c10; /* your dark bg color */
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    html[data-theme="dark"] h1,
+    html[data-theme="dark"] h2,
+    html[data-theme="dark"] h3 {
+      color: var(--heading-color);
+    }
+
+    html[data-theme="dark"] #publications .pub-title {
+      color: var(--heading-color);
+    }
+
+    html[data-theme="dark"] #publications .pub-venue {
+      opacity: 1;
     }
 
     html[data-theme="light"] body {
-      background-color: #f7f7f8; /* your light bg color */
-      color: #333333;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
     html[data-theme="light"] h1,
     html[data-theme="light"] h2,
     html[data-theme="light"] h3 {
-      color: #000000;
+      color: var(--heading-color);
     }
 
     html[data-theme="light"] .content-layer a {
-      color: #0056b3;
+      color: var(--link-color);
     }
 
             /* --- Theme Toggle Button --- */
@@ -320,18 +438,18 @@
 
     /* --- Light Mode Styles --- */
     body.light-mode {
-        background-color: #f5f5f5;
-        color: #333333;
+        background-color: var(--bg);
+        color: var(--text);
     }
 
     body.light-mode h1,
     body.light-mode h2,
     body.light-mode h3 {
-        color: #000000;
+        color: var(--heading-color);
     }
       
     body.light-mode .background-link {
-        color: #d95300 !important;
+        color: var(--link-color) !important;
     }
 
     body.light-mode hr, 
@@ -340,16 +458,16 @@
     }
 
     body.light-mode .phd-button {
-        background-color: #007bff;
+        background-color: #444444;
         color: #ffffff;
-        border-color: #007bff;
+        border-color: #707070;
     }
 
     :where(h1,h2,h3,h4,h5,h6) {
         text-shadow: none !important;
         -webkit-text-stroke: 0 !important;
         filter: none !important;
-        color: var(--text);
+        color: var(--heading-color);
     }
 
     /* 2) Prevent double underlines when a heading is a link */
@@ -380,6 +498,13 @@
         min-height: 100%;
     }
 
+    @media (min-width: 769px) {
+        body {
+            width: 82.5%;
+            max-width: 170ch;
+        }
+    }
+
     /* Small screens: pull the photo into the normal flow, centered, readable */
     @media (max-width: 768px) {
         body {
@@ -399,46 +524,146 @@
         }
         .profile-header .profile-photo {
             margin: 0 0 2rem;
-            width: 50% !important;
-            max-width: 200px;
+            width: 84% !important;
+            max-width: 340px;
         }
         .intro-copy {
             width: 100%;
         }
-        .publication-entry {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+        #publications .publication-entry {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 1rem;
+            padding: 0.8rem 0;
         }
-        /* === PhD Student Group Mobile Layout === */
+        #publications .publication-thumb {
+            width: 50%;
+            max-width: 200px;
+        }
+        #publications .pub-title {
+            font-size: 1.35rem;
+        }
+        /* === PhD Student Group Mobile Layout: two per row === */
         .group-container {
-            display: block; /* [cite: 82] */ /* Ignore the grid layout on mobile */
-            margin-left: 0; /* [cite: 83] */ /* Reset desktop margin */
+            grid-template-columns: repeat(2, 117px);
+            max-width: none;
+            column-gap: 2.5rem;
+            row-gap: 1.5rem;
         }
-
-        /* CORRECTED: Targets the actual class used for student entries */
+        #group .student-entry .pub-details p {
+            white-space: nowrap;
+        }
         #group .student-entry {
-            display: flex; /*  */ /* Use flexbox for robust alignment */
-            flex-direction: row; /* Ensures items are side-by-side */
             width: 100%;
-            align-items: center; /* [cite: 85] */ /* Vertically center the image and text */
-            text-align: left; /* [cite: 86] */ /* Force text to align left */
-            margin-bottom: 1.0rem; /* [cite: 87] */ /* Reduced spacing between students */
-            gap: 1rem; /* [cite: 88] */ /* Add a gap between the photo and the name */
         }
         #group .student-entry figure {
-            width: 90px;
-            flex: 0 0 90px;
+            width: 100%;
         }
-
-        /* CORRECTED: Targets the actual class used for student photos */
         #group .student-photo {
-            width: 90px !important; /* [cite: 89] */ /* Force a smaller, fixed size */
-            height: 90px !important; /* [cite: 90] */
-            flex-shrink: 0; /* [cite: 91] */ /* Prevent the image from shrinking */
-            object-fit: cover; /* [cite: 47] */ /* Prevents image from being distorted */
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 6 / 7;
+            object-fit: cover;
         }
 
+    }
+
+    /* === Contained layout: centred page column with section cards === */
+    html {
+        --outer-bg: #050505;
+        --page-bg: #121212;
+        --card-bg: #1a1a1a;
+        --rule: #2e2e2e;
+    }
+    html[data-theme="light"] {
+        --outer-bg: #e4e4e1;
+        --page-bg: #ffffff;
+        --card-bg: #f6f6f5;
+        --rule: #e2e2e0;
+    }
+    html,
+    html[data-theme] body,
+    body.light-mode {
+        background-color: var(--outer-bg);
+    }
+    body {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+    main.content-layer {
+        box-sizing: border-box;
+        max-width: 1040px;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 1.75rem 1.5rem 0.5rem;
+        background-color: var(--page-bg);
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.08);
+    }
+    main.content-layer > section {
+        width: auto;
+    }
+    .profile-header {
+        margin-top: 0.5rem;
+    }
+    .intro-section {
+        margin-bottom: 1.25rem;
+    }
+    #group,
+    #publications {
+        background-color: var(--card-bg);
+        border-radius: 8px;
+        padding: 1.25rem 1.6rem 1.4rem;
+        margin: 0 0 1.25rem;
+    }
+    #group h2,
+    #publications h2 {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 0 1.1rem;
+        padding: 0;
+        border: 0;
+    }
+    #group h2::after,
+    #publications h2::after {
+        content: "";
+        flex: 1;
+        height: 2px;
+        background-color: var(--rule);
+    }
+    #publications .publication-thumb {
+        background: var(--thumb-background);
+    }
+    .site-footer {
+        margin: 1.5rem 0 0;
+        padding: 1rem 0 1.25rem;
+        border-top-color: var(--rule);
+    }
+    /* Header photo sized to match the height of the name/affiliation block */
+    @media (min-width: 769px) {
+        .profile-header {
+            gap: 3rem;
+            margin-bottom: 1rem;
+        }
+        .profile-header .profile-photo {
+            flex: 0 0 340px;
+            width: 340px;
+        }
+    }
+    @media (max-width: 768px) {
+        body {
+            width: auto;
+            padding: 0;
+        }
+        main.content-layer {
+            padding: 1rem 1rem 0.5rem;
+            box-shadow: none;
+        }
+        #group,
+        #publications {
+            padding: 1rem;
+        }
     }
 /* --- End of Styles --- */
     </style>
@@ -451,38 +676,34 @@
     <main class="content-layer">
         
 <article class="phd-info">
+    <p class="back-link"><a href="/">&larr; Home</a></p>
     <h1>Information for prospective PhD students</h1>
 
     <p>
-        <strong>I am actively seeking 1-2 PhD students to join my lab for the Fall 2026 intake.</strong>
+        I am looking for 1-2 PhD students to join my lab for the October 2027 intake. This year, I am particularly interested in students who want to work on <strong>modelling dynamic scenes and robotic manipulation</strong>.
+        However, I might be open to other areas as well.
     </p>
 
     <p>Please read the following points carefully before applying:</p>
     <ul>
         <li>
-            <strong>⚠️ Gates Funding Deadline (US citizens):</strong> The deadline for the <a href="https://www.gatescambridge.org/apply/timeline/" target="_blank" rel="noopener noreferrer">Gates Cambridge Scholarship</a> for students who are US citizens is on <strong>15 October 2025</strong>.
+            I am a member of the <strong>Department of Engineering</strong>. If you apply to the Department of Computer Science and Technology or another department, I will not be able to access your application. <a href="https://www.postgraduate.study.cam.ac.uk/courses/directory/egegpdpeg" target="_blank" rel="noopener noreferrer">Please use the correct application link</a>.
         </li>
         <li>
-            <strong>Department of Engineering:</strong> I am a member of the <strong>Department of Engineering</strong>. If you apply to the Department of Computer Science and Technology or another department, I will not be able to access your application. <a href="https://www.postgraduate.study.cam.ac.uk/courses/directory/egegpdpeg" target="_blank" rel="noopener noreferrer">Please use the correct application link</a>.
+            The <a href="https://www.postgraduate.study.cam.ac.uk/courses/directory/egegpdpeg" target="_blank" rel="noopener noreferrer">Engineering course funding deadline</a> is <strong>8 December 2026 at 23:59 GMT</strong>. Submit your complete application, including supporting documents and references, by this deadline to be considered for this funding round. Individual scholarships may have earlier deadlines.
         </li>
         <li>
-            <strong>Reference Letters:</strong> Unlike many universities in the US, it is critical that all of your reference letters are uploaded by the application deadline. Incomplete applications, including those with late letters, will likely make you ineligible for key funding opportunities. Please ensure your referees are aware of this. The deadline is <strong>2 December 2025</strong>.
+            All references must be submitted by the relevant application or funding deadline. Late references can make your application ineligible for funding. Please give your referees enough time and confirm that they know the deadline.
+        </li>
+        <li>
+            You should also consider applying to the <a href="https://ellis.eu/news/ellis-phd-program-call-for-applications-2026" target="_blank" rel="noopener noreferrer">ELLIS PhD program</a> to work with me. The ELLIS deadline is <strong>31 October 2026</strong>. Remember to also apply directly to Cambridge.
+        </li>
+        <li>
+            Feel free to email with details. I might not be able to reply to every email, but I will make sure to read it, and a lack of reply does not mean a lack of interest.
+            In any case, I will go through all applications that mention my name.
         </li>
     </ul>
 
-    <h3>Research Focus</h3>
-    <p>
-        The primary goal of my lab is to build <strong>world models</strong> that can capture the physical structure of the world from image and video observations and enable complex physical reasoning.
-        While I am open to a broad range of ideas within this domain, I am particularly interested in students keen to explore topics such as:
-    </p>
-    <ul>
-        <li>Physical inductive biases for world models</li>
-        <li>Robust and explainable inference and reasoning with generative models</li>
-        <li>Control and interpretability of large generative models</li>
-    </ul>
-    <p>
-        If your interests align with this research direction, I encourage you to apply and mention my name in your application.
-    </p>
 </article>
 
     </main>
@@ -525,9 +746,13 @@
                 localStorage.setItem('theme', newTheme);
                 applyTheme(newTheme);
             });
-// Check for saved theme in localStorage on page load
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            applyTheme(savedTheme);
+            // Use the saved choice if there is one, otherwise follow the visitor's system setting
+            const systemLight = window.matchMedia('(prefers-color-scheme: light)');
+            const preferredTheme = () => localStorage.getItem('theme') || (systemLight.matches ? 'light' : 'dark');
+            applyTheme(preferredTheme());
+            systemLight.addEventListener('change', () => {
+                if (!localStorage.getItem('theme')) applyTheme(preferredTheme());
+            });
 
             const publicationVideos = document.querySelectorAll('.publication-video');
             const loadVideo = (video) => {

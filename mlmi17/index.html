@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light">
+<html data-theme="dark">
   <head>
     <title>
     MLMI 17: Advanced Computer Vision - Ayush Tewari
@@ -11,7 +11,7 @@
     <script>
         (function(){
         try {
-            var t = localStorage.getItem('theme') || 'light';
+            var t = localStorage.getItem('theme') || 'dark';
             document.documentElement.dataset.theme = t; // or document.body if that’s what your CSS targets
         } catch(e){}
         })();
@@ -572,8 +572,8 @@
             }
         };
 
-        // DEFAULT TO LIGHT: Check storage, otherwise default to 'light' 
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        // Keep the visitor's saved preference; otherwise use dark mode.
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         applyTheme(savedTheme);
     })();
 </script>
@@ -619,7 +619,7 @@
                 applyTheme(newTheme);
             });
 // Check for saved theme in localStorage on page load
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             applyTheme(savedTheme);
         });
     </script>
