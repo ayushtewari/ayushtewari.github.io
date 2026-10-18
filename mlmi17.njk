@@ -215,8 +215,8 @@
             }
         };
 
-        // DEFAULT TO LIGHT: Check storage, otherwise default to 'light' 
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        // Keep the visitor's saved preference; otherwise use dark mode.
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         applyTheme(savedTheme);
     })();
 </script>
