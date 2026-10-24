@@ -194,6 +194,31 @@
         font-size: 1.05rem;
         opacity: 0.75;
       }
+      .flash-badge {
+        display: inline-block;
+        margin-right: 0.35rem;
+        padding: 0.05rem 0.5rem;
+        border-radius: 999px;
+        background-color: #b3261e;
+        color: #ffffff;
+        font-size: 0.85em;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        line-height: 1.4;
+        vertical-align: 0.05em;
+        animation: flash-badge 1.4s ease-in-out infinite;
+      }
+      html[data-theme="dark"] .flash-badge {
+        background-color: #e5534b;
+        color: #101010;
+      }
+      @keyframes flash-badge {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.25; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .flash-badge { animation: none; }
+      }
       .back-link {
         margin: 0 0 1.5rem;
         font-size: 1.2rem;

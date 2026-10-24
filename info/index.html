@@ -194,6 +194,31 @@
         font-size: 1.05rem;
         opacity: 0.75;
       }
+      .flash-badge {
+        display: inline-block;
+        margin-right: 0.35rem;
+        padding: 0.05rem 0.5rem;
+        border-radius: 999px;
+        background-color: #b3261e;
+        color: #ffffff;
+        font-size: 0.85em;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        line-height: 1.4;
+        vertical-align: 0.05em;
+        animation: flash-badge 1.4s ease-in-out infinite;
+      }
+      html[data-theme="dark"] .flash-badge {
+        background-color: #e5534b;
+        color: #101010;
+      }
+      @keyframes flash-badge {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.25; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .flash-badge { animation: none; }
+      }
       .back-link {
         margin: 0 0 1.5rem;
         font-size: 1.2rem;
@@ -690,17 +715,19 @@
             I am a member of the <strong>Department of Engineering</strong>. If you apply to the Department of Computer Science and Technology or another department, I will not be able to access your application. <a href="https://www.postgraduate.study.cam.ac.uk/courses/directory/egegpdpeg" target="_blank" rel="noopener noreferrer">Please use the correct application link</a>.
         </li>
         <li>
-            The <a href="https://www.postgraduate.study.cam.ac.uk/courses/directory/egegpdpeg" target="_blank" rel="noopener noreferrer">Engineering course funding deadline</a> is <strong>8 December 2026 at 23:59 GMT</strong>. Submit your complete application, including supporting documents and references, by this deadline to be considered for this funding round. Individual scholarships may have earlier deadlines.
+            The <a href="https://www.postgraduate.study.cam.ac.uk/courses/directory/egegpdpeg" target="_blank" rel="noopener noreferrer">Engineering course funding deadline</a> is <strong>8 December 2026 at 23:59 GMT</strong>. Submit your complete application, including supporting documents and references, by this deadline.
         </li>
         <li>
             All references must be submitted by the relevant application or funding deadline. Late references can make your application ineligible for funding. Please give your referees enough time and confirm that they know the deadline.
         </li>
         <li>
+            <span class="flash-badge">Home students</span> I also have a funded PhD position, <a href="https://www.findaphd.com/phds/project/executable-world-models-for-robot-manipulation/?p200562" target="_blank" rel="noopener noreferrer">Executable World Models for Robot Manipulation</a>, co-supervised with Prof. Fulvio Forni as part of the UKRI AI CDT in Decision Making for Complex Systems. Please consider applying, especially if you are a home student. Applications go through the University of Manchester portal (see the advert for details), and the deadline is <strong>4 December 2026</strong>.
+        </li>
+        <li>
             You should also consider applying to the <a href="https://ellis.eu/news/ellis-phd-program-call-for-applications-2026" target="_blank" rel="noopener noreferrer">ELLIS PhD program</a> to work with me. The ELLIS deadline is <strong>31 October 2026</strong>. Remember to also apply directly to Cambridge.
         </li>
         <li>
-            Feel free to email with details. I might not be able to reply to every email, but I will make sure to read it, and a lack of reply does not mean a lack of interest.
-            In any case, I will go through all applications that mention my name.
+            You do not need to email me, and I will not be able to reply to every email. A lack of reply does not mean a lack of interest, and I will go through all applications that mention my name.
         </li>
     </ul>
 
