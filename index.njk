@@ -5,6 +5,27 @@
 {% endblock %}
 
 {% block content %}
+{% macro pubEntry(pub) %}
+        <div class="publication-entry">
+            {% if pub.teaser %}
+            <figure class="publication-thumb">
+                {%- if pub.teaser | isAnimatedTeaser %}
+                <video class="publication-video" loop muted playsinline preload="none" poster="{{ pub.teaser | teaserPoster }}" aria-label="Teaser for {{ pub.title }}">
+                    <source data-src="{{ pub.teaser | teaserVideo }}" type="video/mp4" />
+                </video>
+                {%- else -%}
+                <img src="{{ pub.teaser | teaserPoster }}" alt="Teaser for {{ pub.title }}" loading="lazy" decoding="async"/>
+                {%- endif -%}
+            </figure>
+            {% endif %}
+            <div class="pub-details">
+                <h3 class="pub-title">{{ pub.title }}</h3>
+                <p class="pub-authors">{{ pub.authors | safe }}</p>
+                <p class="pub-venue">{{ pub.conference | safe }}</p>
+                <div class="pub-links">{{ pub.data | safe }}</div>
+            </div>
+        </div>
+{% endmacro %}
     <section class="profile-header">
         <figure class="profile-photo">
             <img src="assets/ayush-tewari.jpg" width="1500" height="1000" alt="A photo of Ayush Tewari"/>
@@ -56,36 +77,19 @@
         </div>
     </section>
 
-    <section id="publications" class="show-selected">
-        <div class="pub-header">
-            <h2>Publications</h2>
-            <div class="pub-toggle" role="group" aria-label="Show publications">
-                <button type="button" data-filter="selected" aria-pressed="true">Recent selected</button>
-                <span aria-hidden="true">/</span>
-                <button type="button" data-filter="all" aria-pressed="false">All</button>
-            </div>
-        </div>
+    <section id="publications">
+        <h2>Selected recent publications</h2>
+        {% for pub in publications %}{% if pub.selected %}
+{{ pubEntry(pub) }}
+        {%- endif %}{% endfor %}
+        <p class="pub-show-all"><button type="button" aria-expanded="false" aria-controls="all-publications">Show all publications &rarr;</button></p>
+    </section>
+
+    <section id="all-publications" hidden>
+        <h2>All publications</h2>
         {% for pub in publications %}
-        <div class="publication-entry"{% if pub.selected %} data-selected{% endif %}>
-            {% if pub.teaser %}
-            <figure class="publication-thumb">
-                {%- if pub.teaser | isAnimatedTeaser %}
-                <video class="publication-video" loop muted playsinline preload="none" poster="{{ pub.teaser | teaserPoster }}" aria-label="Teaser for {{ pub.title }}">
-                    <source data-src="{{ pub.teaser | teaserVideo }}" type="video/mp4" />
-                </video>
-                {%- else -%}
-                <img src="{{ pub.teaser | teaserPoster }}" alt="Teaser for {{ pub.title }}" loading="lazy" decoding="async"/>
-                {%- endif -%}
-            </figure>
-            {% endif %}
-            <div class="pub-details">
-                <h3 class="pub-title">{{ pub.title }}</h3>
-                <p class="pub-authors">{{ pub.authors | safe }}</p>
-                <p class="pub-venue">{{ pub.conference | safe }}</p>
-                <div class="pub-links">{{ pub.data | safe }}</div>
-            </div>
-        </div>
-        {% endfor %}
+{{ pubEntry(pub) }}
+        {%- endfor %}
     </section>
     <!--section id="talks">
         <h2>Talks</h2>
@@ -96,21 +100,21 @@
         </p>
         {% endfor %}
     </section-->
-    <noscript><style>#publications .publication-entry { display: grid !important; } .pub-toggle { display: none; }</style></noscript>
+    <noscript><style>#all-publications { display: block !important; } .pub-show-all { display: none; }</style></noscript>
     <script>
         (function () {
-            var section = document.getElementById('publications');
-            var buttons = section.querySelectorAll('.pub-toggle button');
-            function show(filter) {
-                section.classList.toggle('show-selected', filter === 'selected');
-                buttons.forEach(function (b) {
-                    b.setAttribute('aria-pressed', String(b.dataset.filter === filter));
-                });
+            var all = document.getElementById('all-publications');
+            var button = document.querySelector('.pub-show-all button');
+            function setOpen(open) {
+                all.hidden = !open;
+                button.setAttribute('aria-expanded', String(open));
+                button.innerHTML = open ? 'Hide all publications &uarr;' : 'Show all publications &rarr;';
             }
-            buttons.forEach(function (b) {
-                b.addEventListener('click', function () { show(b.dataset.filter); });
-            });
-            if (location.hash === '#all-publications') show('all');
+            button.addEventListener('click', function () { setOpen(all.hidden); });
+            if (location.hash === '#all-publications') {
+                setOpen(true);
+                all.scrollIntoView();
+            }
         })();
     </script>
     <footer class="site-footer">
