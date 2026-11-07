@@ -42,6 +42,7 @@ const GauravBharaj = "Gaurav Bharaj".link("http://gauravbharaj.com/");
 const GeorgeCazenavette = "George Cazenavette".link("https://georgecazenavette.github.io/");
 const GeorgeDrettakis = "George Drettakis".link("http://www-sop.inria.fr/members/George.Drettakis/");
 const GereonFox = "Gereon Fox".link("https://people.mpi-inf.mpg.de/~gfox/");
+const GirishRongali = "Girish Rongali".link("https://girish445ai.github.io/");
 const GordonWetzstein = "Gordon Wetzstein".link("https://stanford.edu/~gordonwz/");
 const GuillaumeCordonnier = "Guillaume Cordonnier".link("https://www-sop.inria.fr/members/Guillaume.Cordonnier/");
 const HansenLillemark = "Hansen Lillemark".link("https://hansenlillemark.com/");
@@ -67,6 +68,7 @@ const KarranPandey = "Karran Pandey".link("https://karranpandey.github.io/");
 const KartikTeotia = "Kartik Teotia".link("");
 const KatherineMCollins = "Katherine M. Collins".link("https://collinskatie.github.io/");
 const KalyanSunkavalli = "Kalyan Sunkavalli".link("http://www.kalyans.org/");
+const KaushikMitra = "Kaushik Mitra".link("https://www.ee.iitm.ac.in/kmitra/");
 const KrishnaMurthy = "Krishna Murthy Jatavallabhula".link("https://krrish94.github.io/");
 const KyleGenova = "Kyle Genova".link("https://www.kylegenova.com/");
 const LanJiang = "Lan Jiang".link("https://uk.linkedin.com/in/lanjiang11");
@@ -86,6 +88,7 @@ const MiriZilka = "Miri Zilka".link("https://www.eng.cam.ac.uk/profiles/mz477");
 const MohamedElgharib = "Mohamed Elgharib".link("https://people.mpi-inf.mpg.de/~elgharib/");
 const MohitMendiratta = "Mohit Mendiratta".link("http://people.mpi-inf.mpg.de/~mmendira/");
 const MrinmoyKumarDas = "Mrinmoy Kumar Das".link("https://mrinmoy.dev/");
+const MukundVarmaT = "Mukund Varma T".link("https://mukundvarmat.github.io/");
 const NanruDai = "Nanru Dai".link("https://www.linkedin.com/in/nanru-dai-8b33a9261/");
 const NancyKanwisher = "Nancy Kanwisher".link("https://mcgovern.mit.edu/profile/nancy-kanwisher/");
 const NiloyMitra = "Niloy Mitra".link("http://www0.cs.ucl.ac.uk/staff/n.mitra/");
@@ -100,6 +103,7 @@ const PaulGuerrero = "Paul Guerrero".link("https://paulguerrero.net/");
 const PrafullSharma = "Prafull Sharma".link("https://prafullsharma.net/");
 const PramodRao = "Pramod Rao".link("https://people.mpi-inf.mpg.de/~prao/")
 const PratulSrinivasan = "Pratul Srinivasan".link("https://pratulsrinivasan.github.io/");
+const VinayakGupta = "Vinayak Gupta".link("https://vinayak-vg.github.io/");
 const VolkerBlanz = "Volker Blanz".link("http://www.grk1564.uni-siegen.de/de/blanz-volker");
 const QianruSun = "Qianru Sun".link("https://qianrusun.com/");
 const RaresAmbrus = "Rares Ambrus".link("https://scholar.google.se/citations?user=2xjjS3oAAAAJ&hl=en");
@@ -364,6 +368,13 @@ module.exports = {
             authors: authorListEqualEnd([VincentVanDerBrugge, MarcPollefeys, JoshTenenbaum, KrishnaMurthy, AyushTewari], 2),
             conference: IROS + " 2024",
             data: ["project page".link("https://vincentvanderbrugge.github.io/pickscan.github.io/"), "paper".link("https://arxiv.org/pdf/2411.11196v1")].join(" / ")
+        },
+        {
+            title: "GAURA: Generalizable Approach for Unified Restoration and Rendering of Arbitrary Views",
+            teaser: "assets/gaura.jpg",
+            authors: authorListEqual([VinayakGupta, GirishRongali, MukundVarmaT, AyushTewari, KaushikMitra], 3),
+            conference: ECCV + " 2024",
+            data: ["project page".link("https://vinayak-vg.github.io/GAURA/"), "paper".link("https://arxiv.org/abs/2407.08221"), "code".link("https://github.com/Vinayak-VG/GAURA")].join(" / ")
         },
         {
             title: "COCO-Periph: Bridging the Gap Between Human and Machine Perception in the Periphery",
