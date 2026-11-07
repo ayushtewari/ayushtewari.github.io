@@ -119,17 +119,17 @@
       #talks {
         margin-top: 2rem;
       }
-      #publications .publication-entry {
+      :is(#publications, #all-publications) .publication-entry {
         display: grid;
         grid-template-columns: 15% minmax(0, 1fr);
         align-items: center;
         gap: 1.5rem;
         padding: 0.85rem 0;
       }
-      #publications .publication-entry:first-of-type {
+      :is(#publications, #all-publications) .publication-entry:first-of-type {
         padding-top: 0;
       }
-      #publications .publication-thumb {
+      :is(#publications, #all-publications) .publication-thumb {
         width: 100%;
         max-width: none;
         margin: 0;
@@ -139,8 +139,8 @@
         background: var(--thumb-background);
         box-sizing: border-box;
       }
-      #publications .publication-thumb img,
-      #publications .publication-thumb video {
+      :is(#publications, #all-publications) .publication-thumb img,
+      :is(#publications, #all-publications) .publication-thumb video {
         display: block;
         width: 100%;
         height: auto;
@@ -149,11 +149,11 @@
         flex: 1;
         max-width: 125ch;
       }
-      #publications .pub-details {
+      :is(#publications, #all-publications) .pub-details {
         min-width: 0;
         overflow-wrap: anywhere;
       }
-      #publications .pub-title {
+      :is(#publications, #all-publications) .pub-title {
         margin: 0 0 0.35rem;
         padding: 0;
         border: 0;
@@ -162,27 +162,27 @@
         font-weight: 700;
         line-height: 1.25;
       }
-      #publications .pub-authors,
-      #publications .pub-venue {
+      :is(#publications, #all-publications) .pub-authors,
+      :is(#publications, #all-publications) .pub-venue {
         width: 100%;
         padding: 0;
         font-size: 1.22rem;
         line-height: 1.4;
       }
-      #publications .pub-authors {
+      :is(#publications, #all-publications) .pub-authors {
         margin: 0 0 0.15rem;
         font-size: 1.32rem;
       }
-      #publications .pub-authors .self-author {
+      :is(#publications, #all-publications) .pub-authors .self-author {
         font-weight: 700;
         color: var(--heading-color);
       }
       /* Calmer author lists: underline only on hover/focus */
-      #publications .pub-authors a {
+      :is(#publications, #all-publications) .pub-authors a {
         text-decoration-color: transparent;
       }
-      #publications .pub-authors a[href]:hover,
-      #publications .pub-authors a[href]:focus-visible {
+      :is(#publications, #all-publications) .pub-authors a[href]:hover,
+      :is(#publications, #all-publications) .pub-authors a[href]:focus-visible {
         text-decoration-color: currentColor;
       }
       .site-footer {
@@ -227,19 +227,19 @@
         font-size: 1rem;
         line-height: 1.4;
       }
-      #publications .pub-venue {
+      :is(#publications, #all-publications) .pub-venue {
         margin: 0 0 0.45rem;
         opacity: 1;
       }
-      #publications .pub-venue font[color="red"] {
+      :is(#publications, #all-publications) .pub-venue font[color="red"] {
         color: var(--heading-color);
         font-weight: 700;
       }
-      #publications .pub-links {
+      :is(#publications, #all-publications) .pub-links {
         font-size: 1.26rem;
         line-height: 1.4;
       }
-      #publications .pub-links a {
+      :is(#publications, #all-publications) .pub-links a {
         display: inline-block;
       }
 
@@ -282,11 +282,11 @@
       #group h2 {
         margin-top: 1rem;
     }
-      #publications {
+      :is(#publications, #all-publications) {
         margin-top: 1.5rem;
         padding-top: 0.25rem;
     }
-      #publications h2 {
+      :is(#publications, #all-publications) h2 {
         margin-top: 1rem;
     }
 
@@ -415,11 +415,11 @@
       color: var(--heading-color);
     }
 
-    html[data-theme="dark"] #publications .pub-title {
+    html[data-theme="dark"] :is(#publications, #all-publications) .pub-title {
       color: var(--heading-color);
     }
 
-    html[data-theme="dark"] #publications .pub-venue {
+    html[data-theme="dark"] :is(#publications, #all-publications) .pub-venue {
       opacity: 1;
     }
 
@@ -553,16 +553,16 @@
         .intro-copy {
             width: 100%;
         }
-        #publications .publication-entry {
+        :is(#publications, #all-publications) .publication-entry {
             grid-template-columns: minmax(0, 1fr);
             gap: 1rem;
             padding: 0.8rem 0;
         }
-        #publications .publication-thumb {
+        :is(#publications, #all-publications) .publication-thumb {
             width: 50%;
             max-width: 200px;
         }
-        #publications .pub-title {
+        :is(#publications, #all-publications) .pub-title {
             font-size: 1.35rem;
         }
         /* === PhD Student Group Mobile Layout: two per row === */
@@ -633,14 +633,14 @@
         margin-bottom: 1.25rem;
     }
     #group,
-    #publications {
+    :is(#publications, #all-publications) {
         background-color: var(--card-bg);
         border-radius: 8px;
         padding: 1.25rem 1.6rem 1.4rem;
         margin: 0 0 1.25rem;
     }
     #group h2,
-    #publications h2 {
+    :is(#publications, #all-publications) h2 {
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -649,57 +649,35 @@
         border: 0;
     }
     #group h2::after,
-    #publications h2::after {
+    :is(#publications, #all-publications) h2::after {
         content: "";
         flex: 1;
         height: 2px;
         background-color: var(--rule);
     }
-    #publications .publication-thumb {
+    :is(#publications, #all-publications) .publication-thumb {
         background: var(--thumb-background);
     }
-    /* Selected / All publications toggle */
-    .pub-header {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin: 0 0 1.1rem;
-    }
-    .pub-header h2 {
-        flex: 1;
-        margin: 0 !important;
-    }
-    .pub-toggle {
-        display: flex;
-        align-items: baseline;
-        gap: 0.4rem;
+    .pub-show-all {
+        margin: 0.6rem 0 0;
+        width: auto;
         font-size: 1.3rem;
-        white-space: nowrap;
     }
-    .pub-toggle button {
+    .pub-show-all button {
         padding: 0;
         border: 0;
         background: none;
         font: inherit;
-        color: var(--text);
+        color: var(--link-color);
         cursor: pointer;
         text-decoration: underline;
         text-decoration-color: var(--link-underline);
         text-underline-offset: 0.16em;
     }
-    .pub-toggle button:hover,
-    .pub-toggle button:focus-visible {
+    .pub-show-all button:hover,
+    .pub-show-all button:focus-visible {
         color: var(--link-hover);
         text-decoration-color: currentColor;
-    }
-    .pub-toggle button[aria-pressed="true"] {
-        color: var(--heading-color);
-        font-weight: 700;
-        text-decoration: none;
-        cursor: default;
-    }
-    #publications.show-selected .publication-entry:not([data-selected]) {
-        display: none;
     }
     .site-footer {
         margin: 1.5rem 0 0;
@@ -727,7 +705,7 @@
             box-shadow: none;
         }
         #group,
-        #publications {
+        :is(#publications, #all-publications) {
             padding: 1rem;
         }
     }
