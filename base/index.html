@@ -658,6 +658,49 @@
     #publications .publication-thumb {
         background: var(--thumb-background);
     }
+    /* Selected / All publications toggle */
+    .pub-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 0 1.1rem;
+    }
+    .pub-header h2 {
+        flex: 1;
+        margin: 0 !important;
+    }
+    .pub-toggle {
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        font-size: 1.3rem;
+        white-space: nowrap;
+    }
+    .pub-toggle button {
+        padding: 0;
+        border: 0;
+        background: none;
+        font: inherit;
+        color: var(--text);
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: var(--link-underline);
+        text-underline-offset: 0.16em;
+    }
+    .pub-toggle button:hover,
+    .pub-toggle button:focus-visible {
+        color: var(--link-hover);
+        text-decoration-color: currentColor;
+    }
+    .pub-toggle button[aria-pressed="true"] {
+        color: var(--heading-color);
+        font-weight: 700;
+        text-decoration: none;
+        cursor: default;
+    }
+    #publications.show-selected .publication-entry:not([data-selected]) {
+        display: none;
+    }
     .site-footer {
         margin: 1.5rem 0 0;
         padding: 1rem 0 1.25rem;

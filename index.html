@@ -660,6 +660,49 @@
     #publications .publication-thumb {
         background: var(--thumb-background);
     }
+    /* Selected / All publications toggle */
+    .pub-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 0 1.1rem;
+    }
+    .pub-header h2 {
+        flex: 1;
+        margin: 0 !important;
+    }
+    .pub-toggle {
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        font-size: 1.3rem;
+        white-space: nowrap;
+    }
+    .pub-toggle button {
+        padding: 0;
+        border: 0;
+        background: none;
+        font: inherit;
+        color: var(--text);
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: var(--link-underline);
+        text-underline-offset: 0.16em;
+    }
+    .pub-toggle button:hover,
+    .pub-toggle button:focus-visible {
+        color: var(--link-hover);
+        text-decoration-color: currentColor;
+    }
+    .pub-toggle button[aria-pressed="true"] {
+        color: var(--heading-color);
+        font-weight: 700;
+        text-decoration: none;
+        cursor: default;
+    }
+    #publications.show-selected .publication-entry:not([data-selected]) {
+        display: none;
+    }
     .site-footer {
         margin: 1.5rem 0 0;
         padding: 1rem 0 1.25rem;
@@ -775,10 +818,17 @@
         </div>
     </section>
 
-    <section id="publications">
-        <h2>Publications</h2>
+    <section id="publications" class="show-selected">
+        <div class="pub-header">
+            <h2>Publications</h2>
+            <div class="pub-toggle" role="group" aria-label="Show publications">
+                <button type="button" data-filter="selected" aria-pressed="true">Recent selected</button>
+                <span aria-hidden="true">/</span>
+                <button type="button" data-filter="all" aria-pressed="false">All</button>
+            </div>
+        </div>
         
-        <div class="publication-entry">
+        <div class="publication-entry" data-selected>
             
             <figure class="publication-thumb">
                 <video class="publication-video" loop muted playsinline preload="none" poster="assets/thumbnails/s2pd.webp" aria-label="Teaser for S2PD: Serial-to-Parallel Diffusion for Physically and Logically Consistent Video Generation">
@@ -808,7 +858,7 @@
             </div>
         </div>
         
-        <div class="publication-entry">
+        <div class="publication-entry" data-selected>
             
             <figure class="publication-thumb"><img src="assets/thumbnails/understanding25_2.webp" alt="Teaser for Understanding Multi-view Transformers" loading="lazy" decoding="async"/></figure>
             
@@ -820,7 +870,7 @@
             </div>
         </div>
         
-        <div class="publication-entry">
+        <div class="publication-entry" data-selected>
             
             <figure class="publication-thumb">
                 <video class="publication-video" loop muted playsinline preload="none" poster="assets/thumbnails/ugg.webp" aria-label="Teaser for UGG: Unified Generative Geometry Model">
@@ -835,22 +885,7 @@
             </div>
         </div>
         
-        <div class="publication-entry">
-            
-            <figure class="publication-thumb">
-                <video class="publication-video" loop muted playsinline preload="none" poster="assets/thumbnails/3dbelief1.webp" aria-label="Teaser for 3D-Belief: Embodied Belief Inference via Generative 3D World Modeling">
-                    <source data-src="assets/thumbnails/3dbelief1.mp4" type="video/mp4" />
-                </video></figure>
-            
-            <div class="pub-details">
-                <h3 class="pub-title">3D-Belief: Embodied Belief Inference via Generative 3D World Modeling</h3>
-                <p class="pub-authors"><a href="https://yifanyin11.github.io/">Yifan Yin</a>*, <a href="https://zehaowen.com/">Zehao Wen</a>*, <a href="https://www.linkedin.com/in/suyu-ye/">Suyu Ye</a>, <a href="https://beckschen.github.io/">Jieneng Chen</a>, <a href="https://dyfcalid.github.io/">Zehan Zheng</a>, <a href="https://www.linkedin.com/in/nanru-dai-8b33a9261/">Nanru Dai</a>, <a href="https://www.linkedin.com/in/haojun-shi-746b3328b/">Haojun Shi</a>, <a href="https://www.linkedin.com/in/aydan-huang-hyn26533554432/">Aydan Huang</a>, <a href="https://zheyuanzhang.me/">Zheyuan Zhang</a>, <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>, <a href="https://www.stat.ucla.edu/~jxie/">Jianwen Xie</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://www.tshu.io/">Tianmin Shu</a> (* equal contribution)</p>
-                <p class="pub-venue">CoRL 2026 Workshop: Do Robots Need World Models?</p>
-                <div class="pub-links"><a href="https://3d-belief.github.io/">project page</a> / <a href="https://arxiv.org/abs/2605.11367">paper</a> / <a href="https://github.com/3D-Belief/3d-belief">code</a></div>
-            </div>
-        </div>
-        
-        <div class="publication-entry">
+        <div class="publication-entry" data-selected>
             
             <figure class="publication-thumb">
                 <video class="publication-video" loop muted playsinline preload="none" poster="assets/thumbnails/VDAWorld4.webp" aria-label="Teaser for VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation">
@@ -895,7 +930,7 @@
             </div>
         </div>
         
-        <div class="publication-entry">
+        <div class="publication-entry" data-selected>
             
             <figure class="publication-thumb">
                 <video class="publication-video" loop muted playsinline preload="none" poster="assets/thumbnails/teaser.webp" aria-label="Teaser for Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering">
@@ -907,6 +942,21 @@
                 <p class="pub-authors"><a href="https://www.linkedin.com/in/jieying-chen-5bb4381a1/">Jieying Chen</a>, <a href="https://jefequien.github.io/">Jeffrey Hu</a>, <a href="https://www.eng.cam.ac.uk/profiles/jl221">Joan Lasenby</a>, and <span class="self-author">Ayush Tewari</span></p>
                 <p class="pub-venue">arXiv 2026</p>
                 <div class="pub-links"><a href="projects/srender/">project page</a> / <a href="https://arxiv.org/abs/2601.09697">paper</a></div>
+            </div>
+        </div>
+        
+        <div class="publication-entry" data-selected>
+            
+            <figure class="publication-thumb">
+                <video class="publication-video" loop muted playsinline preload="none" poster="assets/thumbnails/3dbelief1.webp" aria-label="Teaser for 3D-Belief: Embodied Belief Inference via Generative 3D World Modeling">
+                    <source data-src="assets/thumbnails/3dbelief1.mp4" type="video/mp4" />
+                </video></figure>
+            
+            <div class="pub-details">
+                <h3 class="pub-title">3D-Belief: Embodied Belief Inference via Generative 3D World Modeling</h3>
+                <p class="pub-authors"><a href="https://yifanyin11.github.io/">Yifan Yin</a>*, <a href="https://zehaowen.com/">Zehao Wen</a>*, <a href="https://www.linkedin.com/in/suyu-ye/">Suyu Ye</a>, <a href="https://beckschen.github.io/">Jieneng Chen</a>, <a href="https://dyfcalid.github.io/">Zehan Zheng</a>, <a href="https://www.linkedin.com/in/nanru-dai-8b33a9261/">Nanru Dai</a>, <a href="https://www.linkedin.com/in/haojun-shi-746b3328b/">Haojun Shi</a>, <a href="https://www.linkedin.com/in/aydan-huang-hyn26533554432/">Aydan Huang</a>, <a href="https://zheyuanzhang.me/">Zheyuan Zhang</a>, <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>, <a href="https://www.stat.ucla.edu/~jxie/">Jianwen Xie</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://www.tshu.io/">Tianmin Shu</a> (* equal contribution)</p>
+                <p class="pub-venue">CoRL 2026 Workshop: Do Robots Need World Models?</p>
+                <div class="pub-links"><a href="https://3d-belief.github.io/">project page</a> / <a href="https://arxiv.org/abs/2605.11367">paper</a> / <a href="https://github.com/3D-Belief/3d-belief">code</a></div>
             </div>
         </div>
         
@@ -1562,6 +1612,23 @@
         </p>
         
     </section-->
+    <noscript><style>#publications .publication-entry { display: grid !important; } .pub-toggle { display: none; }</style></noscript>
+    <script>
+        (function () {
+            var section = document.getElementById('publications');
+            var buttons = section.querySelectorAll('.pub-toggle button');
+            function show(filter) {
+                section.classList.toggle('show-selected', filter === 'selected');
+                buttons.forEach(function (b) {
+                    b.setAttribute('aria-pressed', String(b.dataset.filter === filter));
+                });
+            }
+            buttons.forEach(function (b) {
+                b.addEventListener('click', function () { show(b.dataset.filter); });
+            });
+            if (location.hash === '#all-publications') show('all');
+        })();
+    </script>
     <footer class="site-footer">
         <p>Theme inspired and adapted from <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a> and <a href="https://s-m.ac/">Mathias Sablé-Meyer</a>.</p>
     </footer>
