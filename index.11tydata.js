@@ -20,6 +20,7 @@ const BenMildenhall = "Ben Mildenhall".link("https://bmild.github.io/");
 const BerndBickel = "Bernd Bickel".link("http://berndbickel.com/");
 const BerntSchiele = "Bernt Schiele".link("https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/");
 const BernhardEgger = "Bernhard Egger".link("https://eggerbernhard.ch/");
+const BoqingGong = "Boqing Gong".link("https://boqinggong.github.io/");
 const CameronSmith = "Cameron Smith".link("https://cameronosmith.github.io/");
 const ChangxiZheng = "Changxi Zheng".link("http://www.cs.columbia.edu/~cxz/");
 const ChristianRichardt = "Christian Richardt".link("https://richardt.name/");
@@ -30,6 +31,7 @@ const DanBGoldman = "Dan B Goldman".link("https://www.danbgoldman.com/home/");
 const DanielCremers = "Daniel Cremers".link("https://vision.in.tum.de/members/cremers");
 const DanielOlmedaReino = "Daniel Olmeda Reino".link("https://www.linkedin.com/in/danielolmeda/");
 const DavidCharatan = "David Charatan".link("https://davidcharatan.com/#/");
+const DeeptiGhadiyaram = "Deepti Ghadiyaram".link("https://deeptigp.github.io/");
 const EdgarTretschk = "Edith Tretschk".link("http://people.mpi-inf.mpg.de/~tretschk/");
 const EliShectman = "Eli Schectman".link("https://research.adobe.com/person/eli-shechtman/");
 const FelixOMahony = "Felix O'Mahony".link("https://felixomahony.github.io/");
@@ -77,11 +79,13 @@ const ManeeshAgrawala = "Maneesh Agrawala".link("http://graphics.stanford.edu/~m
 const MarcPollefeys = "Marc Pollefeys".link("https://people.inf.ethz.ch/marc.pollefeys/");
 const MatheusGadelha = "Matheus Gadelha".link("http://mgadelha.me/");
 const MatthiasNiessner = "Matthias Niessner".link("http://www.niessnerlab.org/members/matthias_niessner/profile.html");
+const MichaelWakeham = "Michael Wakeham".link("https://mikewakeham.github.io/");
 const MichaelZollhoefer = "Michael Zollhoefer".link("https://zollhoefer.com/");
 const MichalStary = "Michal Stary".link("https://michal-stary.github.io/");
 const MiriZilka = "Miri Zilka".link("https://www.eng.cam.ac.uk/profiles/mz477");
 const MohamedElgharib = "Mohamed Elgharib".link("https://people.mpi-inf.mpg.de/~elgharib/");
 const MohitMendiratta = "Mohit Mendiratta".link("http://people.mpi-inf.mpg.de/~mmendira/");
+const MrinmoyKumarDas = "Mrinmoy Kumar Das".link("https://mrinmoy.dev/");
 const NanruDai = "Nanru Dai".link("https://www.linkedin.com/in/nanru-dai-8b33a9261/");
 const NancyKanwisher = "Nancy Kanwisher".link("https://mcgovern.mit.edu/profile/nancy-kanwisher/");
 const NiloyMitra = "Niloy Mitra".link("http://www0.cs.ucl.ac.uk/staff/n.mitra/");
@@ -132,6 +136,7 @@ const VincentSitzmann = "Vincent Sitzmann".link("https://vincentsitzmann.com/");
 const VincentVanDerBrugge = "Vincent van der Brugge".link("https://linkedin.com/in/vincent-van-der-brugge");
 const VladislavGolyanik = "Vladislav Golyanik".link("http://people.mpi-inf.mpg.de/~golyanik/");
 const WeipengXu = "Weipeng Xu".link("http://people.mpi-inf.mpg.de/~wxu/");
+const WenqiWang = "Wenqi Wang".link("https://wqwang.me/");
 const WilliamTFreeman = "William T. Freeman".link("https://billf.mit.edu/");
 const WillSmith = "Will Smith".link("https://www-users.cs.york.ac.uk/wsmith/");
 const WojciechMatusik = "Wojciech Matusik".link("https://cdfg.csail.mit.edu/wojciech");
@@ -168,6 +173,7 @@ const TPAMI = "TPAMI"
 const ICLR = "ICLR"
 const RSS = "RSS"
 const NEURIPS = "NeurIPS"
+const WACV = "WACV"
 
 function authorList(authors) {
     var list = [];
@@ -267,6 +273,13 @@ module.exports = {
             data: ["project page".link("https://jefequien.github.io/S2PD/"), "paper".link("https://arxiv.org/abs/2610.06847"), "code".link("https://github.com/jefequien/S2PD")].join(" / ")
         },
         {
+            title: "A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation",
+            teaser: "assets/pano3d.mp4",
+            authors: authorList([MichaelWakeham, MrinmoyKumarDas, WenqiWang, AyushTewari, BoqingGong, DeeptiGhadiyaram]),
+            conference: WACV + " 2027",
+            data: ["project page".link("https://pano3d-video.github.io/"), "paper".link("https://arxiv.org/abs/2610.25395"), "code".link("https://github.com/mikewakeham/pano3d-video")].join(" / ")
+        },
+        {
             title: "Understanding Multi-view Transformers",
             teaser: "assets/understanding25_2.png",
             authors: authorListEqual([JulienGaubil, MichalStary, LouisMartinez, AndreasGeiger, MaksOvsjanikov, AyushTewari, VincentSitzmann], 2, 3, false),
@@ -285,7 +298,7 @@ module.exports = {
             title: "3D-Belief: Embodied Belief Inference via Generative 3D World Modeling",
             teaser: "assets/3dbelief1.mp4",
             authors: authorListEqual([YifanYin, ZehaoWen, SuyuYe, JienengChen, ZehanZheng, NanruDai, HaojunShi, AydanHuang, ZheyuanZhang, AlanYuille, JianwenXie, AyushTewari, TianminShu], 2),
-            conference: "arXiv 2026",
+            conference: "CoRL 2026 Workshop: Do Robots Need World Models?",
             data: ["project page".link("https://3d-belief.github.io/"), "paper".link("https://arxiv.org/abs/2605.11367"), "code".link("https://github.com/3D-Belief/3d-belief")].join(" / ")
         },
         {
