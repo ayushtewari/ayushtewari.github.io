@@ -271,6 +271,7 @@ module.exports = {
     publications: [
         {
             title: "S2PD: Serial-to-Parallel Diffusion for Physically and Logically Consistent Video Generation",
+            selected: true,
             teaser: "assets/s2pd.mp4",
             authors: authorList([JeffreyHu, DanielOlmedaReino, AyushTewari]),
             conference: "arXiv 2026",
@@ -285,6 +286,7 @@ module.exports = {
         },
         {
             title: "Understanding Multi-view Transformers",
+            selected: true,
             teaser: "assets/understanding25_2.png",
             authors: authorListEqual([JulienGaubil, MichalStary, LouisMartinez, AndreasGeiger, MaksOvsjanikov, AyushTewari, VincentSitzmann], 2, 3, false),
             conference: NEURIPS + " 2026",
@@ -292,6 +294,7 @@ module.exports = {
         },
         {
             title: "UGG: Unified Generative Geometry Model",
+            selected: true,
             teaser: "assets/ugg.mp4",
             authors: authorListEqual([AmaniKiruga, ZhiyiLi, RuojinCai, HansenLillemark, XiaoshanWu, AyushTewari, YilunDu], 3),
             conference: NEURIPS + " 2026",
@@ -299,14 +302,8 @@ module.exports = {
             data: ["project page", "paper", "code"].map(label => `<span role="link" aria-disabled="true" title="Coming soon">${label}</span>`).join(" / ")
         },
         {
-            title: "3D-Belief: Embodied Belief Inference via Generative 3D World Modeling",
-            teaser: "assets/3dbelief1.mp4",
-            authors: authorListEqual([YifanYin, ZehaoWen, SuyuYe, JienengChen, ZehanZheng, NanruDai, HaojunShi, AydanHuang, ZheyuanZhang, AlanYuille, JianwenXie, AyushTewari, TianminShu], 2),
-            conference: "CoRL 2026 Workshop: Do Robots Need World Models?",
-            data: ["project page".link("https://3d-belief.github.io/"), "paper".link("https://arxiv.org/abs/2605.11367"), "code".link("https://github.com/3D-Belief/3d-belief")].join(" / ")
-        },
-        {
             title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
+            selected: true,
             teaser: "assets/VDAWorld4.mp4",
             authors: authorList([FelixOMahony, RobertoCipolla, AyushTewari]),
             conference: SIGGRAPHASIA + " 2026",
@@ -328,10 +325,19 @@ module.exports = {
         },
         {
             title: "Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering",
+            selected: true,
             teaser: "projects/srender/videos/teaser.mp4",
             authors: authorList([JieyingChen, JeffreyHu, JoanLasenby, AyushTewari]),
             conference: "arXiv 2026",
             data: ["project page".link("projects/srender/"), "paper".link("https://arxiv.org/abs/2601.09697")].join(" / ")
+        },
+        {
+            title: "3D-Belief: Embodied Belief Inference via Generative 3D World Modeling",
+            selected: true,
+            teaser: "assets/3dbelief1.mp4",
+            authors: authorListEqual([YifanYin, ZehaoWen, SuyuYe, JienengChen, ZehanZheng, NanruDai, HaojunShi, AydanHuang, ZheyuanZhang, AlanYuille, JianwenXie, AyushTewari, TianminShu], 2),
+            conference: "CoRL 2026 Workshop: Do Robots Need World Models?",
+            data: ["project page".link("https://3d-belief.github.io/"), "paper".link("https://arxiv.org/abs/2605.11367"), "code".link("https://github.com/3D-Belief/3d-belief")].join(" / ")
         },
         {
             title: "Perceived authenticity drives gaze behavior when watching AI-generated videos of physical scenes",

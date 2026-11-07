@@ -56,10 +56,17 @@
         </div>
     </section>
 
-    <section id="publications">
-        <h2>Publications</h2>
+    <section id="publications" class="show-selected">
+        <div class="pub-header">
+            <h2>Publications</h2>
+            <div class="pub-toggle" role="group" aria-label="Show publications">
+                <button type="button" data-filter="selected" aria-pressed="true">Recent selected</button>
+                <span aria-hidden="true">/</span>
+                <button type="button" data-filter="all" aria-pressed="false">All</button>
+            </div>
+        </div>
         {% for pub in publications %}
-        <div class="publication-entry">
+        <div class="publication-entry"{% if pub.selected %} data-selected{% endif %}>
             {% if pub.teaser %}
             <figure class="publication-thumb">
                 {%- if pub.teaser | isAnimatedTeaser %}
@@ -89,6 +96,23 @@
         </p>
         {% endfor %}
     </section-->
+    <noscript><style>#publications .publication-entry { display: grid !important; } .pub-toggle { display: none; }</style></noscript>
+    <script>
+        (function () {
+            var section = document.getElementById('publications');
+            var buttons = section.querySelectorAll('.pub-toggle button');
+            function show(filter) {
+                section.classList.toggle('show-selected', filter === 'selected');
+                buttons.forEach(function (b) {
+                    b.setAttribute('aria-pressed', String(b.dataset.filter === filter));
+                });
+            }
+            buttons.forEach(function (b) {
+                b.addEventListener('click', function () { show(b.dataset.filter); });
+            });
+            if (location.hash === '#all-publications') show('all');
+        })();
+    </script>
     <footer class="site-footer">
         <p>Theme inspired and adapted from <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a> and <a href="https://s-m.ac/">Mathias Sablé-Meyer</a>.</p>
     </footer>
