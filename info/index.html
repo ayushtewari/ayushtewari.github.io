@@ -660,6 +660,30 @@
     :is(#publications, #all-publications) .publication-thumb {
         background: var(--thumb-background);
     }
+    #all-publications .pub-year {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 1.4rem 0 0.6rem;
+        padding: 0;
+        font-size: 1.35rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--heading-color);
+    }
+    #all-publications .pub-year::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: var(--rule);
+    }
+    #all-publications h2 + .pub-year {
+        margin-top: 0;
+    }
+    #all-publications .pub-year + .publication-entry {
+        padding-top: 0;
+    }
     .pub-show-all {
         margin: 0.6rem 0 0;
         width: auto;

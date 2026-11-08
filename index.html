@@ -660,6 +660,30 @@
     :is(#publications, #all-publications) .publication-thumb {
         background: var(--thumb-background);
     }
+    #all-publications .pub-year {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 1.4rem 0 0.6rem;
+        padding: 0;
+        font-size: 1.35rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--heading-color);
+    }
+    #all-publications .pub-year::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: var(--rule);
+    }
+    #all-publications h2 + .pub-year {
+        margin-top: 0;
+    }
+    #all-publications .pub-year + .publication-entry {
+        padding-top: 0;
+    }
     .pub-show-all {
         margin: 0.6rem 0 0;
         width: auto;
@@ -839,7 +863,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">UGG: Unified Generative Geometry Model</h3>
-                <p class="pub-authors"><a href="https://amanikiruga.github.io/">Amani Kiruga</a>*, <a href="https://sky-lzy.github.io/">Zhiyi Li</a>*, <a href="https://ruojincai.github.io/">Ruojin Cai</a>*, <a href="https://hansenlillemark.com/">Hansen Lillemark</a>, <a href="https://candy-crusher.github.io/xiaoshanwu.github.io/">Xiaoshan Wu</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://yilundu.github.io/">Yilun Du</a> (* equal contribution)</p>
+                <p class="pub-authors"><a href="https://amanikiruga.github.io/">Amani Kiruga</a>*, <a href="https://sky-lzy.github.io/">Zhiyi Li</a>*, <a href="https://ruojincai.github.io/">Ruojin Cai</a>*, <a href="https://hansenlillemark.com/">Hansen Lillemark</a>, <a href="https://candy-crusher.github.io/xiaoshanwu.github.io/">Xiaoshan Wu</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://yilundu.github.io/">Yilun Du</a></p>
                 <p class="pub-venue">NeurIPS 2026</p>
                 <div class="pub-links"><span role="link" aria-disabled="true" title="Coming soon">project page</span> / <span role="link" aria-disabled="true" title="Coming soon">paper</span> / <span role="link" aria-disabled="true" title="Coming soon">code</span></div>
             </div>
@@ -887,7 +911,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">3D-Belief: Embodied Belief Inference via Generative 3D World Modeling</h3>
-                <p class="pub-authors"><a href="https://yifanyin11.github.io/">Yifan Yin</a>*, <a href="https://zehaowen.com/">Zehao Wen</a>*, <a href="https://www.linkedin.com/in/suyu-ye/">Suyu Ye</a>, <a href="https://beckschen.github.io/">Jieneng Chen</a>, <a href="https://dyfcalid.github.io/">Zehan Zheng</a>, <a href="https://www.linkedin.com/in/nanru-dai-8b33a9261/">Nanru Dai</a>, <a href="https://www.linkedin.com/in/haojun-shi-746b3328b/">Haojun Shi</a>, <a href="https://www.linkedin.com/in/aydan-huang-hyn26533554432/">Aydan Huang</a>, <a href="https://zheyuanzhang.me/">Zheyuan Zhang</a>, <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>, <a href="https://www.stat.ucla.edu/~jxie/">Jianwen Xie</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://www.tshu.io/">Tianmin Shu</a> (* equal contribution)</p>
+                <p class="pub-authors"><a href="https://yifanyin11.github.io/">Yifan Yin</a>*, <a href="https://zehaowen.com/">Zehao Wen</a>*, <a href="https://www.linkedin.com/in/suyu-ye/">Suyu Ye</a>, <a href="https://beckschen.github.io/">Jieneng Chen</a>, <a href="https://dyfcalid.github.io/">Zehan Zheng</a>, <a href="https://www.linkedin.com/in/nanru-dai-8b33a9261/">Nanru Dai</a>, <a href="https://www.linkedin.com/in/haojun-shi-746b3328b/">Haojun Shi</a>, <a href="https://www.linkedin.com/in/aydan-huang-hyn26533554432/">Aydan Huang</a>, <a href="https://zheyuanzhang.me/">Zheyuan Zhang</a>, <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>, <a href="https://www.stat.ucla.edu/~jxie/">Jianwen Xie</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://www.tshu.io/">Tianmin Shu</a></p>
                 <p class="pub-venue">CoRL 2026 Workshop: Do Robots Need World Models?</p>
                 <div class="pub-links"><a href="https://3d-belief.github.io/">project page</a> / <a href="https://arxiv.org/abs/2605.11367">paper</a> / <a href="https://github.com/3D-Belief/3d-belief">code</a></div>
             </div>
@@ -899,6 +923,7 @@
     <section id="all-publications" hidden>
         <h2>All publications</h2>
         
+        <h3 class="pub-year">2027</h3>
 
         <div class="publication-entry">
             
@@ -915,6 +940,7 @@
             </div>
         </div>
 
+        <h3 class="pub-year">2026</h3>
 
         <div class="publication-entry">
             
@@ -954,7 +980,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">UGG: Unified Generative Geometry Model</h3>
-                <p class="pub-authors"><a href="https://amanikiruga.github.io/">Amani Kiruga</a>*, <a href="https://sky-lzy.github.io/">Zhiyi Li</a>*, <a href="https://ruojincai.github.io/">Ruojin Cai</a>*, <a href="https://hansenlillemark.com/">Hansen Lillemark</a>, <a href="https://candy-crusher.github.io/xiaoshanwu.github.io/">Xiaoshan Wu</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://yilundu.github.io/">Yilun Du</a> (* equal contribution)</p>
+                <p class="pub-authors"><a href="https://amanikiruga.github.io/">Amani Kiruga</a>*, <a href="https://sky-lzy.github.io/">Zhiyi Li</a>*, <a href="https://ruojincai.github.io/">Ruojin Cai</a>*, <a href="https://hansenlillemark.com/">Hansen Lillemark</a>, <a href="https://candy-crusher.github.io/xiaoshanwu.github.io/">Xiaoshan Wu</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://yilundu.github.io/">Yilun Du</a></p>
                 <p class="pub-venue">NeurIPS 2026</p>
                 <div class="pub-links"><span role="link" aria-disabled="true" title="Coming soon">project page</span> / <span role="link" aria-disabled="true" title="Coming soon">paper</span> / <span role="link" aria-disabled="true" title="Coming soon">code</span></div>
             </div>
@@ -1034,7 +1060,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">3D-Belief: Embodied Belief Inference via Generative 3D World Modeling</h3>
-                <p class="pub-authors"><a href="https://yifanyin11.github.io/">Yifan Yin</a>*, <a href="https://zehaowen.com/">Zehao Wen</a>*, <a href="https://www.linkedin.com/in/suyu-ye/">Suyu Ye</a>, <a href="https://beckschen.github.io/">Jieneng Chen</a>, <a href="https://dyfcalid.github.io/">Zehan Zheng</a>, <a href="https://www.linkedin.com/in/nanru-dai-8b33a9261/">Nanru Dai</a>, <a href="https://www.linkedin.com/in/haojun-shi-746b3328b/">Haojun Shi</a>, <a href="https://www.linkedin.com/in/aydan-huang-hyn26533554432/">Aydan Huang</a>, <a href="https://zheyuanzhang.me/">Zheyuan Zhang</a>, <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>, <a href="https://www.stat.ucla.edu/~jxie/">Jianwen Xie</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://www.tshu.io/">Tianmin Shu</a> (* equal contribution)</p>
+                <p class="pub-authors"><a href="https://yifanyin11.github.io/">Yifan Yin</a>*, <a href="https://zehaowen.com/">Zehao Wen</a>*, <a href="https://www.linkedin.com/in/suyu-ye/">Suyu Ye</a>, <a href="https://beckschen.github.io/">Jieneng Chen</a>, <a href="https://dyfcalid.github.io/">Zehan Zheng</a>, <a href="https://www.linkedin.com/in/nanru-dai-8b33a9261/">Nanru Dai</a>, <a href="https://www.linkedin.com/in/haojun-shi-746b3328b/">Haojun Shi</a>, <a href="https://www.linkedin.com/in/aydan-huang-hyn26533554432/">Aydan Huang</a>, <a href="https://zheyuanzhang.me/">Zheyuan Zhang</a>, <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>, <a href="https://www.stat.ucla.edu/~jxie/">Jianwen Xie</a>, <span class="self-author">Ayush Tewari</span>, and <a href="https://www.tshu.io/">Tianmin Shu</a></p>
                 <p class="pub-venue">CoRL 2026 Workshop: Do Robots Need World Models?</p>
                 <div class="pub-links"><a href="https://3d-belief.github.io/">project page</a> / <a href="https://arxiv.org/abs/2605.11367">paper</a> / <a href="https://github.com/3D-Belief/3d-belief">code</a></div>
             </div>
@@ -1053,6 +1079,7 @@
             </div>
         </div>
 
+        <h3 class="pub-year">2025</h3>
 
         <div class="publication-entry">
             
@@ -1076,12 +1103,13 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent</h3>
-                <p class="pub-authors"><a href="https://cameronosmith.github.io/">Cameron Smith</a>*, <a href="https://davidcharatan.com/#/">David Charatan</a>*, <span class="self-author">Ayush Tewari</span>, and <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a> (* equal contribution)</p>
+                <p class="pub-authors"><a href="https://cameronosmith.github.io/">Cameron Smith</a>*, <a href="https://davidcharatan.com/#/">David Charatan</a>*, <span class="self-author">Ayush Tewari</span>, and <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a></p>
                 <p class="pub-venue">3DV 2025</p>
                 <div class="pub-links"><a href="https://cameronosmith.github.io/flowmap//">project page</a> / <a href="https://arxiv.org/abs/2404.15259">paper</a> / <a href="https://github.com/dcharatan/flowmap">code</a></div>
             </div>
         </div>
 
+        <h3 class="pub-year">2024</h3>
 
         <div class="publication-entry">
             
@@ -1105,7 +1133,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">PickScan: Object discovery and reconstruction from handheld interactions</h3>
-                <p class="pub-authors"><a href="https://linkedin.com/in/vincent-van-der-brugge">Vincent van der Brugge</a>, <a href="https://people.inf.ethz.ch/marc.pollefeys/">Marc Pollefeys</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, <a href="https://krrish94.github.io/">Krishna Murthy Jatavallabhula</a>&#8224;, and <span class="self-author">Ayush Tewari</span>&#8224; (&#8224; equal advising)</p>
+                <p class="pub-authors"><a href="https://linkedin.com/in/vincent-van-der-brugge">Vincent van der Brugge</a>, <a href="https://people.inf.ethz.ch/marc.pollefeys/">Marc Pollefeys</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, <a href="https://krrish94.github.io/">Krishna Murthy Jatavallabhula</a>&#8224;, and <span class="self-author">Ayush Tewari</span>&#8224;</p>
                 <p class="pub-venue">IROS 2024</p>
                 <div class="pub-links"><a href="https://vincentvanderbrugge.github.io/pickscan.github.io/">project page</a> / <a href="https://arxiv.org/pdf/2411.11196v1">paper</a></div>
             </div>
@@ -1118,7 +1146,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">GAURA: Generalizable Approach for Unified Restoration and Rendering of Arbitrary Views</h3>
-                <p class="pub-authors"><a href="https://vinayak-vg.github.io/">Vinayak Gupta</a>*, <a href="https://girish445ai.github.io/">Girish Rongali</a>*, <a href="https://mukundvarmat.github.io/">Mukund Varma T</a>*, <span class="self-author">Ayush Tewari</span>, and <a href="https://www.ee.iitm.ac.in/kmitra/">Kaushik Mitra</a> (* equal contribution)</p>
+                <p class="pub-authors"><a href="https://vinayak-vg.github.io/">Vinayak Gupta</a>*, <a href="https://girish445ai.github.io/">Girish Rongali</a>*, <a href="https://mukundvarmat.github.io/">Mukund Varma T</a>*, <span class="self-author">Ayush Tewari</span>, and <a href="https://www.ee.iitm.ac.in/kmitra/">Kaushik Mitra</a></p>
                 <p class="pub-venue">ECCV 2024</p>
                 <div class="pub-links"><a href="https://vinayak-vg.github.io/GAURA/">project page</a> / <a href="https://arxiv.org/abs/2407.08221">paper</a> / <a href="https://github.com/Vinayak-VG/GAURA">code</a></div>
             </div>
@@ -1137,6 +1165,7 @@
             </div>
         </div>
 
+        <h3 class="pub-year">2023</h3>
 
         <div class="publication-entry">
             
@@ -1147,7 +1176,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title"> Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision</h3>
-                <p class="pub-authors"><span class="self-author">Ayush Tewari</span>*, <a href="https://tianweiy.github.io/">Tianwei Yin</a>*, <a href="https://georgecazenavette.github.io/">George Cazenavette</a>, <a href="https://www.rezchikov.me/">Semon Rezchikov</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, <a href="http://people.csail.mit.edu/fredo/">Fredo Durand</a>, <a href="https://billf.mit.edu/">William T. Freeman</a>, and <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a> (* equal contribution)</p>
+                <p class="pub-authors"><span class="self-author">Ayush Tewari</span>*, <a href="https://tianweiy.github.io/">Tianwei Yin</a>*, <a href="https://georgecazenavette.github.io/">George Cazenavette</a>, <a href="https://www.rezchikov.me/">Semon Rezchikov</a>, <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>, <a href="http://people.csail.mit.edu/fredo/">Fredo Durand</a>, <a href="https://billf.mit.edu/">William T. Freeman</a>, and <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a></p>
                 <p class="pub-venue">NeurIPS 2023 <font color="red"> (Spotlight) </font></p>
                 <div class="pub-links"><a href="https://diffusion-with-forward-models.github.io/">project page</a> / <a href="https://diffusion-with-forward-models.github.io/diffusion-forward-paper.pdf">paper</a> / <a href="https://github.com/ayushtewari/DFM/tree/main">code</a></div>
             </div>
@@ -1243,7 +1272,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">Learning to Render Novel Views from Wide-Baseline Stereo Pairs</h3>
-                <p class="pub-authors"><a href="https://yilundu.github.io/">Yilun Du</a>, <a href="https://cameronosmith.github.io/">Cameron Smith</a>, <span class="self-author">Ayush Tewari</span>&#8224;, and <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a>&#8224; (&#8224; equal advising)</p>
+                <p class="pub-authors"><a href="https://yilundu.github.io/">Yilun Du</a>, <a href="https://cameronosmith.github.io/">Cameron Smith</a>, <span class="self-author">Ayush Tewari</span>&#8224;, and <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a>&#8224;</p>
                 <p class="pub-venue">CVPR 2023</p>
                 <div class="pub-links"><a href="https://yilundu.github.io/wide_baseline/">project page</a> / <a href="https://yilundu.github.io/wide_baseline/paper.pdf">paper</a> / <a href="https://github.com/yilundu/cross_attention_renderer">code</a></div>
             </div>
@@ -1294,6 +1323,7 @@
             </div>
         </div>
 
+        <h3 class="pub-year">2022</h3>
 
         <div class="publication-entry">
             
@@ -1362,12 +1392,13 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">Advances in Neural Rendering</h3>
-                <p class="pub-authors"><span class="self-author">Ayush Tewari</span>*, <a href="https://justusthies.github.io/">Justus Thies</a>*, <a href="https://bmild.github.io/">Ben Mildenhall</a>*, <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>*, <a href="http://people.mpi-inf.mpg.de/~tretschk/">Edith Tretschk</a>, <a href="https://yifita.github.io/">Yifan Wang</a>, <a href="https://christophlassner.de/">Christoph Lassner</a>, <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a>, <a href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a href="https://stephenlombardi.github.io/">Stepehen Lombardi</a>, <a href="http://www.cs.cmu.edu/~tsimon/">Tomas Simon</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://jonbarron.info/">Jonathan T. Barron</a>, <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a> (* equal contribution)</p>
+                <p class="pub-authors"><span class="self-author">Ayush Tewari</span>*, <a href="https://justusthies.github.io/">Justus Thies</a>*, <a href="https://bmild.github.io/">Ben Mildenhall</a>*, <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>*, <a href="http://people.mpi-inf.mpg.de/~tretschk/">Edith Tretschk</a>, <a href="https://yifita.github.io/">Yifan Wang</a>, <a href="https://christophlassner.de/">Christoph Lassner</a>, <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a>, <a href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a href="https://stephenlombardi.github.io/">Stepehen Lombardi</a>, <a href="http://www.cs.cmu.edu/~tsimon/">Tomas Simon</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://jonbarron.info/">Jonathan T. Barron</a>, <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>, <a href="https://zollhoefer.com/">Michael Zollhoefer</a>, and <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a></p>
                 <p class="pub-venue">Eurographics State-of-the-Art Report 2022</p>
                 <div class="pub-links"><a href="https://arxiv.org/abs/2111.05849">paper</a></div>
             </div>
         </div>
 
+        <h3 class="pub-year">2021</h3>
 
         <div class="publication-entry">
             
@@ -1485,6 +1516,7 @@
             </div>
         </div>
 
+        <h3 class="pub-year">2020</h3>
 
         <div class="publication-entry">
             
@@ -1492,7 +1524,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">Egocentric Videoconferencing</h3>
-                <p class="pub-authors"><a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>*, <a href="http://people.mpi-inf.mpg.de/~mmendira/">Mohit Mendiratta</a>*, <a href="https://justusthies.github.io/">Justus Thies</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a> (* equal contribution)</p>
+                <p class="pub-authors"><a href="https://people.mpi-inf.mpg.de/~elgharib/">Mohamed Elgharib</a>*, <a href="http://people.mpi-inf.mpg.de/~mmendira/">Mohit Mendiratta</a>*, <a href="https://justusthies.github.io/">Justus Thies</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://people.mpi-inf.mpg.de/~hpseidel/english.html">Hans-Peter Seidel</a>, <span class="self-author">Ayush Tewari</span>, <a href="http://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>, and <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a></p>
                 <p class="pub-venue">SIGGRAPH Asia 2020</p>
                 <div class="pub-links"><a href="http://gvv.mpi-inf.mpg.de/projects/PIE/">project page</a> / <a href="http://gvv.mpi-inf.mpg.de/projects/PIE/data/paper.pdf">paper</a></div>
             </div>
@@ -1544,7 +1576,7 @@
             
             <div class="pub-details">
                 <h3 class="pub-title">State of the Art on Neural Rendering</h3>
-                <p class="pub-authors"><span class="self-author">Ayush Tewari</span>*, <a href="https://www.ohadf.com/">Ohad Fried</a>*, <a href="https://justusthies.github.io/">Justus Thies</a>*, <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a>*, <a href="https://stephenlombardi.github.io/">Stepehen Lombardi</a>, <a href="http://www.kalyans.org/">Kalyan Sunkavalli</a>, <a href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a href="http://www.cs.cmu.edu/~tsimon/">Tomas Simon</a>, <a href="http://jsaragih.org/Home_Page.html">Jason Saragih</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://research.google/people/106687/">Rohit Pandey</a>, <a href="http://www.seanfanello.it/">Sean Fanello</a>, <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>, <a href="https://www.cs.cmu.edu/~junyanz/">Jun-Yan Zhu</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>, <a href="https://research.adobe.com/person/eli-shechtman/">Eli Schectman</a>, <a href="https://www.danbgoldman.com/home/">Dan B Goldman</a>, and <a href="https://zollhoefer.com/">Michael Zollhoefer</a> (* equal contribution)</p>
+                <p class="pub-authors"><span class="self-author">Ayush Tewari</span>*, <a href="https://www.ohadf.com/">Ohad Fried</a>*, <a href="https://justusthies.github.io/">Justus Thies</a>*, <a href="https://vincentsitzmann.com/">Vincent Sitzmann</a>*, <a href="https://stephenlombardi.github.io/">Stepehen Lombardi</a>, <a href="http://www.kalyans.org/">Kalyan Sunkavalli</a>, <a href="http://ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <a href="http://www.cs.cmu.edu/~tsimon/">Tomas Simon</a>, <a href="http://jsaragih.org/Home_Page.html">Jason Saragih</a>, <a href="http://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>, <a href="https://research.google/people/106687/">Rohit Pandey</a>, <a href="http://www.seanfanello.it/">Sean Fanello</a>, <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>, <a href="https://www.cs.cmu.edu/~junyanz/">Jun-Yan Zhu</a>, <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>, <a href="http://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>, <a href="https://research.adobe.com/person/eli-shechtman/">Eli Schectman</a>, <a href="https://www.danbgoldman.com/home/">Dan B Goldman</a>, and <a href="https://zollhoefer.com/">Michael Zollhoefer</a></p>
                 <p class="pub-venue">Eurographics State-of-the-Art Report 2020</p>
                 <div class="pub-links"><a href="https://arxiv.org/abs/2004.03805">paper</a></div>
             </div>
@@ -1563,6 +1595,7 @@
             </div>
         </div>
 
+        <h3 class="pub-year">2019</h3>
 
         <div class="publication-entry">
             
@@ -1589,6 +1622,7 @@
             </div>
         </div>
 
+        <h3 class="pub-year">2018</h3>
 
         <div class="publication-entry">
             
@@ -1654,6 +1688,7 @@
             </div>
         </div>
 
+        <h3 class="pub-year">2017</h3>
 
         <div class="publication-entry">
             
