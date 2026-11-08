@@ -270,19 +270,19 @@ module.exports = {
     ],
     publications: [
         {
+            title: "A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation",
+            teaser: "assets/pano3d.mp4",
+            authors: authorList([MichaelWakeham, MrinmoyKumarDas, WenqiWang, AyushTewari, BoqingGong, DeeptiGhadiyaram]),
+            conference: WACV + " 2027",
+            data: ["project page".link("https://pano3d-video.github.io/"), "paper".link("https://arxiv.org/abs/2610.25395"), "code".link("https://github.com/mikewakeham/pano3d-video")].join(" / ")
+        },
+        {
             title: "S2PD: Serial-to-Parallel Diffusion for Physically and Logically Consistent Video Generation",
             selected: true,
             teaser: "assets/s2pd.mp4",
             authors: authorList([JeffreyHu, DanielOlmedaReino, AyushTewari]),
             conference: "arXiv 2026",
             data: ["project page".link("https://jefequien.github.io/S2PD/"), "paper".link("https://arxiv.org/abs/2610.06847"), "code".link("https://github.com/jefequien/S2PD")].join(" / ")
-        },
-        {
-            title: "A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation",
-            teaser: "assets/pano3d.mp4",
-            authors: authorList([MichaelWakeham, MrinmoyKumarDas, WenqiWang, AyushTewari, BoqingGong, DeeptiGhadiyaram]),
-            conference: WACV + " 2027",
-            data: ["project page".link("https://pano3d-video.github.io/"), "paper".link("https://arxiv.org/abs/2610.25395"), "code".link("https://github.com/mikewakeham/pano3d-video")].join(" / ")
         },
         {
             title: "Understanding Multi-view Transformers",
