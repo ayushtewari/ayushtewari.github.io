@@ -211,11 +211,6 @@ function authorListEqual(authors, numEqual, numEqualEnd = 0, showContributionNot
             list.push(name + ",");
         }
     });
-    if (showContributionNote && numEqual > 1 && numEqualEnd > 1) {
-        list.push("(* co-first authors; &#8224; co-last authors)")
-    } else if (showContributionNote && numEqual > 1) {
-        list.push("(* equal contribution)")
-    }
     return list.join(" ");
 }
 
@@ -234,9 +229,6 @@ function authorListEqualEnd(authors, numEqual) {
             list.push(name + ",");
         }
     });
-    if (numEqual > 1) {
-        list.push("(&#8224; equal advising)")
-    }
     return list.join(" ");
 }
 
@@ -725,3 +717,9 @@ module.exports = {
     // metadata: ["[Google Scholar]".link("https://scholar.google.com/citations?user=pDnzpeoAAAAJ&hl=en"), "[CV]".link("assets/cv.pdf")].join(" "),
     metadata: ["CV".link("assets/cv.pdf")].join(" / "),
 };
+
+// Year of each publication, taken from the first year in its venue (used for the year labels in "All publications")
+module.exports.publications.forEach(pub => {
+    const match = String(pub.conference).match(/(19|20)\d{2}/);
+    pub.year = match ? match[0] : "";
+});

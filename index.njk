@@ -88,6 +88,9 @@
     <section id="all-publications" hidden>
         <h2>All publications</h2>
         {% for pub in publications %}
+        {%- if loop.first or pub.year != publications[loop.index0 - 1].year %}
+        <h3 class="pub-year">{{ pub.year }}</h3>
+        {%- endif %}
 {{ pubEntry(pub) }}
         {%- endfor %}
     </section>
