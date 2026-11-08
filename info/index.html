@@ -735,6 +735,15 @@
             padding: 1rem;
         }
     }
+/* Overall page scale on desktop: same as one step of browser zoom-out (Cmd/Ctrl -, 90%) */
+    @media (min-width: 769px) {
+        html {
+            zoom: 0.9;
+        }
+        main.content-layer {
+            min-height: calc(100vh / 0.9);
+        }
+    }
 /* --- End of Styles --- */
     </style>
   </head>
