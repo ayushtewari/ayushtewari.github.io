@@ -262,18 +262,18 @@ module.exports = {
     ],
     publications: [
         {
-            title: "Infer3D: Inverse Generative Modeling Enables Robust 3D Reconstruction",
-            teaser: "assets/infer3d.mp4",
-            authors: authorListEqualEnd([AmaniKiruga, MarkHamilton, JoshTenenbaum, WilliamTFreeman, VincentSitzmann, YilunDu, AyushTewari], 2),
-            conference: "Preprint 2027",
-            data: ["project page".link("https://amanikiruga.github.io/infer3d-site/"), "paper".link("https://amanikiruga.github.io/infer3d-site/infer3d_preprint.pdf")].join(" / ")
-        },
-        {
             title: "A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation",
             teaser: "assets/pano3d.mp4",
             authors: authorList([MichaelWakeham, MrinmoyKumarDas, WenqiWang, AyushTewari, BoqingGong, DeeptiGhadiyaram]),
             conference: WACV + " 2027",
             data: ["project page".link("https://pano3d-video.github.io/"), "paper".link("https://arxiv.org/abs/2610.25395"), "code".link("https://github.com/mikewakeham/pano3d-video")].join(" / ")
+        },
+        {
+            title: "Infer3D: Inverse Generative Modeling Enables Robust 3D Reconstruction",
+            teaser: "assets/infer3d.mp4",
+            authors: authorListEqualEnd([AmaniKiruga, MarkHamilton, JoshTenenbaum, WilliamTFreeman, VincentSitzmann, YilunDu, AyushTewari], 2),
+            conference: "Preprint 2026",
+            data: ["project page".link("https://amanikiruga.github.io/infer3d-site/"), "paper".link("https://amanikiruga.github.io/infer3d-site/infer3d_preprint.pdf")].join(" / ")
         },
         {
             title: "S2PD: Serial-to-Parallel Diffusion for Physically and Logically Consistent Video Generation",
