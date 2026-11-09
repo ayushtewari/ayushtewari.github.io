@@ -262,6 +262,13 @@ module.exports = {
     ],
     publications: [
         {
+            title: "Infer3D: Inverse Generative Modeling Enables Robust 3D Reconstruction",
+            teaser: "assets/infer3d.mp4",
+            authors: authorListEqualEnd([AmaniKiruga, MarkHamilton, JoshTenenbaum, WilliamTFreeman, VincentSitzmann, YilunDu, AyushTewari], 2),
+            conference: "Preprint 2027",
+            data: ["project page".link("https://amanikiruga.github.io/infer3d-site/"), "paper".link("https://amanikiruga.github.io/infer3d-site/infer3d_preprint.pdf")].join(" / ")
+        },
+        {
             title: "A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation",
             teaser: "assets/pano3d.mp4",
             authors: authorList([MichaelWakeham, MrinmoyKumarDas, WenqiWang, AyushTewari, BoqingGong, DeeptiGhadiyaram]),
@@ -290,8 +297,7 @@ module.exports = {
             teaser: "assets/ugg.mp4",
             authors: authorListEqual([AmaniKiruga, ZhiyiLi, RuojinCai, HansenLillemark, XiaoshanWu, AyushTewari, YilunDu], 3),
             conference: NEURIPS + " 2026",
-            // Keep resource links inactive until release: https://sky-lzy.github.io/UGG-website/
-            data: ["project page", "paper", "code"].map(label => `<span role="link" aria-disabled="true" title="Coming soon">${label}</span>`).join(" / ")
+            data: ["project page".link("https://ugg-model.github.io/"), "paper".link("https://ugg-model.github.io/assets/ugg-paper.pdf"), "code".link("https://github.com/amanikiruga/UGG")].join(" / ")
         },
         {
             title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
