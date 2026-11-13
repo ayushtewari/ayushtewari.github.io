@@ -1,0 +1,104 @@
+/* Fonts, sizes and colours live here. The editor never rewrites this file. */
+/* Matched to the MLMI17 decks: white background, Avenir, orange titles. */
+
+.slide {
+  background: #ffffff;
+  color: #1b1b1b;
+  font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.element-text {
+  font-size: 40px;
+  line-height: 1.3;
+}
+
+.role-title, .title {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: #B94700;
+}
+
+.role-heading {
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1b1b1b;
+}
+
+.role-body {
+  font-size: 38px;
+  line-height: 1.3;
+}
+
+.role-caption, .caption {
+  font-size: 28px;
+  line-height: 1.3;
+  color: #6b6b6b;
+}
+
+.accent { color: #B94700; }
+
+.source {
+  font-size: 22px;
+  line-height: 1.2;
+  color: #8a8a8a;
+}
+
+table { border-collapse: collapse; }
+th, td { border: 0; padding: 0; }
+
+/* >>> slide-editor theme (generated) */
+/* theme: Custom deck defaults */
+/* --- font set: Custom deck defaults --- */
+/*  */
+
+.slide {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Inter, system-ui, sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.34;
+  letter-spacing: 0;
+}
+
+.role-title {
+  font-family: Charter, "Iowan Old Style", "New York", Palatino, Georgia, serif;
+  font-size: 108px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.role-heading {
+  font-family: Charter, "Iowan Old Style", "New York", Palatino, Georgia, serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+.role-body {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Inter, system-ui, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+.role-caption {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Inter, system-ui, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.015em;
+  color: #6b6862;
+}
+
+.slide {
+  background: #faf9f5;
+  color: #191918;
+}
+
+.role-caption { color: #6b6862; }
+/* <<< end theme */
