@@ -269,6 +269,14 @@ module.exports = {
             data: ["project page".link("https://pano3d-video.github.io/"), "paper".link("https://arxiv.org/abs/2610.25395"), "code".link("https://github.com/mikewakeham/pano3d-video")].join(" / ")
         },
         {
+            title: "K2V: Generative Keyframing for Physically Plausible Video Generation",
+            selected: true,
+            teaser: "assets/k2v.mp4",
+            authors: authorList([FelixOMahony, DanielOlmedaReino, RobertoCipolla, AyushTewari]),
+            conference: "arXiv 2026",
+            data: ["project page".link("https://felixomahony.github.io/k2v_project/"), "paper".link("https://arxiv.org/abs/2611.17324"), "code".link("https://github.com/felixomahony/k2v")].join(" / ")
+        },
+        {
             title: "Infer3D: Inverse Generative Modeling Enables Robust 3D Reconstruction",
             teaser: "assets/infer3d.mp4",
             authors: authorListEqualEnd([AmaniKiruga, MarkHamilton, JoshTenenbaum, WilliamTFreeman, VincentSitzmann, YilunDu, AyushTewari], 2),
@@ -297,7 +305,7 @@ module.exports = {
             teaser: "assets/ugg.mp4",
             authors: authorListEqual([AmaniKiruga, ZhiyiLi, RuojinCai, HansenLillemark, XiaoshanWu, AyushTewari, YilunDu], 3),
             conference: NEURIPS + " 2026",
-            data: ["project page".link("https://ugg-model.github.io/"), "paper".link("https://ugg-model.github.io/assets/ugg-paper.pdf"), "code".link("https://github.com/amanikiruga/UGG")].join(" / ")
+            data: ["project page".link("https://ugg-model.github.io/"), "paper".link("https://arxiv.org/abs/2611.14440"), "code".link("https://github.com/amanikiruga/UGG")].join(" / ")
         },
         {
             title: "VDAWorld: World Modelling via VLM-Directed Abstraction and Simulation",
